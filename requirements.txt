@@ -1,0 +1,8 @@
+agno
+openai
+pandas
+duckdb
+plotly
+matplotlib
+streamlit
+python-dotenv
