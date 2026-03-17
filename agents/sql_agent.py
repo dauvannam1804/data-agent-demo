@@ -2,19 +2,21 @@ from agno.agent import Agent
 from agno.models.openai import OpenAIChat
 from tools.sql_tools import execute_sql_on_csv
 
-def get_sql_agent(csv_path: str) -> Agent:
+from typing import List
+
+def get_sql_agent(csv_paths: List[str]) -> Agent:
     """
-    Returns the SQL Agent responsible for writing and executing SQL queries on the CSV using DuckDB.
+    Returns the SQL Agent responsible for writing and executing SQL queries on multiple CSVs using DuckDB.
     """
     
-    # We create a closure so the agent doesn't need to guess the CSV path
+    # We create a closure so the agent doesn't need to guess the CSV paths
     def run_sql(query: str) -> str:
         """
-        Thực thi câu lệnh SQL trên file CSV.
-        Tên bảng bắt buộc phải là 'data'. Không dùng tên file làm tên bảng.
-        Ví dụ: SELECT * FROM data LIMIT 10;
+        Thực thi câu lệnh SQL trên các file CSV.
+        Tên bảng sẽ tương ứng với tên file (bỏ đuôi .csv).
+        Ví dụ: SELECT * FROM sales s JOIN customers c ON s.customer_id = c.id LIMIT 10;
         """
-        return execute_sql_on_csv(csv_path, query)
+        return execute_sql_on_csv(csv_paths, query)
         
     return Agent(
         name="SQL Agent",
@@ -24,7 +26,7 @@ def get_sql_agent(csv_path: str) -> Agent:
         instructions=[
             "Bạn sẽ nhận được yêu cầu truy xuất dữ liệu từ Analyzer Agent.",
             "Nhiệm vụ của bạn là viết câu lệnh SQL và sử dụng tool `run_sql` để thực thi câu lệnh đó nhằm lấy ra dữ liệu.",
-            "LƯU Ý QUAN TRỌNG VỀ SQL: Tên bảng (table name) trong câu lệnh SQL LUÔN LUÔN là 'data', bất kể tên file csv được cung cấp là gì. Ví dụ: SELECT * FROM data;",
+            "LƯU Ý QUAN TRỌNG VỀ SQL: Hệ thống có thể có nhiều bảng. Tên bảng (table name) trong câu lệnh SQL sẽ TƯƠNG ỨNG với tên file csv (đã bỏ đuôi .csv). Ví dụ: file 'sales.csv' sẽ có bảng là 'sales'. Hãy sử dụng JOIN nếu cần thiết.",
             "Nếu kết quả truy vấn bị lỗi, hãy phân tích lỗi, sửa lại câu SQL rồi chạy lại tool.",
             "Bạn có thể chạy thử truy vấn nhiều lần.",
             "Sau khi có kết quả thành công, hãy trình bày lại kết quả dữ liệu một cách rõ ràng dưới dạng Markdown Table hoặc danh sách.",

@@ -18,24 +18,35 @@ def get_csv_metadata(file_path: str, sample_size: int = 5) -> Dict[str, Any]:
     except Exception as e:
         return {"error": str(e)}
 
-def get_csv_schema_string(file_path: str, sample_size: int = 3) -> str:
+from typing import List
+
+def get_csvs_schema_string(file_paths: List[str], sample_size: int = 3) -> str:
     """
-    Returns a formatted string describing the CSV schema, useful for LLM context.
+    Returns a concatenated formatted string describing the schemas of multiple CSV files.
     """
-    metadata = get_csv_metadata(file_path, sample_size)
-    if "error" in metadata:
-        return f"Error reading CSV: {metadata['error']}"
+    import os
+    schemas = []
     
-    schema_str = f"File: {file_path}\n"
-    schema_str += f"Total Rows: {metadata['total_rows']}\n"
-    schema_str += f"Columns: {', '.join(metadata['columns'])}\n\n"
-    
-    schema_str += "Data Types:\n"
-    for col, dtype in metadata["data_types"].items():
-        schema_str += f"- {col}: {dtype}\n"
+    for file_path in file_paths:
+        metadata = get_csv_metadata(file_path, sample_size)
+        table_name = os.path.splitext(os.path.basename(file_path))[0]
         
-    schema_str += f"\nSample Data ({sample_size} rows):\n"
-    for row in metadata['sample_data']:
-        schema_str += f"{row}\n"
+        if "error" in metadata:
+            schemas.append(f"Table '{table_name}' (Error reading {file_path}): {metadata['error']}")
+            continue
+            
+        schema_str = f"Table: '{table_name}' (Source: {os.path.basename(file_path)})\n"
+        schema_str += f"Total Rows: {metadata['total_rows']}\n"
+        schema_str += f"Columns: {', '.join(metadata['columns'])}\n\n"
         
-    return schema_str
+        schema_str += "Data Types:\n"
+        for col, dtype in metadata["data_types"].items():
+            schema_str += f"- {col}: {dtype}\n"
+            
+        schema_str += f"\nSample Data ({sample_size} rows):\n"
+        for row in metadata['sample_data']:
+            schema_str += f"{row}\n"
+            
+        schemas.append(schema_str)
+        
+    return "\n" + "="*40 + "\n\n".join(schemas) + "\n" + "="*40 + "\n"
