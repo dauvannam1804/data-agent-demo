@@ -103,13 +103,13 @@ A newly introduced schema-driven architecture optimized for large sets of CSV fi
 
 ## Setup
 
-1. **Prerequisites**: Ensure you have Python installed.
+1. **Prerequisites**: Ensure you have Python installed. We recommend using [`uv`](https://github.com/astral-sh/uv) to manage your environment.
 
 2. **Initialize python environment and install dependencies**:
    ```bash
-   python -m venv .venv
+   uv venv
    source .venv/bin/activate
-   pip install -r requirements.txt
+   uv pip install -r requirements.txt
    ```
 
 3. **Configure Environment Variables**:
