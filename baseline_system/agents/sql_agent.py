@@ -27,6 +27,7 @@ def get_sql_agent(csv_paths: List[str]) -> Agent:
             "Bạn sẽ nhận được yêu cầu truy xuất dữ liệu từ Analyzer Agent.",
             "Nhiệm vụ của bạn là viết câu lệnh SQL và sử dụng tool `run_sql` để thực thi câu lệnh đó nhằm lấy ra dữ liệu.",
             "LƯU Ý QUAN TRỌNG VỀ SQL: Hệ thống có thể có nhiều bảng. Tên bảng (table name) trong câu lệnh SQL sẽ TƯƠNG ỨNG với tên file csv (đã bỏ đuôi .csv). Ví dụ: file 'sales.csv' sẽ có bảng là 'sales'. Hãy sử dụng JOIN nếu cần thiết.",
+            "BẮT BUỘC: Luôn dùng dấu nháy kép (\\\") bao quanh tên bảng và tên cột trong SQL. Ví dụ: SELECT \\\"Happiness Score\\\" FROM \\\"2015\\\" LIMIT 10; Đây là quy tắc bắt buộc vì tên bảng có thể bắt đầu bằng số và tên cột có thể chứa khoảng trắng.",
             "Nếu kết quả truy vấn bị lỗi, hãy phân tích lỗi, sửa lại câu SQL rồi chạy lại tool.",
             "Bạn có thể chạy thử truy vấn nhiều lần.",
             "Sau khi có kết quả thành công, hãy trình bày lại kết quả dữ liệu một cách rõ ràng dưới dạng Markdown Table hoặc danh sách.",
