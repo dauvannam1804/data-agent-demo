@@ -1,18 +1,19 @@
 # Data Agent System
 
-A multi-agent AI system built with [`agno`](https://agno.com) and Streamlit that allows you to chat with your CSV data. The system automatically analyzes your data, writes SQL queries via `duckdb`, and generates custom charts based on your natural language questions.
+A dual-architecture AI system that allows you to chat with your CSV data using Natural Language to generate SQL queries and charts. This repository actively develops and compares two distinct architectural methodologies side-by-side.
 
 ## Features
 
-- **Upload any CSV file**: It automatically infers the data schema and reads metadata.
+- **Upload any CSV file**: The applications automatically infer the data schema and read metadata.
 - **Natural Language to SQL**: Converts your chat questions into optimized DuckDB queries.
-- **Automated Data Visualization**: Automatically writes Python code to generate and display plots inline using Matplotlib/Plotly.
-- **Architecture**: Employs a 3-agent pipeline:
-  1. `AnalyzerAgent`: Semantically understands your question against the CSV schema.
-  2. `SqlAgent`: Writes and executes SQL on the CSV to extract necessary data points.
-  3. `ChartAgent`: Parses the extracted data to formulate and visualize charts.
+- **Automated Data Visualization (Baseline)**: Automatically writes Python code to generate and display plots inline using Matplotlib/Plotly.
+- **Dual Architecture Deployment**: 
+  - **Baseline System**: A standard 3-agent pipeline (`Analyzer`, `SQL`, `Chart`).
+  - **Query GPT System**: An advanced 5-stage pipeline inspired by Uber's Query GPT (`Intent -> Table -> Prune -> GenAI -> Execute`).
 
-## System Architecture
+## System Architectures
+
+### 1. Baseline System (Legacy 3-Agent Pipeline)
 
 ```text
 [User Chat]
@@ -52,31 +53,63 @@ A multi-agent AI system built with [`agno`](https://agno.com) and Streamlit that
 [Streamlit UI Displays Data/Chart]
 ```
 
-The Data Agent system is designed to break down complex data analytics into a pipeline of specialized agents:
+1. **Analyzer Agent**: Interprets the user's intent against the available CSV schema to output a clear set of step-by-step instructions.
+2. **SQL Agent**: Translates these instructions into optimized SQL queries and safely executes them using the `DuckDB` engine.
+3. **Chart Agent (Optional)**: Triggered if visualization is requested, it acts on the extracted dataset to write and execute python code (matplotlib/plotly) to render charts within Streamlit.
 
-1. **Analyzer Agent**
-   - **Role**: Data Semantic Understanding
-   - **Process**: Takes the user's natural language request and the schema of the uploaded CSV file (inferred using Pandas). It interprets the user's intent and maps it to the available columns in the dataset without writing any queries itself. It outputs a clear set of step-by-step instructions for data retrieval.
+### 2. Query GPT System (Uber Inspired)
 
-2. **SQL Agent**
-   - **Role**: Data Extraction & Query Execution
-   - **Process**: Receives the instructions from the Analyzer Agent. It translates these instructions into optimized SQL queries. Using the `DuckDB` engine, it safely executes these queries against the CSV data without loading the entire dataset into memory. It then formats the result into a clean structure (e.g., Markdown table) for the final agent.
+A newly introduced schema-driven architecture optimized for large sets of CSV files and context-window minimization.
 
-3. **Chart Agent (Optional)**
-   - **Role**: Data Visualization
-   - **Process**: Triggered only if the user's request involves visualization (e.g., "plot", "chart", "vẽ biểu đồ"). It acts on the extracted dataset provided by the SQL Agent, writes Python code utilizing `matplotlib` or `plotly`, executes the script to generate an image or HTML file, and saves it to the `output/` directory so Streamlit can render it in the UI.
+```text
+       [User Chat Query]
+              │
+              ▼
+   ┌──────────────────────┐    ┌──────────────────────┐
+   │ 1. Intent Agent      │    │ 0. Metadata Scanner  │
+   │   (Classify Topic)   │    │ (Pre-builds Schema)  │
+   └──────────────────────┘    └──────────┬───────────┘
+              │                           │
+              ▼                           ▼
+   ┌──────────────────────────────────────────────────┐
+   │ 2. Table Agent (Finds Best Matching CSV)         │
+   └──────────────────────────────────────────────────┘
+              │
+              ▼ (Matched CSV Schema + Query)
+   ┌──────────────────────────────────────────────────┐
+   │ 3. Column Pruner (Removes Irrelevant Columns)    │
+   └──────────────────────────────────────────────────┘
+              │
+              ▼ (Pruned Schema + Query)
+   ┌──────────────────────────────────────────────────┐
+   │ 4. GenAI SQL Gateway (Generates DuckDB SQL)      │
+   └──────────────────────────────────────────────────┘
+              │
+              ▼ (Executable SQL)
+   ┌──────────────────────────────────────────────────┐
+   │ 5. SQL Executor (Runs DuckDB & Formats Markdown) │
+   └──────────────────────────────────────────────────┘
+              │
+              ▼
+      [Streamlit UI Shows Markdown Data]
+```
 
-This modular architecture ensures separation of concerns, increases accuracy (as SQL Agent doesn't have to guess the user intent blindly), and allows for robust error handling at each step.
+1. **Metadata Scanner (`schema_builder.py`)**: Pre-scans the `data/` directory and builds a global `schema_registry.json`.
+2. **Intent Agent**: Classifies the semantic topic of the user's input.
+3. **Table Agent**: Uses the Intent and Query to identify the single most relevant CSV file out of dozens of files.
+4. **Column Pruner Agent**: Selects ONLY the absolutely necessary columns required to answer the query, discarding the rest to dramatically save LLM token usage and prevent hallucinations.
+5. **GenAI SQL Gateway**: A specialized pipeline that takes the fully optimized/pruned payload and generates highly accurate Zero-Shot DuckDB SQL.
+6. **SQL Executor**: A sandboxed wrapper that runs the query on DuckDB and streams Markdown results back to the user.
 
 ## Setup
 
-1. **Prerequisites**: Ensure you have Python installed. We recommend using [`uv`](https://github.com/astral-sh/uv) to manage your environment.
+1. **Prerequisites**: Ensure you have Python installed.
 
 2. **Initialize python environment and install dependencies**:
    ```bash
-   uv venv
+   python -m venv .venv
    source .venv/bin/activate
-   uv pip install -r requirements.txt
+   pip install -r requirements.txt
    ```
 
 3. **Configure Environment Variables**:
@@ -91,12 +124,27 @@ This modular architecture ensures separation of concerns, increases accuracy (as
 
 ## Usage
 
+This repository contains executable bash scripts for both distinct systems. Data resources (`data/`) are heavily shared between them.
+
+### Running Baseline System
 1. Start the Streamlit application:
    ```bash
-   streamlit run main.py
+   ./run_baseline.sh
    ```
 2. Upload a CSV file through the sidebar on the left.
 3. Chat with your data! 
+
+### Running Query GPT System
+Before launching the query GPT architecture, you **must** build the metadata schema registry at least once:
+```bash
+python query_gpt_system/metadata/schema_builder.py
+```
+This command will deeply scan all the large CSVs inside `data/` and structure their formats for the Table Agent.
+
+After the registry is successfully populated:
+```bash
+./run_query_gpt.sh
+```
 
 ### Example Prompts
 - "What is the average age of passengers in each ticket class?"
