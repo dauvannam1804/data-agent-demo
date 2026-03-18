@@ -8,12 +8,12 @@ A dual-architecture AI system that allows you to chat with your CSV data using N
 - **Natural Language to SQL**: Converts your chat questions into optimized DuckDB queries.
 - **Automated Data Visualization (Baseline)**: Automatically writes Python code to generate and display plots inline using Matplotlib/Plotly.
 - **Dual Architecture Deployment**: 
-  - **Baseline System**: A standard 3-agent pipeline (`Analyzer`, `SQL`, `Chart`).
+  - **Baseline System**: A 3-agent pipeline with **Semantic Layer** for rule-based query pre-analysis (`Semantic → Analyzer → SQL → Chart`).
   - **Query GPT System**: An advanced 5-stage pipeline inspired by Uber's Query GPT (`Intent -> Table -> Prune -> GenAI -> Execute`).
 
 ## System Architectures
 
-### 1. Baseline System (Legacy 3-Agent Pipeline)
+### 1. Baseline System (3-Agent Pipeline + Semantic Layer)
 
 ```text
 [User Chat]
@@ -30,7 +30,20 @@ A dual-architecture AI system that allows you to chat with your CSV data using N
       │         └──────────────┘
       │                │
       ▼                ▼
-┌──────────────┐ ◀─────┘ (Uses Schema info)
+┌─────────────────────────────┐
+│    🔍 Semantic Layer        │ ◀── (Rule-based, No LLM)
+│  ┌────────────────────────┐ │
+│  │ • Intent Detection     │ │
+│  │ • Column Matching      │ │
+│  │ • Aggregation Detection│ │
+│  │ • Time Period Detection│ │
+│  │ • Output Type Detection│ │
+│  └────────────────────────┘ │
+└─────────────────────────────┘
+      │
+      │ (SemanticResult: intent, columns, ops, ...)
+      ▼
+┌──────────────┐ ◀── (Schema + SemanticResult + User Query)
 │   Analyzer   │
 │    Agent     │
 └──────────────┘
@@ -53,9 +66,16 @@ A dual-architecture AI system that allows you to chat with your CSV data using N
 [Streamlit UI Displays Data/Chart]
 ```
 
-1. **Analyzer Agent**: Interprets the user's intent against the available CSV schema to output a clear set of step-by-step instructions.
-2. **SQL Agent**: Translates these instructions into optimized SQL queries and safely executes them using the `DuckDB` engine.
-3. **Chart Agent (Optional)**: Triggered if visualization is requested, it acts on the extracted dataset to write and execute python code (matplotlib/plotly) to render charts within Streamlit.
+1. **Semantic Layer (`semantic/`)**: A **rule-based** pre-processing module (no LLM calls) that analyzes the user's query before passing it to the LLM agents. It extracts structured metadata to reduce LLM workload and improve accuracy:
+   - **Intent Detection**: Classifies query intent (aggregation, filter, comparison, ranking, trend, distribution) using keyword matching.
+   - **Column Matching**: Fuzzy-matches terms in the query to CSV column names using 4 strategies: exact, normalized (diacritics-free), synonym-based (Vietnamese ↔ English), and fuzzy (SequenceMatcher).
+   - **Aggregation Detection**: Identifies SQL operations (SUM, AVG, COUNT, MAX, MIN) from Vietnamese/English keywords.
+   - **Time Period Detection**: Extracts time granularity (day/month/quarter/year) and specific time filters.
+   - **Output Type Detection**: Determines desired output format (chart, table, single value).
+   - **GROUP BY / Sort Detection**: Identifies grouping and ordering hints.
+2. **Analyzer Agent**: Interprets the user's intent using **both** the CSV schema and the `SemanticResult` from the Semantic Layer. The structured hints allow the LLM to validate and refine rather than analyze from scratch.
+3. **SQL Agent**: Translates instructions into optimized SQL queries and safely executes them using the `DuckDB` engine. Uses double-quoted identifiers to support table/column names with special characters.
+4. **Chart Agent (Optional)**: Triggered if visualization is requested, it writes and executes Python code (matplotlib/plotly) to render charts within Streamlit.
 
 ### 2. Query GPT System (Uber Inspired)
 
