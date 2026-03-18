@@ -29,12 +29,9 @@ Dự án hiện tại không phải là một Data Warehouse tập trung (như H
     *   Khi có truy vấn (ví dụ "fare and passengers"), Table Agent sẽ tìm kiếm Semantic Search / Keyword Search trong file Metadata này để quyết định Table dùng là `titanic.csv`.
 4.  **Column Prune Agent**:
     *   Các file CSV có thể chứa hàng chục cột. Agent sẽ chạy bước LLM nhỏ để phân định: Đối với câu hỏi về "Fare và Age của Titanic", nó sẽ chỉ trích xuất schema của 2 cột đó, bỏ qua cột "Ticket", "Cabin".
-5.  **SQL Samples RAG (RAG Database)**:
-    *   Sử dụng trực tiếp nội dung file `da-dev-questions.jsonl`. Trong này có chứa các câu hỏi đa dạng và định dạng trả lời (Concept, constraints). Chúng ta sẽ sinh ra các mẫu code / SQL mẫu tương ứng cho các câu hỏi này.
-    *   Tạo một VectorDB tại local (ChromaDB, FAISS) làm **Kho SQL Samples** để lấy ra k-ví dụ gần giống (few-shot RAG) gài vào prompt.
-6.  **Generator (GenAI Gateway)**:
-    *   Tạo thành một Pipeline Prompt Generator tổng hợp: `System Prompt (Hướng dẫn DuckDB hoặc Pandas)` + `Table Schema đã pruned` + `Top-K câu hỏi mẫu từ RAG` + `Câu hỏi hiện tại`.
-7.  **Execution Engine (Xử lý truy vấn)**: Câu lệnh sinh ra sẽ được tự động thực thi bởi máy ở Sandbox sử dụng DuckDB engine.
+5.  **Generator (GenAI Gateway)**:
+    *   Tạo thành một Pipeline Prompt Generator tổng hợp: `System Prompt (Hướng dẫn DuckDB hoặc Pandas)` + `Table Schema đã pruned` + `Câu hỏi hiện tại`. (Không dùng SQL RAG Samples vì các LLM hiện đại như GPT-4o-mini dư sức zero-shot sinh code chính xác từ Data Schema mà không cần example mồi).
+6.  **Execution Engine (Xử lý truy vấn)**: Câu lệnh sinh ra sẽ được tự động thực thi bởi máy ở Sandbox sử dụng DuckDB engine.
     *   Vd: `SELECT AVG(fare) FROM 'data/InfiAgent/da-dev-tables/titanic.csv'`
     *   Trả kết quả tự động.
 
@@ -42,19 +39,18 @@ Dự án hiện tại không phải là một Data Warehouse tập trung (như H
 
 Đây là kế hoạch phát triển 3 Giai đoạn:
 
-### Giai đoạn 1: Xây dựng Nền tảng Metadata và Kho RAG (Data Foundation)
+### Giai đoạn 1: Xây dựng Nền tảng Metadata (Data Foundation)
 *   **Task 1**: Phát triển script Quét Metadata (mô phỏng Metadata Gateway). Tự động đọc header 68 file CSV, nhận diện kiểu dữ liệu bằng pandas, trích xuất cấu trúc ra file `schemas.json`.
-*   **Task 2**: Trích xuất dữ liệu mẫu từ `da-dev-questions.jsonl`. Bổ sung lời giải chuẩn xác (SQL query code) cho một số câu hỏi tiêu biểu để xây dựng thành một file VectorDB SQLite cục bộ. File này đóng vai trò kho tri thức dùng cho khối truy xuất RAG Samples.
 
 ### Giai đoạn 2: Xây dựng các Core Agents (Routing & Pruning)
-*   **Task 3**: Xây dựng Agent Tìm Bảng (Table Agent). Nhận câu hỏi, embed câu hỏi bằng thư viện nhẹ (sentence-transformers), so sánh với mô tả / schema của 68 file để trả về danh sách Top-1 đến Top-2 file CSV tương ứng nhất.
-*   **Task 4**: Xây dựng Agent Cắt Cột (Column Prune Agent). Kêu gọi LLM với yêu cầu: "Đây là câu hỏi, đây là toàn bộ cột CSV, hãy liệt kê đúng tên những cột cần giải quyết câu hỏi và bỏ qua phần còn lại".
-*   **Task 5**: Xây dựng khối Intent Agent định tuyến các luồng cho hệ thống.
+*   **Task 2**: Xây dựng Agent Tìm Bảng (Table Agent). Nhận câu hỏi, embed câu hỏi bằng thư viện nhẹ (sentence-transformers), so sánh với mô tả / schema của 68 file để trả về danh sách Top-1 đến Top-2 file CSV tương ứng nhất.
+*   **Task 3**: Xây dựng Agent Cắt Cột (Column Prune Agent). Kêu gọi LLM với yêu cầu: "Đây là câu hỏi, đây là toàn bộ cột CSV, hãy liệt kê đúng tên những cột cần giải quyết câu hỏi và bỏ qua phần còn lại".
+*   **Task 4**: Xây dựng khối Intent Agent định tuyến các luồng cho hệ thống.
 
 ### Giai đoạn 3: Tích hợp Pipeline sinh Sinh Code, Thực thi và Hoàn thiện
-*   **Task 6**: Thiết kế GenAI Prompt Pipeline tổng hợp toàn bộ các kết quả từ: Danh sách cột cần, SQL Mẫu tham khảo, Câu hỏi đầu vào.
-*   **Task 7**: Viết Sandboxed Executor: Tự động chạy SQL do LLM sinh ra để lọc kết quả vào một Dataframe tạm thời, xuất ra thông điệp hoặc đáp án chính xác. Trang bị thêm cơ chế tự đọc báo lỗi và fix code tự động (Self-Correction Logic).
-*   **Task 8**: Query Explanation Agent - Thiết lập module tuỳ chọn: giải thích cho người dùng là "Tại sao câu SQL lại có cấu trúc như vậy" dựa trên yêu cầu ban đầu.
+*   **Task 5**: Thiết kế GenAI Prompt Pipeline tổng hợp toàn bộ các kết quả từ: Danh sách cột cần, Câu hỏi đầu vào.
+*   **Task 6**: Viết Sandboxed Executor: Tự động chạy SQL do LLM sinh ra để lọc kết quả vào một Dataframe tạm thời, xuất ra thông điệp hoặc đáp án chính xác. Trang bị thêm cơ chế tự đọc báo lỗi và fix code tự động (Self-Correction Logic).
+*   **Task 7**: Query Explanation Agent - Thiết lập module tuỳ chọn: giải thích cho người dùng là "Tại sao câu SQL lại có cấu trúc như vậy" dựa trên yêu cầu ban đầu.
 
 ## 4. Đề xuất Tổ chức Cấu trúc Thư mục (Directory Structure)
 
@@ -78,9 +74,6 @@ data-agent-demo/
 │   │   ├── table_agent.py      
 │   │   ├── column_pruner.py    
 │   │   └── genai_gateway.py    
-│   ├── rag/                    
-│   │   ├── vector_db.py        # Khởi tạo Vector DB (Chroma/FAISS)
-│   │   └── ingest_samples.py   # Script nạp JSONL vào Vector DB
 │   ├── metadata/               
 │   │   ├── schema_builder.py   # Quét tự động 68 file CSV
 │   │   └── schema_registry.json# Metadata cache
