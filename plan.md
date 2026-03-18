@@ -95,3 +95,20 @@ data-agent-demo/
 1.  **Không gây xung đột (Zero Conflict)**: Hai hệ thống được cô lập hoàn toàn về mặt logic code, file thực thi và output. 
 2.  **Chia sẻ chung dữ liệu (Data Sharing)**: Thư mục `data/`, `.env` và `benchmark/` được đặt ở root, giúp cả 2 hệ thống đều tái sử dụng được mà không cần duplicate.
 3.  **So sánh dễ dàng (A/B Testing)**: Bạn có thể bật cùng lúc 2 terminal chạy lệnh `streamlit run` để so sánh trải nghiệm, độ trễ và độ chính xác sinh mã SQL giữa Agent System cũ và Uber Query GPT.
+
+## 5. Đánh giá Benchmark cho Hệ thống Mới
+
+Để đo lường hiệu năng của kiến trúc Query GPT so với hệ thống Baseline, thư mục `benchmark/` sẽ được tái sử dụng và tinh chỉnh lại.
+
+### Ý tưởng cốt lõi:
+- **Tập dữ liệu**: Vẫn sử dụng `data/InfiAgent/da-dev-questions.jsonl` làm tập test chung, và đối chiếu đáp án từ `da-dev-labels.jsonl`.
+- **Tách script chạy benchmark**: Script đánh giá hiện tại (`benchmark/run_eval.py`) đang import cứng code cũ (ví dụ `from agents.analyzer_agent import get_analyzer_agent`). Ta sẽ tách ra làm hai:
+  - `benchmark/run_eval_baseline.py` (Script cũ trỏ vào `baseline_system`)
+  - `benchmark/run_eval_query_gpt.py` (Script mới trỏ vào `query_gpt_system`)
+
+### Luồng Benchmark của Query GPT:
+1. Đọc câu hỏi và Metadata Schema tương ứng từ thư mục `query_gpt_system/metadata/`.
+2. Truyền câu hỏi qua `intent_agent.py` và `table_agent.py` để tìm file CSV phù hợp.
+3. Đưa qua `genai_gateway.py` để LLM sinh câu trả lời SQL với format chuẩn: `@answer_name[value]`.
+4. Extractor trong script benchmark sẽ regex lấy kết quả và so với đáp án ở `da-dev-labels.jsonl`.
+5. Xuất kết quả riêng biệt vào `benchmark/results_query_gpt.json` và `benchmark/summary_query_gpt.txt` để đối chiếu với `results.json` của hệ thống cũ.
