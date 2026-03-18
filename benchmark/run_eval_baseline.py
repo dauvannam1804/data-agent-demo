@@ -3,8 +3,10 @@ import os
 import re
 import sys
 
-# Thêm thư mục gốc vào sys.path để import các module
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Thêm thư mục gốc và baseline_system vào sys.path để import các module
+root_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(root_dir)
+sys.path.append(os.path.join(root_dir, 'baseline_system'))
 
 from utils.csv_helpers import get_csv_schema_string
 from agents.analyzer_agent import get_analyzer_agent

@@ -1,0 +1,4680 @@
+[
+    {
+        "table_name": "Current_Logan.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Current_Logan.csv",
+        "columns": [
+            "JAMES LOGAN",
+            "Unnamed: 1",
+            "Unnamed: 2",
+            "Unnamed: 3",
+            "Unnamed: 4",
+            "Unnamed: 5",
+            "Unnamed: 6",
+            "Unnamed: 7",
+            "Unnamed: 8"
+        ],
+        "dtypes": {
+            "JAMES LOGAN": "object",
+            "Unnamed: 1": "object",
+            "Unnamed: 2": "object",
+            "Unnamed: 3": "object",
+            "Unnamed: 4": "float64",
+            "Unnamed: 5": "float64",
+            "Unnamed: 6": "object",
+            "Unnamed: 7": "object",
+            "Unnamed: 8": "object"
+        },
+        "sample_data": [
+            {
+                "JAMES LOGAN": "Wins",
+                "Unnamed: 1": "Name",
+                "Unnamed: 2": "Code",
+                "Unnamed: 3": "School",
+                "Unnamed: 4": NaN,
+                "Unnamed: 5": NaN,
+                "Unnamed: 6": "STANDARD TEAM NAME",
+                "Unnamed: 7": "NUM ROUNDS",
+                "Unnamed: 8": "WEIGHTING"
+            },
+            {
+                "JAMES LOGAN": "5",
+                "Unnamed: 1": "Gatlin & Ramarao",
+                "Unnamed: 2": "Archbishop Mitty GR",
+                "Unnamed: 3": "Archbishop Mitty",
+                "Unnamed: 4": NaN,
+                "Unnamed: 5": NaN,
+                "Unnamed: 6": "Mitty GR",
+                "Unnamed: 7": "5",
+                "Unnamed: 8": "0.8"
+            },
+            {
+                "JAMES LOGAN": "5",
+                "Unnamed: 1": "Lahiri & Ponnuswamy",
+                "Unnamed: 2": "Archbishop Mitty LP",
+                "Unnamed: 3": "Archbishop Mitty",
+                "Unnamed: 4": NaN,
+                "Unnamed: 5": NaN,
+                "Unnamed: 6": "Mitty PL",
+                "Unnamed: 7": NaN,
+                "Unnamed: 8": NaN
+            }
+        ]
+    },
+    {
+        "table_name": "3901.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/3901.csv",
+        "columns": [
+            "TRUE_TIME",
+            "TIME",
+            "USFLUX",
+            "MEANGAM",
+            "MEANGBT",
+            "MEANGBZ",
+            "MEANGBH",
+            "MEANJZD",
+            "TOTUSJZ",
+            "MEANJZH",
+            "TOTUSJH",
+            "ABSNJZH",
+            "SAVNCPP",
+            "MEANPOT",
+            "TOTPOT",
+            "MEANSHR",
+            "SHRGT45",
+            "R_VALUE",
+            "AREA_ACR"
+        ],
+        "dtypes": {
+            "TRUE_TIME": "object",
+            "TIME": "float64",
+            "USFLUX": "float64",
+            "MEANGAM": "float64",
+            "MEANGBT": "float64",
+            "MEANGBZ": "float64",
+            "MEANGBH": "float64",
+            "MEANJZD": "float64",
+            "TOTUSJZ": "float64",
+            "MEANJZH": "float64",
+            "TOTUSJH": "float64",
+            "ABSNJZH": "float64",
+            "SAVNCPP": "float64",
+            "MEANPOT": "float64",
+            "TOTPOT": "float64",
+            "MEANSHR": "float64",
+            "SHRGT45": "float64",
+            "R_VALUE": "float64",
+            "AREA_ACR": "float64"
+        },
+        "sample_data": [
+            {
+                "TRUE_TIME": "2014.03.23_20:24:00_TAI",
+                "TIME": 11.6,
+                "USFLUX": 3.246502e+21,
+                "MEANGAM": 21.786,
+                "MEANGBT": 93.013,
+                "MEANGBZ": 92.809,
+                "MEANGBH": 31.21,
+                "MEANJZD": 0.08746085,
+                "TOTUSJZ": 3141588000000.0,
+                "MEANJZH": 0.00286312,
+                "TOTUSJH": 143.341,
+                "ABSNJZH": 14.092,
+                "SAVNCPP": 224887400000.0,
+                "MEANPOT": 1185.247,
+                "TOTPOT": 7.747525e+21,
+                "MEANSHR": 18.695,
+                "SHRGT45": 0.061,
+                "R_VALUE": 0.0,
+                "AREA_ACR": 69.26413
+            },
+            {
+                "TRUE_TIME": "2014.03.23_20:36:00_TAI",
+                "TIME": 11.8,
+                "USFLUX": 3.90834e+21,
+                "MEANGAM": 21.74,
+                "MEANGBT": 89.953,
+                "MEANGBZ": 89.779,
+                "MEANGBH": 31.535,
+                "MEANJZD": 0.15138598,
+                "TOTUSJZ": 3745627000000.0,
+                "MEANJZH": 0.00309745,
+                "TOTUSJH": 173.704,
+                "ABSNJZH": 18.216,
+                "SAVNCPP": 465108600000.0,
+                "MEANPOT": 1155.593,
+                "TOTPOT": 9.025444e+21,
+                "MEANSHR": 18.172,
+                "SHRGT45": 0.0,
+                "R_VALUE": 0.0,
+                "AREA_ACR": 83.896141
+            },
+            {
+                "TRUE_TIME": "2014.03.23_20:48:00_TAI",
+                "TIME": 12.0,
+                "USFLUX": 4.041844e+21,
+                "MEANGAM": 21.797,
+                "MEANGBT": 89.552,
+                "MEANGBZ": 89.566,
+                "MEANGBH": 30.425,
+                "MEANJZD": 0.139126,
+                "TOTUSJZ": 3790352000000.0,
+                "MEANJZH": 0.00293124,
+                "TOTUSJH": 174.009,
+                "ABSNJZH": 18.001,
+                "SAVNCPP": 446420300000.0,
+                "MEANPOT": 1132.3,
+                "TOTPOT": 9.235995e+21,
+                "MEANSHR": 18.322,
+                "SHRGT45": 0.016,
+                "R_VALUE": 0.0,
+                "AREA_ACR": 86.314224
+            }
+        ]
+    },
+    {
+        "table_name": "Credit.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Credit.csv",
+        "columns": [
+            "Unnamed: 0",
+            "Income",
+            "Limit",
+            "Rating",
+            "Cards",
+            "Age",
+            "Education",
+            "Gender",
+            "Student",
+            "Married",
+            "Ethnicity",
+            "Balance"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "Income": "float64",
+            "Limit": "int64",
+            "Rating": "int64",
+            "Cards": "int64",
+            "Age": "int64",
+            "Education": "int64",
+            "Gender": "object",
+            "Student": "object",
+            "Married": "object",
+            "Ethnicity": "object",
+            "Balance": "int64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 1,
+                "Income": 14.891,
+                "Limit": 3606,
+                "Rating": 283,
+                "Cards": 2,
+                "Age": 34,
+                "Education": 11,
+                "Gender": "Male",
+                "Student": "No",
+                "Married": "Yes",
+                "Ethnicity": "Caucasian",
+                "Balance": 333
+            },
+            {
+                "Unnamed: 0": 2,
+                "Income": 106.025,
+                "Limit": 6645,
+                "Rating": 483,
+                "Cards": 3,
+                "Age": 82,
+                "Education": 15,
+                "Gender": "Female",
+                "Student": "Yes",
+                "Married": "Yes",
+                "Ethnicity": "Asian",
+                "Balance": 903
+            },
+            {
+                "Unnamed: 0": 3,
+                "Income": 104.593,
+                "Limit": 7075,
+                "Rating": 514,
+                "Cards": 4,
+                "Age": 71,
+                "Education": 11,
+                "Gender": "Male",
+                "Student": "No",
+                "Married": "No",
+                "Ethnicity": "Asian",
+                "Balance": 580
+            }
+        ]
+    },
+    {
+        "table_name": "titanic.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/titanic.csv",
+        "columns": [
+            "PassengerId",
+            "Survived",
+            "Pclass",
+            "Name",
+            "Sex",
+            "Age",
+            "SibSp",
+            "Parch",
+            "Ticket",
+            "Fare",
+            "Cabin",
+            "Embarked"
+        ],
+        "dtypes": {
+            "PassengerId": "int64",
+            "Survived": "int64",
+            "Pclass": "int64",
+            "Name": "object",
+            "Sex": "object",
+            "Age": "int64",
+            "SibSp": "int64",
+            "Parch": "int64",
+            "Ticket": "object",
+            "Fare": "float64",
+            "Cabin": "object",
+            "Embarked": "object"
+        },
+        "sample_data": [
+            {
+                "PassengerId": 1,
+                "Survived": 0,
+                "Pclass": 3,
+                "Name": "Braund, Mr. Owen Harris",
+                "Sex": "male",
+                "Age": 22,
+                "SibSp": 1,
+                "Parch": 0,
+                "Ticket": "A/5 21171",
+                "Fare": 7.25,
+                "Cabin": NaN,
+                "Embarked": "S"
+            },
+            {
+                "PassengerId": 2,
+                "Survived": 1,
+                "Pclass": 1,
+                "Name": "Cumings, Mrs. John Bradley (Florence Briggs Thayer)",
+                "Sex": "female",
+                "Age": 38,
+                "SibSp": 1,
+                "Parch": 0,
+                "Ticket": "PC 17599",
+                "Fare": 71.2833,
+                "Cabin": "C85",
+                "Embarked": "C"
+            },
+            {
+                "PassengerId": 3,
+                "Survived": 1,
+                "Pclass": 3,
+                "Name": "Heikkinen, Miss. Laina",
+                "Sex": "female",
+                "Age": 26,
+                "SibSp": 0,
+                "Parch": 0,
+                "Ticket": "STON/O2. 3101282",
+                "Fare": 7.925,
+                "Cabin": NaN,
+                "Embarked": "S"
+            }
+        ]
+    },
+    {
+        "table_name": "ferret-Pitt-2-preinf-lib2-100_sitediffsel.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/ferret-Pitt-2-preinf-lib2-100_sitediffsel.csv",
+        "columns": [
+            "site",
+            "abs_diffsel",
+            "positive_diffsel",
+            "negative_diffsel",
+            "max_diffsel",
+            "min_diffsel"
+        ],
+        "dtypes": {
+            "site": "object",
+            "abs_diffsel": "float64",
+            "positive_diffsel": "float64",
+            "negative_diffsel": "float64",
+            "max_diffsel": "float64",
+            "min_diffsel": "float64"
+        },
+        "sample_data": [
+            {
+                "site": "(HA2)121",
+                "abs_diffsel": 9.026365225783264,
+                "positive_diffsel": 4.147102073893115,
+                "negative_diffsel": -4.879263151890148,
+                "max_diffsel": 1.5787387471316894,
+                "min_diffsel": -1.004167098795603
+            },
+            {
+                "site": "326",
+                "abs_diffsel": 9.002764774505879,
+                "positive_diffsel": 3.61560099488037,
+                "negative_diffsel": -5.387163779625509,
+                "max_diffsel": 0.7169223975734413,
+                "min_diffsel": -1.2184218611180495
+            },
+            {
+                "site": "280",
+                "abs_diffsel": 8.418637730396656,
+                "positive_diffsel": 5.146937744324779,
+                "negative_diffsel": -3.271699986071876,
+                "max_diffsel": 0.9710714351184296,
+                "min_diffsel": -1.0182673783732994
+            }
+        ]
+    },
+    {
+        "table_name": "titanic_test.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/titanic_test.csv",
+        "columns": [
+            "PassengerId",
+            "Pclass",
+            "Name",
+            "Sex",
+            "Age",
+            "SibSp",
+            "Parch",
+            "Ticket",
+            "Fare",
+            "Cabin",
+            "Embarked"
+        ],
+        "dtypes": {
+            "PassengerId": "int64",
+            "Pclass": "int64",
+            "Name": "object",
+            "Sex": "object",
+            "Age": "float64",
+            "SibSp": "int64",
+            "Parch": "int64",
+            "Ticket": "int64",
+            "Fare": "float64",
+            "Cabin": "float64",
+            "Embarked": "object"
+        },
+        "sample_data": [
+            {
+                "PassengerId": 892,
+                "Pclass": 3,
+                "Name": "Kelly, Mr. James",
+                "Sex": "male",
+                "Age": 34.5,
+                "SibSp": 0,
+                "Parch": 0,
+                "Ticket": 330911,
+                "Fare": 7.8292,
+                "Cabin": NaN,
+                "Embarked": "Q"
+            },
+            {
+                "PassengerId": 893,
+                "Pclass": 3,
+                "Name": "Wilkes, Mrs. James (Ellen Needs)",
+                "Sex": "female",
+                "Age": 47.0,
+                "SibSp": 1,
+                "Parch": 0,
+                "Ticket": 363272,
+                "Fare": 7.0,
+                "Cabin": NaN,
+                "Embarked": "S"
+            },
+            {
+                "PassengerId": 894,
+                "Pclass": 2,
+                "Name": "Myles, Mr. Thomas Francis",
+                "Sex": "male",
+                "Age": 62.0,
+                "SibSp": 0,
+                "Parch": 0,
+                "Ticket": 240276,
+                "Fare": 9.6875,
+                "Cabin": NaN,
+                "Embarked": "Q"
+            }
+        ]
+    },
+    {
+        "table_name": "random_stock_data.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/random_stock_data.csv",
+        "columns": [
+            "Time",
+            "Open",
+            "High",
+            "Low",
+            "Close",
+            "Volume"
+        ],
+        "dtypes": {
+            "Time": "object",
+            "Open": "float64",
+            "High": "float64",
+            "Low": "float64",
+            "Close": "float64",
+            "Volume": "int64"
+        },
+        "sample_data": [
+            {
+                "Time": "09:15:59",
+                "Open": 319.25,
+                "High": 319.4,
+                "Low": 316.05,
+                "Close": 317.7,
+                "Volume": 143354
+            },
+            {
+                "Time": "09:16:59",
+                "Open": 317.7,
+                "High": 318.2,
+                "Low": 317.7,
+                "Close": 318.0,
+                "Volume": 52695
+            },
+            {
+                "Time": "09:17:59",
+                "Open": 318.0,
+                "High": 318.85,
+                "Low": 318.0,
+                "Close": 318.55,
+                "Volume": 47179
+            }
+        ]
+    },
+    {
+        "table_name": "abalone.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/abalone.csv",
+        "columns": [
+            "Sex",
+            "Length",
+            "Diameter",
+            "Height",
+            "Whole weight",
+            "Shucked weight",
+            "Viscera weight",
+            "Shell weight",
+            "Rings"
+        ],
+        "dtypes": {
+            "Sex": "object",
+            "Length": "float64",
+            "Diameter": "float64",
+            "Height": "float64",
+            "Whole weight": "float64",
+            "Shucked weight": "float64",
+            "Viscera weight": "float64",
+            "Shell weight": "float64",
+            "Rings": "int64"
+        },
+        "sample_data": [
+            {
+                "Sex": "M",
+                "Length": 0.455,
+                "Diameter": 0.365,
+                "Height": 0.095,
+                "Whole weight": 0.514,
+                "Shucked weight": 0.2245,
+                "Viscera weight": 0.101,
+                "Shell weight": 0.15,
+                "Rings": 15
+            },
+            {
+                "Sex": "M",
+                "Length": 0.35,
+                "Diameter": 0.265,
+                "Height": 0.09,
+                "Whole weight": 0.2255,
+                "Shucked weight": 0.0995,
+                "Viscera weight": 0.0485,
+                "Shell weight": 0.07,
+                "Rings": 7
+            },
+            {
+                "Sex": "F",
+                "Length": 0.53,
+                "Diameter": 0.42,
+                "Height": 0.135,
+                "Whole weight": 0.677,
+                "Shucked weight": 0.2565,
+                "Viscera weight": 0.1415,
+                "Shell weight": 0.21,
+                "Rings": 9
+            }
+        ]
+    },
+    {
+        "table_name": "insurance.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/insurance.csv",
+        "columns": [
+            "age",
+            "sex",
+            "bmi",
+            "children",
+            "smoker",
+            "region",
+            "charges"
+        ],
+        "dtypes": {
+            "age": "int64",
+            "sex": "object",
+            "bmi": "float64",
+            "children": "int64",
+            "smoker": "object",
+            "region": "object",
+            "charges": "float64"
+        },
+        "sample_data": [
+            {
+                "age": 19,
+                "sex": "female",
+                "bmi": 27.9,
+                "children": 0,
+                "smoker": "yes",
+                "region": "southwest",
+                "charges": 16884.924
+            },
+            {
+                "age": 18,
+                "sex": "male",
+                "bmi": 33.77,
+                "children": 1,
+                "smoker": "no",
+                "region": "southeast",
+                "charges": 1725.5523
+            },
+            {
+                "age": 28,
+                "sex": "male",
+                "bmi": 33.0,
+                "children": 3,
+                "smoker": "no",
+                "region": "southeast",
+                "charges": 4449.462
+            }
+        ]
+    },
+    {
+        "table_name": "bike_rental_hour.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/bike_rental_hour.csv",
+        "columns": [
+            "instant",
+            "dteday",
+            "season",
+            "yr",
+            "mnth",
+            "hr",
+            "holiday",
+            "weekday",
+            "workingday",
+            "weathersit",
+            "temp",
+            "atemp",
+            "hum",
+            "windspeed",
+            "casual",
+            "registered",
+            "cnt"
+        ],
+        "dtypes": {
+            "instant": "int64",
+            "dteday": "object",
+            "season": "int64",
+            "yr": "int64",
+            "mnth": "int64",
+            "hr": "int64",
+            "holiday": "int64",
+            "weekday": "int64",
+            "workingday": "int64",
+            "weathersit": "int64",
+            "temp": "float64",
+            "atemp": "float64",
+            "hum": "float64",
+            "windspeed": "int64",
+            "casual": "int64",
+            "registered": "int64",
+            "cnt": "int64"
+        },
+        "sample_data": [
+            {
+                "instant": 1,
+                "dteday": "2011-01-01",
+                "season": 1,
+                "yr": 0,
+                "mnth": 1,
+                "hr": 0,
+                "holiday": 0,
+                "weekday": 6,
+                "workingday": 0,
+                "weathersit": 1,
+                "temp": 0.24,
+                "atemp": 0.2879,
+                "hum": 0.81,
+                "windspeed": 0,
+                "casual": 3,
+                "registered": 13,
+                "cnt": 16
+            },
+            {
+                "instant": 2,
+                "dteday": "2011-01-01",
+                "season": 1,
+                "yr": 0,
+                "mnth": 1,
+                "hr": 1,
+                "holiday": 0,
+                "weekday": 6,
+                "workingday": 0,
+                "weathersit": 1,
+                "temp": 0.22,
+                "atemp": 0.2727,
+                "hum": 0.8,
+                "windspeed": 0,
+                "casual": 8,
+                "registered": 32,
+                "cnt": 40
+            },
+            {
+                "instant": 3,
+                "dteday": "2011-01-01",
+                "season": 1,
+                "yr": 0,
+                "mnth": 1,
+                "hr": 2,
+                "holiday": 0,
+                "weekday": 6,
+                "workingday": 0,
+                "weathersit": 1,
+                "temp": 0.22,
+                "atemp": 0.2727,
+                "hum": 0.8,
+                "windspeed": 0,
+                "casual": 5,
+                "registered": 27,
+                "cnt": 32
+            }
+        ]
+    },
+    {
+        "table_name": "traj-Osak.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/traj-Osak.csv",
+        "columns": [
+            "userID",
+            "trajID",
+            "poiID",
+            "startTime",
+            "endTime",
+            "#photo",
+            "trajLen",
+            "poiDuration"
+        ],
+        "dtypes": {
+            "userID": "object",
+            "trajID": "int64",
+            "poiID": "int64",
+            "startTime": "int64",
+            "endTime": "int64",
+            "#photo": "int64",
+            "trajLen": "int64",
+            "poiDuration": "int64"
+        },
+        "sample_data": [
+            {
+                "userID": "10297518@N00",
+                "trajID": 1,
+                "poiID": 20,
+                "startTime": 1277719324,
+                "endTime": 1277720832,
+                "#photo": 6,
+                "trajLen": 1,
+                "poiDuration": 1508
+            },
+            {
+                "userID": "10307040@N08",
+                "trajID": 2,
+                "poiID": 6,
+                "startTime": 1382608644,
+                "endTime": 1382608644,
+                "#photo": 1,
+                "trajLen": 4,
+                "poiDuration": 0
+            },
+            {
+                "userID": "10307040@N08",
+                "trajID": 2,
+                "poiID": 8,
+                "startTime": 1382607812,
+                "endTime": 1382607812,
+                "#photo": 1,
+                "trajLen": 4,
+                "poiDuration": 0
+            }
+        ]
+    },
+    {
+        "table_name": "Gillam_fin.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Gillam_fin.csv",
+        "columns": [
+            "Unnamed: 0",
+            "id",
+            "transcript_id",
+            "gloss",
+            "part_of_speech",
+            "Impaired",
+            "Age",
+            "Gender"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "id": "int64",
+            "transcript_id": "int64",
+            "gloss": "object",
+            "part_of_speech": "object",
+            "Impaired": "int64",
+            "Age": "int64",
+            "Gender": "int64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 0,
+                "id": 3772732,
+                "transcript_id": 9573,
+                "gloss": "and she asked um where do you wanna go",
+                "part_of_speech": "coord pro0sub v adv0int mod pro0per v v",
+                "Impaired": 1,
+                "Age": 10,
+                "Gender": 0
+            },
+            {
+                "Unnamed: 0": 1,
+                "id": 3772777,
+                "transcript_id": 9573,
+                "gloss": "and the kids I guess answered Mcdonalds",
+                "part_of_speech": "coord det0art n v n0prop",
+                "Impaired": 1,
+                "Age": 10,
+                "Gender": 0
+            },
+            {
+                "Unnamed: 0": 2,
+                "id": 3772812,
+                "transcript_id": 9573,
+                "gloss": "and so they went to Mcdonalds",
+                "part_of_speech": "coord co pro0sub v prep n0prop",
+                "Impaired": 1,
+                "Age": 10,
+                "Gender": 0
+            }
+        ]
+    },
+    {
+        "table_name": "titanic_train.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/titanic_train.csv",
+        "columns": [
+            "PassengerId",
+            "Survived",
+            "Pclass",
+            "Name",
+            "Sex",
+            "Age",
+            "SibSp",
+            "Parch",
+            "Ticket",
+            "Fare",
+            "Cabin",
+            "Embarked"
+        ],
+        "dtypes": {
+            "PassengerId": "int64",
+            "Survived": "int64",
+            "Pclass": "int64",
+            "Name": "object",
+            "Sex": "object",
+            "Age": "int64",
+            "SibSp": "int64",
+            "Parch": "int64",
+            "Ticket": "object",
+            "Fare": "float64",
+            "Cabin": "object",
+            "Embarked": "object"
+        },
+        "sample_data": [
+            {
+                "PassengerId": 1,
+                "Survived": 0,
+                "Pclass": 3,
+                "Name": "Braund, Mr. Owen Harris",
+                "Sex": "male",
+                "Age": 22,
+                "SibSp": 1,
+                "Parch": 0,
+                "Ticket": "A/5 21171",
+                "Fare": 7.25,
+                "Cabin": NaN,
+                "Embarked": "S"
+            },
+            {
+                "PassengerId": 2,
+                "Survived": 1,
+                "Pclass": 1,
+                "Name": "Cumings, Mrs. John Bradley (Florence Briggs Thayer)",
+                "Sex": "female",
+                "Age": 38,
+                "SibSp": 1,
+                "Parch": 0,
+                "Ticket": "PC 17599",
+                "Fare": 71.2833,
+                "Cabin": "C85",
+                "Embarked": "C"
+            },
+            {
+                "PassengerId": 3,
+                "Survived": 1,
+                "Pclass": 3,
+                "Name": "Heikkinen, Miss. Laina",
+                "Sex": "female",
+                "Age": 26,
+                "SibSp": 0,
+                "Parch": 0,
+                "Ticket": "STON/O2. 3101282",
+                "Fare": 7.925,
+                "Cabin": NaN,
+                "Embarked": "S"
+            }
+        ]
+    },
+    {
+        "table_name": "election2016.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/election2016.csv",
+        "columns": [
+            "votes_dem",
+            "votes_gop",
+            "total_votes",
+            "per_dem",
+            "per_gop",
+            "diff",
+            "per_point_diff",
+            "state_abbr",
+            "county_name",
+            "combined_fips"
+        ],
+        "dtypes": {
+            "votes_dem": "float64",
+            "votes_gop": "float64",
+            "total_votes": "float64",
+            "per_dem": "float64",
+            "per_gop": "float64",
+            "diff": "object",
+            "per_point_diff": "object",
+            "state_abbr": "object",
+            "county_name": "object",
+            "combined_fips": "int64"
+        },
+        "sample_data": [
+            {
+                "votes_dem": 93003.0,
+                "votes_gop": 130413.0,
+                "total_votes": 246588.0,
+                "per_dem": 0.37715947248,
+                "per_gop": 0.528870018006,
+                "diff": "37,410",
+                "per_point_diff": "15.17%",
+                "state_abbr": "AK",
+                "county_name": "Alaska",
+                "combined_fips": 2013
+            },
+            {
+                "votes_dem": 93003.0,
+                "votes_gop": 130413.0,
+                "total_votes": 246588.0,
+                "per_dem": 0.37715947248,
+                "per_gop": 0.528870018006,
+                "diff": "37,410",
+                "per_point_diff": "15.17%",
+                "state_abbr": "AK",
+                "county_name": "Alaska",
+                "combined_fips": 2016
+            },
+            {
+                "votes_dem": 93003.0,
+                "votes_gop": 130413.0,
+                "total_votes": 246588.0,
+                "per_dem": 0.37715947248,
+                "per_gop": 0.528870018006,
+                "diff": "37,410",
+                "per_point_diff": "15.17%",
+                "state_abbr": "AK",
+                "county_name": "Alaska",
+                "combined_fips": 2020
+            }
+        ]
+    },
+    {
+        "table_name": "cost_data_with_errors.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/cost_data_with_errors.csv",
+        "columns": [
+            "Unnamed: 0",
+            "name",
+            "dates_active",
+            "max_storm_cat",
+            "max_sust_wind",
+            "min_p",
+            "areas_affected",
+            "damage_USD",
+            "deaths",
+            "year",
+            "damage_imputed"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "name": "object",
+            "dates_active": "object",
+            "max_storm_cat": "int64",
+            "max_sust_wind": "float64",
+            "min_p": "float64",
+            "areas_affected": "object",
+            "damage_USD": "float64",
+            "deaths": "float64",
+            "year": "int64",
+            "damage_imputed": "int64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 0,
+                "name": "ARLENE",
+                "dates_active": "April 19 – 21",
+                "max_storm_cat": 1,
+                "max_sust_wind": 43.4488,
+                "min_p": 990.0,
+                "areas_affected": NaN,
+                "damage_USD": 0.0,
+                "deaths": 0.0,
+                "year": 2017,
+                "damage_imputed": 0
+            },
+            {
+                "Unnamed: 0": 1,
+                "name": "BRET",
+                "dates_active": "June 19 – 20",
+                "max_storm_cat": 1,
+                "max_sust_wind": 43.4488,
+                "min_p": 1007.0,
+                "areas_affected": "Guyana, Venezuela, Trinidad and Tobago, Windward Islands",
+                "damage_USD": 3000000.0,
+                "deaths": 2.0,
+                "year": 2017,
+                "damage_imputed": 0
+            },
+            {
+                "Unnamed: 0": 2,
+                "name": "CINDY",
+                "dates_active": "June 20 – 23",
+                "max_storm_cat": 1,
+                "max_sust_wind": 52.13856,
+                "min_p": 991.0,
+                "areas_affected": "Honduras, Belize, Cayman Islands, Yucatán Peninsula, Cuba, Southern United States, Eastern United States",
+                "damage_USD": 25000000.0,
+                "deaths": 2.0,
+                "year": 2017,
+                "damage_imputed": 0
+            }
+        ]
+    },
+    {
+        "table_name": "2015.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/2015.csv",
+        "columns": [
+            "Country",
+            "Region",
+            "Happiness Rank",
+            "Happiness Score",
+            "Standard Error",
+            "Economy (GDP per Capita)",
+            "Family",
+            "Health (Life Expectancy)",
+            "Freedom",
+            "Trust (Government Corruption)",
+            "Generosity",
+            "Dystopia Residual"
+        ],
+        "dtypes": {
+            "Country": "object",
+            "Region": "object",
+            "Happiness Rank": "int64",
+            "Happiness Score": "float64",
+            "Standard Error": "float64",
+            "Economy (GDP per Capita)": "float64",
+            "Family": "float64",
+            "Health (Life Expectancy)": "float64",
+            "Freedom": "float64",
+            "Trust (Government Corruption)": "float64",
+            "Generosity": "float64",
+            "Dystopia Residual": "float64"
+        },
+        "sample_data": [
+            {
+                "Country": "Switzerland",
+                "Region": "Western Europe",
+                "Happiness Rank": 1,
+                "Happiness Score": 7.587,
+                "Standard Error": 0.03411,
+                "Economy (GDP per Capita)": 1.39651,
+                "Family": 1.34951,
+                "Health (Life Expectancy)": 0.94143,
+                "Freedom": 0.66557,
+                "Trust (Government Corruption)": 0.41978,
+                "Generosity": 0.29678,
+                "Dystopia Residual": 2.51738
+            },
+            {
+                "Country": "Iceland",
+                "Region": "Western Europe",
+                "Happiness Rank": 2,
+                "Happiness Score": 7.561,
+                "Standard Error": 0.04884,
+                "Economy (GDP per Capita)": 1.30232,
+                "Family": 1.40223,
+                "Health (Life Expectancy)": 0.94784,
+                "Freedom": 0.62877,
+                "Trust (Government Corruption)": 0.14145,
+                "Generosity": 0.4363,
+                "Dystopia Residual": 2.70201
+            },
+            {
+                "Country": "Denmark",
+                "Region": "Western Europe",
+                "Happiness Rank": 3,
+                "Happiness Score": 7.527,
+                "Standard Error": 0.03328,
+                "Economy (GDP per Capita)": 1.32548,
+                "Family": 1.36058,
+                "Health (Life Expectancy)": 0.87464,
+                "Freedom": 0.64938,
+                "Trust (Government Corruption)": 0.48357,
+                "Generosity": 0.34139,
+                "Dystopia Residual": 2.49204
+            }
+        ]
+    },
+    {
+        "table_name": "city_departments_in_current_budget.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/city_departments_in_current_budget.csv",
+        "columns": [
+            "Department Name",
+            "coa_dept_id",
+            "github-dept-code",
+            "dept_group",
+            "budget_year_start",
+            "budget_year_end"
+        ],
+        "dtypes": {
+            "Department Name": "object",
+            "coa_dept_id": "int64",
+            "github-dept-code": "object",
+            "dept_group": "object",
+            "budget_year_start": "object",
+            "budget_year_end": "object"
+        },
+        "sample_data": [
+            {
+                "Department Name": "Animal Services",
+                "coa_dept_id": 92,
+                "github-dept-code": "ANM",
+                "dept_group": "Community Services",
+                "budget_year_start": "10/1/2016",
+                "budget_year_end": "9/30/2017"
+            },
+            {
+                "Department Name": "Austin Code",
+                "coa_dept_id": 16,
+                "github-dept-code": "COD",
+                "dept_group": "Community Services",
+                "budget_year_start": "10/1/2016",
+                "budget_year_end": "9/30/2017"
+            },
+            {
+                "Department Name": "Austin Convention Center",
+                "coa_dept_id": 88,
+                "github-dept-code": "CON",
+                "dept_group": "Utility and Other Enterprises",
+                "budget_year_start": "10/1/2016",
+                "budget_year_end": "9/30/2017"
+            }
+        ]
+    },
+    {
+        "table_name": "my_test_01.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/my_test_01.csv",
+        "columns": [
+            "MedInc",
+            "HouseAge",
+            "AveRooms",
+            "AveBedrms",
+            "Population",
+            "AveOccup",
+            "Latitude",
+            "Longitude",
+            "MedianHouseValue"
+        ],
+        "dtypes": {
+            "MedInc": "float64",
+            "HouseAge": "float64",
+            "AveRooms": "float64",
+            "AveBedrms": "float64",
+            "Population": "float64",
+            "AveOccup": "float64",
+            "Latitude": "float64",
+            "Longitude": "float64",
+            "MedianHouseValue": "float64"
+        },
+        "sample_data": [
+            {
+                "MedInc": 0.9298,
+                "HouseAge": 36.0,
+                "AveRooms": 3.67616191904048,
+                "AveBedrms": 1.1004497751124438,
+                "Population": 2664.0,
+                "AveOccup": 3.9940029985007497,
+                "Latitude": 33.93,
+                "Longitude": -118.25,
+                "MedianHouseValue": 1.0
+            },
+            {
+                "MedInc": 2.7006,
+                "HouseAge": 17.0,
+                "AveRooms": 4.499388004895961,
+                "AveBedrms": 1.039779681762546,
+                "Population": 3331.0,
+                "AveOccup": 2.038555691554468,
+                "Latitude": 32.79,
+                "Longitude": -117.03,
+                "MedianHouseValue": 1.663
+            },
+            {
+                "MedInc": 5.0286,
+                "HouseAge": 30.0,
+                "AveRooms": 6.184375,
+                "AveBedrms": 1.06875,
+                "Population": 999.0,
+                "AveOccup": 3.121875,
+                "Latitude": 34.89,
+                "Longitude": -120.43,
+                "MedianHouseValue": 1.58
+            }
+        ]
+    },
+    {
+        "table_name": "train_new_ocr_29.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/train_new_ocr_29.csv",
+        "columns": [
+            "Unnamed: 0",
+            "answers",
+            "flickr_300k_url",
+            "flickr_original_url",
+            "image_classes",
+            "image_height",
+            "image_id",
+            "image_width",
+            "ocr_info",
+            "ocr_tokens",
+            "question",
+            "question_id",
+            "question_tokens",
+            "set_name"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "answers": "object",
+            "flickr_300k_url": "object",
+            "flickr_original_url": "object",
+            "image_classes": "object",
+            "image_height": "int64",
+            "image_id": "object",
+            "image_width": "int64",
+            "ocr_info": "object",
+            "ocr_tokens": "object",
+            "question": "object",
+            "question_id": "int64",
+            "question_tokens": "object",
+            "set_name": "object"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 25087,
+                "answers": "['london victoria', 'london victoria station', 'london victoria station', 'london victoria station', 'london victoria station', 'london victoria station', 'london victoria', 'london victoria station', 'london victoria', 'london victoria']",
+                "flickr_300k_url": "https://c3.staticflickr.com/3/2717/4337427450_a7d9d01c8d_z.jpg?zz=1",
+                "flickr_original_url": "https://farm7.staticflickr.com/2717/4337427450_1db0ea398d_o.jpg",
+                "image_classes": "['Bus', 'Person', 'Land vehicle', 'Vehicle', 'Building', 'Car', 'Taxi']",
+                "image_height": 680,
+                "image_id": "260a736bb7a776a6",
+                "image_width": 1024,
+                "ocr_info": "[{'word': 'London', 'bounding_box': {'top_left_x': 0.4875, 'top_left_y': 0.4447058823529412, 'width': 0.046875, 'height': 0.01647058823529412, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'Victoria', 'bounding_box': {'top_left_x': 0.54375, 'top_left_y': 0.44, 'width': 0.0453125, 'height': 0.018823529411764704, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'Station', 'bounding_box': {'top_left_x': 0.596875, 'top_left_y': 0.4376470588235294, 'width': 0.0421875, 'height': 0.018823529411764704, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'ARARD', 'bounding_box': {'top_left_x': 0.759375, 'top_left_y': 0.5388235294117647, 'width': 0.121875, 'height': 0.03529411764705882, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'HE', 'bounding_box': {'top_left_x': 0.6703125, 'top_left_y': 0.5552941176470588, 'width': 0.04375, 'height': 0.018823529411764704, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': '20NE', 'bounding_box': {'top_left_x': 0.471875, 'top_left_y': 0.6705882352941176, 'width': 0.021875, 'height': 0.009411764705882352, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': '(c)', 'bounding_box': {'top_left_x': 0.7296875, 'top_left_y': 0.9411764705882353, 'width': 0.0203125, 'height': 0.021176470588235293, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'reedamalik.com', 'bounding_box': {'top_left_x': 0.7609375, 'top_left_y': 0.9388235294117647, 'width': 0.15625, 'height': 0.021176470588235293, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': '2010', 'bounding_box': {'top_left_x': 0.928125, 'top_left_y': 0.9411764705882353, 'width': 0.046875, 'height': 0.018823529411764704, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}]",
+                "ocr_tokens": "['London', 'Victoria', 'Station', 'ARARD', 'HE', '20NE', '(c)', 'reedamalik.com', '2010']",
+                "question": "what is the name of the station?",
+                "question_id": 25087,
+                "question_tokens": "['what', 'is', 'the', 'name', 'of', 'the', 'station']",
+                "set_name": "train"
+            },
+            {
+                "Unnamed: 0": 25088,
+                "answers": "['yes', 'no', 'yes', 'yes', 'yes', 'yes', 'answering does not require reading text in the image', 'yes', 'yes', 'unanswerable']",
+                "flickr_300k_url": "https://c3.staticflickr.com/6/5490/12237101336_186bde35e6_z.jpg",
+                "flickr_original_url": "https://c1.staticflickr.com/6/5490/12237101336_f052930862_o.jpg",
+                "image_classes": "['Vehicle registration plate', 'Land vehicle', 'Vehicle', 'Van', 'Car', 'Taxi']",
+                "image_height": 768,
+                "image_id": "2649511b64ff5498",
+                "image_width": 1024,
+                "ocr_info": "[{'word': 'РONER', 'bounding_box': {'top_left_x': 0.009375, 'top_left_y': 0.0125, 'width': 0.0328125, 'height': 0.0125, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'GEGENSTANDPUNKT', 'bounding_box': {'top_left_x': 0.75, 'top_left_y': 0.15416666666666667, 'width': 0.115625, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'A', 'bounding_box': {'top_left_x': 0.725, 'top_left_y': 0.16666666666666666, 'width': 0.015625, 'height': 0.025, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'Warum', 'bounding_box': {'top_left_x': 0.80625, 'top_left_y': 0.19166666666666668, 'width': 0.0296875, 'height': 0.010416666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'steigen.', 'bounding_box': {'top_left_x': 0.840625, 'top_left_y': 0.1875, 'width': 0.0328125, 'height': 0.0125, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'de', 'bounding_box': {'top_left_x': 0.7984375, 'top_left_y': 0.21041666666666667, 'width': 0.01875, 'height': 0.008333333333333333, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'Mieten', 'bounding_box': {'top_left_x': 0.8203125, 'top_left_y': 0.20208333333333334, 'width': 0.03125, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'und', 'bounding_box': {'top_left_x': 0.8546875, 'top_left_y': 0.2, 'width': 0.015625, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'de', 'bounding_box': {'top_left_x': 0.8015625, 'top_left_y': 0.22083333333333333, 'width': 0.0171875, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'wohnungsnot', 'bounding_box': {'top_left_x': 0.821875, 'top_left_y': 0.21666666666666667, 'width': 0.0609375, 'height': 0.016666666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'онR', 'bounding_box': {'top_left_x': 0.709375, 'top_left_y': 0.21875, 'width': 0.0296875, 'height': 0.01875, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'Die', 'bounding_box': {'top_left_x': 0.759375, 'top_left_y': 0.225, 'width': 0.0265625, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'kapitalistische', 'bounding_box': {'top_left_x': 0.7515625, 'top_left_y': 0.2520833333333333, 'width': 0.1375, 'height': 0.027083333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'ED', 'bounding_box': {'top_left_x': 0.128125, 'top_left_y': 0.2791666666666667, 'width': 0.0390625, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': '2004', 'bounding_box': {'top_left_x': 0.1703125, 'top_left_y': 0.28125, 'width': 0.021875, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'B', 'bounding_box': {'top_left_x': 0.55, 'top_left_y': 0.2875, 'width': 0.0078125, 'height': 0.016666666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': '88', 'bounding_box': {'top_left_x': 0.5625, 'top_left_y': 0.2875, 'width': 0.0140625, 'height': 0.01875, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': '054', 'bounding_box': {'top_left_x': 0.5796875, 'top_left_y': 0.28958333333333336, 'width': 0.0171875, 'height': 0.01875, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'Wohnungs', 'bounding_box': {'top_left_x': 0.765625, 'top_left_y': 0.2916666666666667, 'width': 0.0890625, 'height': 0.027083333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'frage', 'bounding_box': {'top_left_x': 0.7640625, 'top_left_y': 0.3229166666666667, 'width': 0.046875, 'height': 0.016666666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'TO', 'bounding_box': {'top_left_x': 0.7078125, 'top_left_y': 0.28958333333333336, 'width': 0.0140625, 'height': 0.010416666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'K', 'bounding_box': {'top_left_x': 0.728125, 'top_left_y': 0.2875, 'width': 0.0046875, 'height': 0.016666666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'GIRL:', 'bounding_box': {'top_left_x': 0.7078125, 'top_left_y': 0.3229166666666667, 'width': 0.028125, 'height': 0.010416666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'Densa', 'bounding_box': {'top_left_x': 0.8515625, 'top_left_y': 0.32708333333333334, 'width': 0.0328125, 'height': 0.008333333333333333, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': '02', 'bounding_box': {'top_left_x': 0.8546875, 'top_left_y': 0.3375, 'width': 0.015625, 'height': 0.008333333333333333, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': '01', 'bounding_box': {'top_left_x': 0.875, 'top_left_y': 0.3333333333333333, 'width': 0.0125, 'height': 0.010416666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': '30', 'bounding_box': {'top_left_x': 0.8546875, 'top_left_y': 0.35, 'width': 0.0171875, 'height': 0.010416666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'Mehrino', 'bounding_box': {'top_left_x': 0.8484375, 'top_left_y': 0.3645833333333333, 'width': 0.0453125, 'height': 0.008333333333333333, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'STEPHEN', 'bounding_box': {'top_left_x': 0.7015625, 'top_left_y': 0.35208333333333336, 'width': 0.0296875, 'height': 0.016666666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'ULLY', 'bounding_box': {'top_left_x': 0.703125, 'top_left_y': 0.3875, 'width': 0.0203125, 'height': 0.016666666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'W', 'bounding_box': {'top_left_x': 0.7265625, 'top_left_y': 0.3875, 'width': 0.00625, 'height': 0.016666666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'BLITZK', 'bounding_box': {'top_left_x': 0.7046875, 'top_left_y': 0.42291666666666666, 'width': 0.0421875, 'height': 0.01875, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'SICYCLE', 'bounding_box': {'top_left_x': 0.84375, 'top_left_y': 0.43125, 'width': 0.040625, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'CLU', 'bounding_box': {'top_left_x': 0.8921875, 'top_left_y': 0.43333333333333335, 'width': 0.0109375, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'AQIFE', 'bounding_box': {'top_left_x': 0.7015625, 'top_left_y': 0.45625, 'width': 0.0265625, 'height': 0.016666666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'ODONOVAM', 'bounding_box': {'top_left_x': 0.7328125, 'top_left_y': 0.45625, 'width': 0.05625, 'height': 0.016666666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'uosSE', 'bounding_box': {'top_left_x': 0.8109375, 'top_left_y': 0.4625, 'width': 0.0671875, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'IZA', 'bounding_box': {'top_left_x': 0.703125, 'top_left_y': 0.49375, 'width': 0.0296875, 'height': 0.010416666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'LACH', 'bounding_box': {'top_left_x': 0.7390625, 'top_left_y': 0.49583333333333335, 'width': 0.0484375, 'height': 0.010416666666666666, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'NINA', 'bounding_box': {'top_left_x': 0.8125, 'top_left_y': 0.5, 'width': 0.0296875, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'PERSSON', 'bounding_box': {'top_left_x': 0.846875, 'top_left_y': 0.5020833333333333, 'width': 0.0546875, 'height': 0.014583333333333334, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}]",
+                "ocr_tokens": "['РONER', 'GEGENSTANDPUNKT', 'A', 'Warum', 'steigen.', 'de', 'Mieten', 'und', 'de', 'wohnungsnot', 'онR', 'Die', 'kapitalistische', 'ED', '2004', 'B', '88', '054', 'Wohnungs', 'frage', 'TO', 'K', 'GIRL:', 'Densa', '02', '01', '30', 'Mehrino', 'STEPHEN', 'ULLY', 'W', 'BLITZK', 'SICYCLE', 'CLU', 'AQIFE', 'ODONOVAM', 'uosSE', 'IZA', 'LACH', 'NINA', 'PERSSON']",
+                "question": "is die a belgium word?",
+                "question_id": 25088,
+                "question_tokens": "['is', 'die', 'a', 'belgium', 'word']",
+                "set_name": "train"
+            },
+            {
+                "Unnamed: 0": 25089,
+                "answers": "['moritz', 'moritz', 'moritz', 'moritz', 'moritz', 'moritz', 'mortiz', 'moritz', 'moritz', 'moritz']",
+                "flickr_300k_url": "https://c7.staticflickr.com/8/7062/6836216262_8f5b376cdc_z.jpg",
+                "flickr_original_url": "https://farm8.staticflickr.com/7062/6836216262_6b537f18d2_o.jpg",
+                "image_classes": "['Land vehicle', 'Vehicle', 'Car', 'Taxi']",
+                "image_height": 681,
+                "image_id": "265592d623531617",
+                "image_width": 1024,
+                "ocr_info": "[{'word': 'MOR!', 'bounding_box': {'top_left_x': 0.0734375, 'top_left_y': 0.2511737089201878, 'width': 0.0390625, 'height': 0.01643192488262911, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'UL', 'bounding_box': {'top_left_x': 0.515625, 'top_left_y': 0.3779342723004695, 'width': 0.0375, 'height': 0.014084507042253521, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'A-185a', 'bounding_box': {'top_left_x': 0.51875, 'top_left_y': 0.39906103286384975, 'width': 0.0375, 'height': 0.007042253521126761, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'MORITZ', 'bounding_box': {'top_left_x': 0.4671875, 'top_left_y': 0.6314553990610329, 'width': 0.1875, 'height': 0.06338028169014084, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}, {'word': 'BARCELOA-1856', 'bounding_box': {'top_left_x': 0.5125, 'top_left_y': 0.6784037558685446, 'width': 0.15, 'height': 0.02112676056338028, 'rotation': 0, 'yaw': 0, 'roll': 0, 'pitch': 0}}]",
+                "ocr_tokens": "['MOR!', 'UL', 'A-185a', 'MORITZ', 'BARCELOA-1856']",
+                "question": "what company is on the hood of the car?",
+                "question_id": 25089,
+                "question_tokens": "['what', 'company', 'is', 'on', 'the', 'hood', 'of', 'the', 'car']",
+                "set_name": "train"
+            }
+        ]
+    },
+    {
+        "table_name": "estimated_numbers.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/estimated_numbers.csv",
+        "columns": [
+            "Country",
+            "Year",
+            "No. of cases",
+            "No. of deaths",
+            "No. of cases_median",
+            "No. of cases_min",
+            "No. of cases_max",
+            "No. of deaths_median",
+            "No. of deaths_min",
+            "No. of deaths_max",
+            "WHO Region"
+        ],
+        "dtypes": {
+            "Country": "object",
+            "Year": "int64",
+            "No. of cases": "object",
+            "No. of deaths": "object",
+            "No. of cases_median": "int64",
+            "No. of cases_min": "float64",
+            "No. of cases_max": "float64",
+            "No. of deaths_median": "int64",
+            "No. of deaths_min": "float64",
+            "No. of deaths_max": "float64",
+            "WHO Region": "object"
+        },
+        "sample_data": [
+            {
+                "Country": "Afghanistan",
+                "Year": 2017,
+                "No. of cases": "630308[495000-801000]",
+                "No. of deaths": "298[110-510]",
+                "No. of cases_median": 630308,
+                "No. of cases_min": 495000.0,
+                "No. of cases_max": 801000.0,
+                "No. of deaths_median": 298,
+                "No. of deaths_min": 110.0,
+                "No. of deaths_max": 510.0,
+                "WHO Region": "Eastern Mediterranean"
+            },
+            {
+                "Country": "Algeria",
+                "Year": 2017,
+                "No. of cases": "0",
+                "No. of deaths": "0",
+                "No. of cases_median": 0,
+                "No. of cases_min": NaN,
+                "No. of cases_max": NaN,
+                "No. of deaths_median": 0,
+                "No. of deaths_min": NaN,
+                "No. of deaths_max": NaN,
+                "WHO Region": "Africa"
+            },
+            {
+                "Country": "Angola",
+                "Year": 2017,
+                "No. of cases": "4615605[3106000-6661000]",
+                "No. of deaths": "13316[9970-16600]",
+                "No. of cases_median": 4615605,
+                "No. of cases_min": 3106000.0,
+                "No. of cases_max": 6661000.0,
+                "No. of deaths_median": 13316,
+                "No. of deaths_min": 9970.0,
+                "No. of deaths_max": 16600.0,
+                "WHO Region": "Africa"
+            }
+        ]
+    },
+    {
+        "table_name": "ravenna_250715.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/ravenna_250715.csv",
+        "columns": [
+            "Unnamed: 0",
+            "temp",
+            "humidity",
+            "pressure",
+            "description",
+            "dt",
+            "wind_speed",
+            "wind_deg",
+            "city",
+            "day",
+            "dist"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "temp": "float64",
+            "humidity": "int64",
+            "pressure": "int64",
+            "description": "object",
+            "dt": "int64",
+            "wind_speed": "float64",
+            "wind_deg": "float64",
+            "city": "object",
+            "day": "object",
+            "dist": "int64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 0,
+                "temp": 32.18000000000001,
+                "humidity": 54,
+                "pressure": 1010,
+                "description": "moderate rain",
+                "dt": 1437730851,
+                "wind_speed": 2.11,
+                "wind_deg": 330.003,
+                "city": "Ravenna",
+                "day": "2015-07-24 11:40:51",
+                "dist": 8
+            },
+            {
+                "Unnamed: 0": 1,
+                "temp": 32.370000000000005,
+                "humidity": 62,
+                "pressure": 1010,
+                "description": "moderate rain",
+                "dt": 1437734494,
+                "wind_speed": 2.6,
+                "wind_deg": 20.0,
+                "city": "Ravenna",
+                "day": "2015-07-24 12:41:34",
+                "dist": 8
+            },
+            {
+                "Unnamed: 0": 2,
+                "temp": 32.79000000000002,
+                "humidity": 75,
+                "pressure": 1009,
+                "description": "moderate rain",
+                "dt": 1437738046,
+                "wind_speed": 3.6,
+                "wind_deg": 70.0,
+                "city": "Ravenna",
+                "day": "2015-07-24 13:40:46",
+                "dist": 8
+            }
+        ]
+    },
+    {
+        "table_name": "e5_aapl.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/e5_aapl.csv",
+        "columns": [
+            "Date",
+            "Open",
+            "High",
+            "Low",
+            "Close",
+            "Volume"
+        ],
+        "dtypes": {
+            "Date": "object",
+            "Open": "float64",
+            "High": "float64",
+            "Low": "float64",
+            "Close": "float64",
+            "Volume": "int64"
+        },
+        "sample_data": [
+            {
+                "Date": "2014-01-02",
+                "Open": 79.38,
+                "High": 79.58,
+                "Low": 78.86,
+                "Close": 79.02,
+                "Volume": 58791957
+            },
+            {
+                "Date": "2014-01-03",
+                "Open": 78.98,
+                "High": 79.1,
+                "Low": 77.2,
+                "Close": 77.28,
+                "Volume": 98303870
+            },
+            {
+                "Date": "2014-01-06",
+                "Open": 76.78,
+                "High": 78.11,
+                "Low": 76.23,
+                "Close": 77.7,
+                "Volume": 103359151
+            }
+        ]
+    },
+    {
+        "table_name": "diamonds.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/diamonds.csv",
+        "columns": [
+            "carat",
+            "cut",
+            "color",
+            "clarity",
+            "depth",
+            "table",
+            "price",
+            "x",
+            "y",
+            "z"
+        ],
+        "dtypes": {
+            "carat": "float64",
+            "cut": "object",
+            "color": "object",
+            "clarity": "object",
+            "depth": "float64",
+            "table": "int64",
+            "price": "int64",
+            "x": "float64",
+            "y": "float64",
+            "z": "float64"
+        },
+        "sample_data": [
+            {
+                "carat": 0.23,
+                "cut": "Ideal",
+                "color": "E",
+                "clarity": "SI2",
+                "depth": 61.5,
+                "table": 55,
+                "price": 326,
+                "x": 3.95,
+                "y": 3.98,
+                "z": 2.43
+            },
+            {
+                "carat": 0.21,
+                "cut": "Premium",
+                "color": "E",
+                "clarity": "SI1",
+                "depth": 59.8,
+                "table": 61,
+                "price": 326,
+                "x": 3.89,
+                "y": 3.84,
+                "z": 2.31
+            },
+            {
+                "carat": 0.23,
+                "cut": "Good",
+                "color": "E",
+                "clarity": "VS1",
+                "depth": 56.9,
+                "table": 65,
+                "price": 327,
+                "x": 4.05,
+                "y": 4.07,
+                "z": 2.31
+            }
+        ]
+    },
+    {
+        "table_name": "veracruz 2016.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/veracruz 2016.csv",
+        "columns": [
+            "Unnamed: 0",
+            "MedInd",
+            "LarInd",
+            "Agri",
+            "Residential",
+            "Full"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "MedInd": "float64",
+            "LarInd": "float64",
+            "Agri": "float64",
+            "Residential": "float64",
+            "Full": "float64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 0,
+                "MedInd": 72.68663894265465,
+                "LarInd": 149.99535964244552,
+                "Agri": 1.494594434717631,
+                "Residential": 166.08260638018217,
+                "Full": 390.2591994
+            },
+            {
+                "Unnamed: 0": 1,
+                "MedInd": 70.38876768425716,
+                "LarInd": 147.39866870619016,
+                "Agri": 1.4834445271002057,
+                "Residential": 152.58386688245244,
+                "Full": 371.8547478
+            },
+            {
+                "Unnamed: 0": 2,
+                "MedInd": 69.21514146130772,
+                "LarInd": 144.92828058345054,
+                "Agri": 1.463171967795796,
+                "Residential": 133.08008978744596,
+                "Full": 348.6866838
+            }
+        ]
+    },
+    {
+        "table_name": "test_Y3wMUE5_7gLdaTN.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/test_Y3wMUE5_7gLdaTN.csv",
+        "columns": [
+            "Loan_ID",
+            "Gender",
+            "Married",
+            "Dependents",
+            "Education",
+            "Self_Employed",
+            "ApplicantIncome",
+            "CoapplicantIncome",
+            "LoanAmount",
+            "Loan_Amount_Term",
+            "Credit_History",
+            "Property_Area"
+        ],
+        "dtypes": {
+            "Loan_ID": "object",
+            "Gender": "object",
+            "Married": "object",
+            "Dependents": "int64",
+            "Education": "object",
+            "Self_Employed": "object",
+            "ApplicantIncome": "int64",
+            "CoapplicantIncome": "int64",
+            "LoanAmount": "int64",
+            "Loan_Amount_Term": "int64",
+            "Credit_History": "float64",
+            "Property_Area": "object"
+        },
+        "sample_data": [
+            {
+                "Loan_ID": "LP001015",
+                "Gender": "Male",
+                "Married": "Yes",
+                "Dependents": 0,
+                "Education": "Graduate",
+                "Self_Employed": "No",
+                "ApplicantIncome": 5720,
+                "CoapplicantIncome": 0,
+                "LoanAmount": 110,
+                "Loan_Amount_Term": 360,
+                "Credit_History": 1.0,
+                "Property_Area": "Urban"
+            },
+            {
+                "Loan_ID": "LP001022",
+                "Gender": "Male",
+                "Married": "Yes",
+                "Dependents": 1,
+                "Education": "Graduate",
+                "Self_Employed": "No",
+                "ApplicantIncome": 3076,
+                "CoapplicantIncome": 1500,
+                "LoanAmount": 126,
+                "Loan_Amount_Term": 360,
+                "Credit_History": 1.0,
+                "Property_Area": "Urban"
+            },
+            {
+                "Loan_ID": "LP001031",
+                "Gender": "Male",
+                "Married": "Yes",
+                "Dependents": 2,
+                "Education": "Graduate",
+                "Self_Employed": "No",
+                "ApplicantIncome": 5000,
+                "CoapplicantIncome": 1800,
+                "LoanAmount": 208,
+                "Loan_Amount_Term": 360,
+                "Credit_History": 1.0,
+                "Property_Area": "Urban"
+            }
+        ]
+    },
+    {
+        "table_name": "microsoft.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/microsoft.csv",
+        "columns": [
+            "Unnamed: 0",
+            "Date",
+            "Open",
+            "High",
+            "Low",
+            "Close",
+            "Volume"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "Date": "object",
+            "Open": "float64",
+            "High": "float64",
+            "Low": "float64",
+            "Close": "float64",
+            "Volume": "int64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 0,
+                "Date": "19-Jan-18",
+                "Open": 90.14,
+                "High": 90.61,
+                "Low": 89.66,
+                "Close": 90.0,
+                "Volume": 36875013
+            },
+            {
+                "Unnamed: 0": 1,
+                "Date": "18-Jan-18",
+                "Open": 89.8,
+                "High": 90.67,
+                "Low": 89.66,
+                "Close": 90.1,
+                "Volume": 24159683
+            },
+            {
+                "Unnamed: 0": 2,
+                "Date": "17-Jan-18",
+                "Open": 89.08,
+                "High": 90.28,
+                "Low": 88.75,
+                "Close": 90.14,
+                "Volume": 25621164
+            }
+        ]
+    },
+    {
+        "table_name": "baseball_data.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/baseball_data.csv",
+        "columns": [
+            "salary_in_thousands_of_dollars",
+            "batting_average",
+            "on_base_percentage",
+            "number_of_runs",
+            "number_of_hits",
+            "number_of_doubles",
+            "number_of_triples",
+            "number_of_home_runs",
+            "number_of_runs_batted_in",
+            "number_of_walks",
+            "number_of_strike_outs",
+            "number_of_stolen_bases",
+            "number_of_errors",
+            "indicator_of_free_agency_eligibility",
+            "indicator_of_free_agent_in_1991_1992",
+            "indicator_of_arbitration_eligibility",
+            "indicator_of_arbitration_in_1991_1992"
+        ],
+        "dtypes": {
+            "salary_in_thousands_of_dollars": "int64",
+            "batting_average": "float64",
+            "on_base_percentage": "float64",
+            "number_of_runs": "int64",
+            "number_of_hits": "int64",
+            "number_of_doubles": "int64",
+            "number_of_triples": "int64",
+            "number_of_home_runs": "float64",
+            "number_of_runs_batted_in": "int64",
+            "number_of_walks": "int64",
+            "number_of_strike_outs": "float64",
+            "number_of_stolen_bases": "int64",
+            "number_of_errors": "float64",
+            "indicator_of_free_agency_eligibility": "float64",
+            "indicator_of_free_agent_in_1991_1992": "int64",
+            "indicator_of_arbitration_eligibility": "float64",
+            "indicator_of_arbitration_in_1991_1992": "float64"
+        },
+        "sample_data": [
+            {
+                "salary_in_thousands_of_dollars": 3300,
+                "batting_average": 0.272,
+                "on_base_percentage": 0.302,
+                "number_of_runs": 69,
+                "number_of_hits": 153,
+                "number_of_doubles": 21,
+                "number_of_triples": 4,
+                "number_of_home_runs": 31.0,
+                "number_of_runs_batted_in": 104,
+                "number_of_walks": 22,
+                "number_of_strike_outs": 80.0,
+                "number_of_stolen_bases": 4,
+                "number_of_errors": 3.0,
+                "indicator_of_free_agency_eligibility": 1.0,
+                "indicator_of_free_agent_in_1991_1992": 0,
+                "indicator_of_arbitration_eligibility": 0.0,
+                "indicator_of_arbitration_in_1991_1992": 0.0
+            },
+            {
+                "salary_in_thousands_of_dollars": 2600,
+                "batting_average": 0.269,
+                "on_base_percentage": 0.335,
+                "number_of_runs": 58,
+                "number_of_hits": 111,
+                "number_of_doubles": 17,
+                "number_of_triples": 2,
+                "number_of_home_runs": 18.0,
+                "number_of_runs_batted_in": 66,
+                "number_of_walks": 39,
+                "number_of_strike_outs": 69.0,
+                "number_of_stolen_bases": 0,
+                "number_of_errors": 3.0,
+                "indicator_of_free_agency_eligibility": 1.0,
+                "indicator_of_free_agent_in_1991_1992": 1,
+                "indicator_of_arbitration_eligibility": 0.0,
+                "indicator_of_arbitration_in_1991_1992": 0.0
+            },
+            {
+                "salary_in_thousands_of_dollars": 2500,
+                "batting_average": 0.249,
+                "on_base_percentage": 0.337,
+                "number_of_runs": 54,
+                "number_of_hits": 115,
+                "number_of_doubles": 15,
+                "number_of_triples": 1,
+                "number_of_home_runs": 17.0,
+                "number_of_runs_batted_in": 73,
+                "number_of_walks": 63,
+                "number_of_strike_outs": 116.0,
+                "number_of_stolen_bases": 6,
+                "number_of_errors": 5.0,
+                "indicator_of_free_agency_eligibility": 1.0,
+                "indicator_of_free_agent_in_1991_1992": 0,
+                "indicator_of_arbitration_eligibility": 0.0,
+                "indicator_of_arbitration_in_1991_1992": 0.0
+            }
+        ]
+    },
+    {
+        "table_name": "unemployement_industry.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/unemployement_industry.csv",
+        "columns": [
+            "Serial",
+            "Industry and class of worker",
+            "Mar.2019",
+            "Mar.2020",
+            "Total Mar.2019",
+            "Total Mar.2020",
+            "Men Mar.2019",
+            "Men Mar.2020",
+            "Women Mar.2019",
+            "Women Mar.2020"
+        ],
+        "dtypes": {
+            "Serial": "int64",
+            "Industry and class of worker": "object",
+            "Mar.2019": "int64",
+            "Mar.2020": "int64",
+            "Total Mar.2019": "float64",
+            "Total Mar.2020": "float64",
+            "Men Mar.2019": "float64",
+            "Men Mar.2020": "float64",
+            "Women Mar.2019": "float64",
+            "Women Mar.2020": "float64"
+        },
+        "sample_data": [
+            {
+                "Serial": 0,
+                "Industry and class of worker": "Total, 16 years and over(1)",
+                "Mar.2019": 6382,
+                "Mar.2020": 7370,
+                "Total Mar.2019": 3.9,
+                "Total Mar.2020": 4.5,
+                "Men Mar.2019": 4.3,
+                "Men Mar.2020": 4.8,
+                "Women Mar.2019": 3.5,
+                "Women Mar.2020": 4.2
+            },
+            {
+                "Serial": 1,
+                "Industry and class of worker": "Nonagricultural private wage and salary workers(2)",
+                "Mar.2019": 4869,
+                "Mar.2020": 5964,
+                "Total Mar.2019": 3.8,
+                "Total Mar.2020": 4.6,
+                "Men Mar.2019": 3.9,
+                "Men Mar.2020": 4.9,
+                "Women Mar.2019": 3.6,
+                "Women Mar.2020": 4.3
+            },
+            {
+                "Serial": 2,
+                "Industry and class of worker": "Mining, quarrying, and oil and gas extraction",
+                "Mar.2019": 26,
+                "Mar.2020": 52,
+                "Total Mar.2019": 3.6,
+                "Total Mar.2020": 6.2,
+                "Men Mar.2019": 3.0,
+                "Men Mar.2020": 6.4,
+                "Women Mar.2019": 7.3,
+                "Women Mar.2020": 4.6
+            }
+        ]
+    },
+    {
+        "table_name": "fb_articles_20180822_20180829_df.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/fb_articles_20180822_20180829_df.csv",
+        "columns": [
+            "Unnamed: 0",
+            "author",
+            "description",
+            "publishedAt",
+            "source",
+            "title",
+            "url",
+            "urlToImage",
+            "text",
+            "neg",
+            "neu",
+            "pos",
+            "compound"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "author": "object",
+            "description": "object",
+            "publishedAt": "object",
+            "source": "object",
+            "title": "object",
+            "url": "object",
+            "urlToImage": "object",
+            "text": "object",
+            "neg": "float64",
+            "neu": "float64",
+            "pos": "float64",
+            "compound": "float64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 0,
+                "author": "ABC News",
+                "description": "Updates to the app include an \"about this account\" feature for users with large followings, and people can now request to be verified, too.",
+                "publishedAt": "2018-08-29 10:44:48",
+                "source": "abc-news",
+                "title": "WATCH: Instagram rolls out new features aimed at improving security",
+                "url": "https://abcnews.go.com/Technology/video/instagram-rolls-features-aimed-improving-security-57469412",
+                "urlToImage": "https://s.abcnews.com/images/Technology/180829_atm_techbytes_hpMain_16x9_992.jpg",
+                "text": "Coming up in the next {{countdown}} {{countdownlbl}} Coming up next: {{nextVideo.title}} {{nextVideo.description}} Skip to this video now  Related Now Playing: {{currentVideo.title}}    Play Video  This transcript has been automatically generated and may not be 100% accurate. How much is Instagram worth? Plus, Samsung could introduce three new phones in January. Instagram reveals new video platform \"GMA\" got a first look at Instagram's IGTV, a major update that allows users to publish longform videos.  Now Playing: How much is Instagram worth? Now Playing: Instagram reveals new video platform Now Playing: Facebook and Instagram crack down on underage users Now Playing: Samsung to unveil 8K TV this fall Now Playing: New technology designed to keep ambulances safer  Now Playing: Trump administration wages battle with Google Now Playing: Instagram rolls out new features aimed at improving security Now Playing: Uber partners with Toyota to build self-driving cars Now Playing: YouTube plans to allow fewer ad skips Now Playing: Facebook increases security after 2016 election controversy Now Playing: Google accused of storing users' location data Now Playing: Netflix responds to criticism for running ads Now Playing: Kroger testing driverless grocery delivery Now Playing: Apple Car rumored to roll out by 2025 Now Playing: Asleep at the wheel: Exposing dangers of drowsy driving Now Playing: Sprint prepares for next generation of smartphones Now Playing: A serious warning about attacks on ATMs Now Playing: What to know about money payment app misfires  Now Playing: Spotify is testing a skip-ad option for nonpaying users Now Playing: Samsung unveils the Galaxy Note9  Now Playing: {{itm.title}}",
+                "neg": 0.067,
+                "neu": 0.733,
+                "pos": 0.2,
+                "compound": 0.9746
+            },
+            {
+                "Unnamed: 0": 1,
+                "author": "ABC News",
+                "description": "Arizona primary voters Carlos Medina and Kaitlin Showers speak with ABC News' Chief National Correspondent Terry Moran on their faith in the political process in Tempe, Arizona on Tuesday.",
+                "publishedAt": "2018-08-29 01:22:02",
+                "source": "abc-news",
+                "title": "WATCH: In the heat of primary day, young Arizonans encourage faith in the political process",
+                "url": "https://abcnews.go.com/Politics/video/heat-primary-day-young-arizonans-encourage-faith-political-57462339",
+                "urlToImage": "https://s.abcnews.com/images/Politics/180828_vod_az_voters_hpMain_16x9_992.jpg",
+                "text": "Coming up in the next {{countdown}} {{countdownlbl}} Coming up next: {{nextVideo.title}} {{nextVideo.description}} Skip to this video now  Related Now Playing: {{currentVideo.title}}    Play Video  This transcript has been automatically generated and may not be 100% accurate. 'Start Here' podcast: Controversial Facebook post complicates Arizona Senate primary A tense GOP primary race heated up this weekend when a campaign suggested John McCain was trying to mess with their timing. Now Playing: 'Start Here' podcast: Controversial Facebook post complicates Arizona Senate primary Now Playing: Arizona Senate candidates Joe Arpaio, Kelli Ward on why they're running Now Playing: WH officials deny connection to Maduro assassination attempt Now Playing: President Trump lashes out at 'totally dishonest' media Now Playing: Andrew Cuomo won't run against Trump in 2020 Now Playing: Joe Biden to pay tribute at John McCain's memorial today  Now Playing: GOP gubernatorial candidate uses 'monkey' comment while discussing black opponent Now Playing: GOP candidate uses 'monkey it up' discussing black opponent Now Playing: Family attend public viewing for Sen. John McCain Now Playing: The Briefing Room: Top White House lawyer leaving administration  Now Playing: Honoring an American hero Now Playing: FiveThirtyEight House forecast update for August 29, 2018 Now Playing: Sun belt showdowns: Progressive, Trump-aligned candidates win big  Now Playing: Black gubernatorial candidate makes history in Florida Now Playing: Primary elections: Andrew Gillum, Ron DeSantis win gubernatorial primaries in Florida Now Playing: Parkland survivor discusses Florida primary results Now Playing: GOP nominee considers potential Trump visit Now Playing: In the heat of primary day, young Arizonans encourage faith in the political process Now Playing: Lawyer for alleged Russian agent says video captures 'romance' Now Playing: The Briefing Room: Trump finally speaks about McCain Now Playing: {{itm.title}}",
+                "neg": 0.062,
+                "neu": 0.735,
+                "pos": 0.204,
+                "compound": 0.9869
+            },
+            {
+                "Unnamed: 0": 2,
+                "author": "Karma Allen",
+                "description": "She works at a Texas hospital where a toddler tested positive for measles.",
+                "publishedAt": "2018-08-28 11:04:51",
+                "source": "abc-news",
+                "title": "Nurse under investigation after posting on anti-vaccination page",
+                "url": "https://abcnews.go.com/US/texas-nurse-investigation-posting-patients-measles-anti-vaccination/story?id=57443736",
+                "urlToImage": "https://s.abcnews.com/images/Politics/measles-vaccine-gty-hb-180815_hpMain_16x9_992.jpg",
+                "text": "\nA nurse at a hospital in Texas where a toddler tested positive for measles has been fired after she posted about the diagnosis on an anti-vaccination website, according to hospital officials.\n \nThe employee's firing comes just one day after Texas Children's Hospital said it was investigating the incident.\n \n\"We were made aware that one of our nurses posted protected health information regarding a patient on social media,\" the hospital said in a statement Tuesday night. \"We take these matters very seriously as the privacy and well-being of our patients is always a top priority. After an internal investigation, this individual is no longer with the organization.\"\n \nTexas Children's Hospital in Houston said Monday it stopped a nurse from seeing patients after she reportedly posted about a young boyâs condition on an anti-vaccination group on Facebook, according to a statement.\n \nShe allegedly wrote about the case on the \"Proud Parents of Unvaccinated Children - Texas\" Facebook page, which has since been deleted. A concerned parent posted screenshots of the unidentified nurseâs comments on the hospital's Facebook page late Friday.\n \n \n \nâI think itâs easy for us nonvaxxers to make assumptions but most of us have never and will never see one of theses diseases,â the self-identified nurse wrote, according to the screenshots. \"[F]or the first time in my career I saw measles this week. Actually most of my coworkers and the ER docs saw measles for the first time as well. And honestly, it was rough. The kid was super sick. Sick enough to be admitted to the ICU and he looked miserable.\n \nâBy no means have I changed my vax stance, and I never will. But I just wanted to share my experience and how much worse it was than I expected,\" she added.\n \n \n \nThe nurse claimed the patient had recently traveled to a region \"where measles is very common\" and speculated that he may have contracted the disease overseas.\n \nTexas Children's Hospital responded to the parentâs post on Friday, confirming that it was aware of the post.\n \nâThank you for your post. We are aware of this situation and have started a thorough investigation.We take these matters very seriously,â the hospital wrote. It edited the statement later to add: âThe views of this employee do not represent that of the organization.â\n \nIf confirmed, the toddlerâs diagnosis would mark the stateâs eighth measles case this year. More than 100 people have been diagnosed in the U.S. this year, according to the Centers for Disease Control and Prevention.\n \n \n \nThe hospital issued a longer statement on Monday, saying it had reached out to children who may have had contact with the infected toddler.\n \nâA patient treated at Texas Children's Hospital West Campus tested positive for measles. This is a highly-contagious, vaccine-preventable infection. We know vaccination is the best protection against measles,â the hospital told Houston ABC station KTRK Monday. âOur Infection Control and Prevention team immediately identified other children who may have come in contact with this patient to assess their risk and provide clinical recommendations. We have contacted all of those families.â\n \n \n \nIt said the nurse in question was in good standing with the licensing board, but it would not comment on her vaccination status. The hospital says it strongly encourages all staff to obtain the recommended vaccines.\n \nMeasles, also known as rubeola, is a highly contagious virus that spreads through respiratory droplets, especially coughing and sneezing, according to medical officials. Early symptoms include a high fever, runny nose, cough and red eyes, preceded by red spots on the face.\n \n\"Measles is such a concern, because one, it's preventable. We have a vaccination that can prevent it,\" Dr. Umair Shah, executive director of the Harris County, Texas, Health System, told KTRK. \"And two, it's so easily transmittable to someone else. ... Vaccines save lives.â\n \nThis report appeared in the Wednesday, Aug. 29, 2018, episode of ABC News' daily news podcast \"Start Here.\"\n \n \n \n\"Start Here\" is a daily ABC News podcast hosted by Brad Mielke featuring original reporting on stories that are driving the national conversation. Listen for FREE on the ABC News app, Apple Podcasts, TuneIn, Spotify, Stitcher, Google Play Music, iHeartRadio -- or ask Alexa: \"Play 'Start Here.'\"\n \nFollow @StartHereABC on social for exclusive content, show updates and more: Twitter, Facebook, Instagram.",
+                "neg": 0.051,
+                "neu": 0.847,
+                "pos": 0.102,
+                "compound": 0.9875
+            }
+        ]
+    },
+    {
+        "table_name": "Todo_Tango_letras_final.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Todo_Tango_letras_final.csv",
+        "columns": [
+            "link",
+            "titulo",
+            "ritmo",
+            "ano",
+            "musica",
+            "compositor",
+            "letra"
+        ],
+        "dtypes": {
+            "link": "object",
+            "titulo": "object",
+            "ritmo": "object",
+            "ano": "object",
+            "musica": "object",
+            "compositor": "object",
+            "letra": "object"
+        },
+        "sample_data": [
+            {
+                "link": "http://www.todotango.com/musica/tema/130/A-bailar/",
+                "titulo": "a bailar",
+                "ritmo": "tango",
+                "ano": "1943",
+                "musica": "domingo federico",
+                "compositor": "homero exposito",
+                "letra": "a bailar a bailar | que la orquesta se va | sobre el fino garabato | de un tango nervioso y lerdo | se ira borrando el recuerdo | a bailar a bailar | que la orquesta se va | el ultimo tango perfuma la noche | un tango dulce que dice adios | la frase callada se asoma a los labios | y canta el tango la despedida! | vamos! a bailar! | tal vez no vuelvas a verla nunca | y el ultimo tango perfuma la noche | y este es el tango que dice el adios | a bailar a bailar | que la orquesta se va! | quedara el salon vacio | con un monton de esperanzas | que iran camino al olvido | a bailar a bailar | que la orquesta se va!"
+            },
+            {
+                "link": "http://www.todotango.com/musica/tema/7866/A-bailar-el-tango/",
+                "titulo": "a bailar el tango",
+                "ritmo": "tango",
+                "ano": "1962",
+                "musica": "leopoldo diaz velez",
+                "compositor": "leopoldo diaz velez",
+                "letra": "este tango nacio para bailarse | y asi hamacarse muy suavemente | oigan ustedes este compas… | es muy sencillo bailar el tango | un doble paso despues descanso | la media vuelta la vuelta entera | y siempre junto a la compañera | este tango nacio para bailarse | no hay que quedarse mirandolo"
+            },
+            {
+                "link": "http://www.todotango.com/musica/tema/7095/A-bailarlo/",
+                "titulo": "a bailarlo",
+                "ritmo": "tango",
+                "ano": "vacio",
+                "musica": "jose dames",
+                "compositor": "vacio",
+                "letra": NaN
+            }
+        ]
+    },
+    {
+        "table_name": "Zip_MedianSoldPricePerSqft_AllHomes.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Zip_MedianSoldPricePerSqft_AllHomes.csv",
+        "columns": [
+            "RegionID",
+            "RegionName",
+            "City",
+            "State",
+            "Metro",
+            "CountyName",
+            "SizeRank",
+            "Month",
+            "MedianSoldPricePerSqft"
+        ],
+        "dtypes": {
+            "RegionID": "int64",
+            "RegionName": "int64",
+            "City": "object",
+            "State": "object",
+            "Metro": "object",
+            "CountyName": "object",
+            "SizeRank": "int64",
+            "Month": "object",
+            "MedianSoldPricePerSqft": "float64"
+        },
+        "sample_data": [
+            {
+                "RegionID": 66133,
+                "RegionName": 20009,
+                "City": "Washington",
+                "State": "DC",
+                "Metro": "Washington",
+                "CountyName": "District of Columbia",
+                "SizeRank": 32,
+                "Month": "1996-04",
+                "MedianSoldPricePerSqft": NaN
+            },
+            {
+                "RegionID": 66133,
+                "RegionName": 20009,
+                "City": "Washington",
+                "State": "DC",
+                "Metro": "Washington",
+                "CountyName": "District of Columbia",
+                "SizeRank": 32,
+                "Month": "1996-05",
+                "MedianSoldPricePerSqft": NaN
+            },
+            {
+                "RegionID": 66133,
+                "RegionName": 20009,
+                "City": "Washington",
+                "State": "DC",
+                "Metro": "Washington",
+                "CountyName": "District of Columbia",
+                "SizeRank": 32,
+                "Month": "1996-06",
+                "MedianSoldPricePerSqft": NaN
+            }
+        ]
+    },
+    {
+        "table_name": "20170413_000000_group_statistics.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/20170413_000000_group_statistics.csv",
+        "columns": [
+            "timestamp",
+            "num. busy overflows",
+            "num. calls answered",
+            "num. calls abandoned ",
+            "num. calls transferred ",
+            "num. calls timed out ",
+            "avg. num. agents talking ",
+            "avg. num. agents staffed ",
+            "avg. wait time ",
+            "avg. abandonment time"
+        ],
+        "dtypes": {
+            "timestamp": "object",
+            "num. busy overflows": "int64",
+            "num. calls answered": "int64",
+            "num. calls abandoned ": "int64",
+            "num. calls transferred ": "int64",
+            "num. calls timed out ": "int64",
+            "avg. num. agents talking ": "int64",
+            "avg. num. agents staffed ": "int64",
+            "avg. wait time ": "object",
+            "avg. abandonment time": "object"
+        },
+        "sample_data": [
+            {
+                "timestamp": "Apr 13  2017 12:00:00 AM",
+                "num. busy overflows": 0,
+                "num. calls answered": 0,
+                "num. calls abandoned ": 0,
+                "num. calls transferred ": 0,
+                "num. calls timed out ": 0,
+                "avg. num. agents talking ": 0,
+                "avg. num. agents staffed ": 4,
+                "avg. wait time ": "00:00:00",
+                "avg. abandonment time": "00:00:00"
+            },
+            {
+                "timestamp": "Apr 13  2017 12:15:00 AM",
+                "num. busy overflows": 0,
+                "num. calls answered": 0,
+                "num. calls abandoned ": 0,
+                "num. calls transferred ": 0,
+                "num. calls timed out ": 0,
+                "avg. num. agents talking ": 0,
+                "avg. num. agents staffed ": 4,
+                "avg. wait time ": "00:00:00",
+                "avg. abandonment time": "00:00:00"
+            },
+            {
+                "timestamp": "Apr 13  2017 12:30:00 AM",
+                "num. busy overflows": 0,
+                "num. calls answered": 0,
+                "num. calls abandoned ": 0,
+                "num. calls transferred ": 0,
+                "num. calls timed out ": 0,
+                "avg. num. agents talking ": 0,
+                "avg. num. agents staffed ": 4,
+                "avg. wait time ": "00:00:00",
+                "avg. abandonment time": "00:00:00"
+            }
+        ]
+    },
+    {
+        "table_name": "housedata.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/housedata.csv",
+        "columns": [
+            "Unnamed: 0",
+            "price",
+            "bedrooms",
+            "bathrooms",
+            "sqft_living",
+            "sqft_lot",
+            "floors",
+            "waterfront",
+            "view",
+            "condition",
+            "grade",
+            "sqft_above",
+            "sqft_basement",
+            "yr_built",
+            "yr_renovated",
+            "zipcode",
+            "lat",
+            "long",
+            "sqft_living15",
+            "sqft_lot15"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "price": "float64",
+            "bedrooms": "int64",
+            "bathrooms": "float64",
+            "sqft_living": "int64",
+            "sqft_lot": "int64",
+            "floors": "float64",
+            "waterfront": "int64",
+            "view": "int64",
+            "condition": "int64",
+            "grade": "int64",
+            "sqft_above": "int64",
+            "sqft_basement": "int64",
+            "yr_built": "int64",
+            "yr_renovated": "int64",
+            "zipcode": "int64",
+            "lat": "float64",
+            "long": "float64",
+            "sqft_living15": "int64",
+            "sqft_lot15": "int64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 0,
+                "price": 221900.0,
+                "bedrooms": 3,
+                "bathrooms": 1.0,
+                "sqft_living": 1180,
+                "sqft_lot": 5650,
+                "floors": 1.0,
+                "waterfront": 0,
+                "view": 0,
+                "condition": 3,
+                "grade": 7,
+                "sqft_above": 1180,
+                "sqft_basement": 0,
+                "yr_built": 1955,
+                "yr_renovated": 0,
+                "zipcode": 98178,
+                "lat": 47.5112,
+                "long": -122.257,
+                "sqft_living15": 1340,
+                "sqft_lot15": 5650
+            },
+            {
+                "Unnamed: 0": 1,
+                "price": 538000.0,
+                "bedrooms": 3,
+                "bathrooms": 2.25,
+                "sqft_living": 2570,
+                "sqft_lot": 7242,
+                "floors": 2.0,
+                "waterfront": 0,
+                "view": 0,
+                "condition": 3,
+                "grade": 7,
+                "sqft_above": 2170,
+                "sqft_basement": 400,
+                "yr_built": 1951,
+                "yr_renovated": 1991,
+                "zipcode": 98125,
+                "lat": 47.721,
+                "long": -122.319,
+                "sqft_living15": 1690,
+                "sqft_lot15": 7639
+            },
+            {
+                "Unnamed: 0": 2,
+                "price": 180000.0,
+                "bedrooms": 2,
+                "bathrooms": 1.0,
+                "sqft_living": 770,
+                "sqft_lot": 10000,
+                "floors": 1.0,
+                "waterfront": 0,
+                "view": 0,
+                "condition": 3,
+                "grade": 6,
+                "sqft_above": 770,
+                "sqft_basement": 0,
+                "yr_built": 1933,
+                "yr_renovated": 0,
+                "zipcode": 98028,
+                "lat": 47.7379,
+                "long": -122.233,
+                "sqft_living15": 2720,
+                "sqft_lot15": 8062
+            }
+        ]
+    },
+    {
+        "table_name": "cms_hospital_readmissions.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/cms_hospital_readmissions.csv",
+        "columns": [
+            "Hospital Name",
+            "Provider Number",
+            "State",
+            "Measure Name",
+            "Number of Discharges",
+            "Footnote",
+            "Excess Readmission Ratio",
+            "Predicted Readmission Rate",
+            "Expected Readmission Rate",
+            "Number of Readmissions",
+            "Start Date",
+            "End Date"
+        ],
+        "dtypes": {
+            "Hospital Name": "object",
+            "Provider Number": "int64",
+            "State": "object",
+            "Measure Name": "object",
+            "Number of Discharges": "int64",
+            "Footnote": "float64",
+            "Excess Readmission Ratio": "float64",
+            "Predicted Readmission Rate": "float64",
+            "Expected Readmission Rate": "float64",
+            "Number of Readmissions": "int64",
+            "Start Date": "object",
+            "End Date": "object"
+        },
+        "sample_data": [
+            {
+                "Hospital Name": "FROEDTERT MEMORIAL LUTHERAN HOSPITAL",
+                "Provider Number": 520177,
+                "State": "WI",
+                "Measure Name": "READM-30-HIP-KNEE-HRRP",
+                "Number of Discharges": 242,
+                "Footnote": NaN,
+                "Excess Readmission Ratio": 1.9095,
+                "Predicted Readmission Rate": 10.8,
+                "Expected Readmission Rate": 5.6,
+                "Number of Readmissions": 38,
+                "Start Date": "07/01/2010",
+                "End Date": "06/30/2013"
+            },
+            {
+                "Hospital Name": "PROVIDENCE HOSPITAL",
+                "Provider Number": 90006,
+                "State": "DC",
+                "Measure Name": "READM-30-HIP-KNEE-HRRP",
+                "Number of Discharges": 247,
+                "Footnote": NaN,
+                "Excess Readmission Ratio": 1.7521,
+                "Predicted Readmission Rate": 9.2,
+                "Expected Readmission Rate": 5.3,
+                "Number of Readmissions": 33,
+                "Start Date": "07/01/2010",
+                "End Date": "06/30/2013"
+            },
+            {
+                "Hospital Name": "BEAUFORT COUNTY MEMORIAL HOSPITAL",
+                "Provider Number": 420067,
+                "State": "SC",
+                "Measure Name": "READM-30-HIP-KNEE-HRRP",
+                "Number of Discharges": 586,
+                "Footnote": NaN,
+                "Excess Readmission Ratio": 1.5836,
+                "Predicted Readmission Rate": 7.6,
+                "Expected Readmission Rate": 4.8,
+                "Number of Readmissions": 53,
+                "Start Date": "07/01/2010",
+                "End Date": "06/30/2013"
+            }
+        ]
+    },
+    {
+        "table_name": "tr_eikon_eod_data.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/tr_eikon_eod_data.csv",
+        "columns": [
+            "Date",
+            "AAPL.O",
+            "MSFT.O",
+            "INTC.O",
+            "AMZN.O",
+            "GS.N",
+            "SPY",
+            ".SPX",
+            ".VIX",
+            "EUR=",
+            "XAU=",
+            "GDX",
+            "GLD"
+        ],
+        "dtypes": {
+            "Date": "object",
+            "AAPL.O": "float64",
+            "MSFT.O": "float64",
+            "INTC.O": "float64",
+            "AMZN.O": "float64",
+            "GS.N": "float64",
+            "SPY": "float64",
+            ".SPX": "float64",
+            ".VIX": "float64",
+            "EUR=": "float64",
+            "XAU=": "float64",
+            "GDX": "float64",
+            "GLD": "float64"
+        },
+        "sample_data": [
+            {
+                "Date": "2010-01-01",
+                "AAPL.O": NaN,
+                "MSFT.O": NaN,
+                "INTC.O": NaN,
+                "AMZN.O": NaN,
+                "GS.N": NaN,
+                "SPY": NaN,
+                ".SPX": NaN,
+                ".VIX": NaN,
+                "EUR=": 1.4323,
+                "XAU=": 1096.35,
+                "GDX": NaN,
+                "GLD": NaN
+            },
+            {
+                "Date": "2010-01-04",
+                "AAPL.O": 30.57282657,
+                "MSFT.O": 30.95,
+                "INTC.O": 20.88,
+                "AMZN.O": 133.9,
+                "GS.N": 173.08,
+                "SPY": 113.33,
+                ".SPX": 1132.99,
+                ".VIX": 20.04,
+                "EUR=": 1.4411,
+                "XAU=": 1120.0,
+                "GDX": 47.71,
+                "GLD": 109.8
+            },
+            {
+                "Date": "2010-01-05",
+                "AAPL.O": 30.625683660000004,
+                "MSFT.O": 30.96,
+                "INTC.O": 20.87,
+                "AMZN.O": 134.69,
+                "GS.N": 176.14,
+                "SPY": 113.63,
+                ".SPX": 1136.52,
+                ".VIX": 19.35,
+                "EUR=": 1.4368,
+                "XAU=": 1118.65,
+                "GDX": 48.17,
+                "GLD": 109.7
+            }
+        ]
+    },
+    {
+        "table_name": "api_output_2018-09-11_11-08-28.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/api_output_2018-09-11_11-08-28.csv",
+        "columns": [
+            "index",
+            "name",
+            "timestamp",
+            "anger",
+            "contempt",
+            "disgust",
+            "fear",
+            "happiness",
+            "neutral",
+            "sadness",
+            "surprise",
+            "blur"
+        ],
+        "dtypes": {
+            "index": "int64",
+            "name": "object",
+            "timestamp": "object",
+            "anger": "float64",
+            "contempt": "float64",
+            "disgust": "float64",
+            "fear": "float64",
+            "happiness": "float64",
+            "neutral": "float64",
+            "sadness": "float64",
+            "surprise": "float64",
+            "blur": "float64"
+        },
+        "sample_data": [
+            {
+                "index": 0,
+                "name": "alckmin",
+                "timestamp": "00h-00m-00s",
+                "anger": 0.0,
+                "contempt": 0.001,
+                "disgust": 0.0,
+                "fear": 0.0,
+                "happiness": 0.0,
+                "neutral": 0.981,
+                "sadness": 0.018,
+                "surprise": 0.0,
+                "blur": 0.0
+            },
+            {
+                "index": 12845,
+                "name": "boulos",
+                "timestamp": "00h-00m-00s",
+                "anger": 0.001,
+                "contempt": 0.001,
+                "disgust": 0.0,
+                "fear": 0.0,
+                "happiness": 0.001,
+                "neutral": 0.996,
+                "sadness": 0.002,
+                "surprise": 0.0,
+                "blur": 0.05
+            },
+            {
+                "index": 19125,
+                "name": "ciro",
+                "timestamp": "00h-00m-00s",
+                "anger": 0.003,
+                "contempt": 0.01,
+                "disgust": 0.0,
+                "fear": 0.0,
+                "happiness": 0.0,
+                "neutral": 0.942,
+                "sadness": 0.046,
+                "surprise": 0.0,
+                "blur": 0.3
+            }
+        ]
+    },
+    {
+        "table_name": "weather_train.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/weather_train.csv",
+        "columns": [
+            "time",
+            "sun",
+            "temperature",
+            "chill",
+            "humidity",
+            "wind direction",
+            "wind speed",
+            "visibility",
+            "air pressure"
+        ],
+        "dtypes": {
+            "time": "object",
+            "sun": "int64",
+            "temperature": "float64",
+            "chill": "float64",
+            "humidity": "int64",
+            "wind direction": "object",
+            "wind speed": "int64",
+            "visibility": "int64",
+            "air pressure": "float64"
+        },
+        "sample_data": [
+            {
+                "time": "2017-01-01T00:00:00Z",
+                "sun": 0,
+                "temperature": -1.7,
+                "chill": -5.6,
+                "humidity": 99,
+                "wind direction": "ZZW",
+                "wind speed": 3,
+                "visibility": 197,
+                "air pressure": 1026.0
+            },
+            {
+                "time": "2017-01-01T00:10:00Z",
+                "sun": 0,
+                "temperature": -1.7,
+                "chill": -5.6,
+                "humidity": 99,
+                "wind direction": "ZZW",
+                "wind speed": 3,
+                "visibility": 195,
+                "air pressure": 1025.8
+            },
+            {
+                "time": "2017-01-01T00:20:00Z",
+                "sun": 0,
+                "temperature": -1.7,
+                "chill": -5.6,
+                "humidity": 99,
+                "wind direction": "ZZW",
+                "wind speed": 3,
+                "visibility": 271,
+                "air pressure": 1025.6
+            }
+        ]
+    },
+    {
+        "table_name": "tree.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/tree.csv",
+        "columns": [
+            "LIVE_ID",
+            "PLTID",
+            "SPP_SYMBOL",
+            "SCIENTIFIC_NAME",
+            "CON",
+            "DBH_CM",
+            "HT_M",
+            "BA_M2",
+            "TPH_PLT"
+        ],
+        "dtypes": {
+            "LIVE_ID": "int64",
+            "PLTID": "int64",
+            "SPP_SYMBOL": "object",
+            "SCIENTIFIC_NAME": "object",
+            "CON": "int64",
+            "DBH_CM": "float64",
+            "HT_M": "float64",
+            "BA_M2": "float64",
+            "TPH_PLT": "float64"
+        },
+        "sample_data": [
+            {
+                "LIVE_ID": 3081763,
+                "PLTID": 153476,
+                "SPP_SYMBOL": "ABGRC",
+                "SCIENTIFIC_NAME": "Abies grandis/concolor",
+                "CON": 1,
+                "DBH_CM": 28.702,
+                "HT_M": 29.2608,
+                "BA_M2": 0.0647,
+                "TPH_PLT": 14.8708
+            },
+            {
+                "LIVE_ID": 3081764,
+                "PLTID": 153476,
+                "SPP_SYMBOL": "ABGRC",
+                "SCIENTIFIC_NAME": "Abies grandis/concolor",
+                "CON": 1,
+                "DBH_CM": 40.64,
+                "HT_M": 29.8704,
+                "BA_M2": 0.1297,
+                "TPH_PLT": 14.8708
+            },
+            {
+                "LIVE_ID": 3081765,
+                "PLTID": 153476,
+                "SPP_SYMBOL": "ABGRC",
+                "SCIENTIFIC_NAME": "Abies grandis/concolor",
+                "CON": 1,
+                "DBH_CM": 47.498,
+                "HT_M": 30.48,
+                "BA_M2": 0.1772,
+                "TPH_PLT": 14.8708
+            }
+        ]
+    },
+    {
+        "table_name": "ts-sc4-wi100000-sl25000-Qrob_Chr05.tree_table.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/ts-sc4-wi100000-sl25000-Qrob_Chr05.tree_table.csv",
+        "columns": [
+            "Unnamed: 0",
+            "start",
+            "end",
+            "nsnps",
+            "nsamplecov",
+            "tree"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "start": "int64",
+            "end": "int64",
+            "nsnps": "int64",
+            "nsamplecov": "int64",
+            "tree": "object"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 0,
+                "start": 0,
+                "end": 100000,
+                "nsnps": 13,
+                "nsamplecov": 33,
+                "tree": "(reference:1e-06,(CUSV6:0.00652881,(DU:0.00549721,(FLCK216:1e-06,FLMO62:1e-06)100:0.00562417)100:0.00550189)100:1e-06,((CRL0030:1e-06,(CUCA4:1e-06,(SCCU3:1e-06,MXSA3017:0.00550694)100:1e-06)100:1e-06)100:1e-06,(AR:1e-06,((NI:0.0104757,HE:0.00151902)100:0.0225515,(CH:0.0134544,(FLSF47:1e-06,((BJSB3:1e-06,(TXGR3:1e-06,(TXMD3:1e-06,FLWO6:1e-06)100:1e-06)100:1e-06)100:1e-06,(((FLSF54:1e-06,FLSF33:1e-06)100:1e-06,(LALC2:1e-06,(FLCK18:1e-06,FLBA140:1e-06)100:1e-06)100:1e-06)100:1e-06,(FLAB109:1e-06,((CRL0001:1e-06,CUVN10:1e-06)100:1e-06,(BJVL19:1e-06,(HNDA09:1e-06,(MXGT4:1e-06,((DO:1e-06,FLSA185:1e-06)100:1e-06,(MXED8:1e-06,BZBB1:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:0.00644056)100:0.0202218)100:0.00526957)100:1e-06)100:1e-06);"
+            },
+            {
+                "Unnamed: 0": 1,
+                "start": 25000,
+                "end": 125000,
+                "nsnps": 13,
+                "nsamplecov": 33,
+                "tree": "(reference:1e-06,(CUSV6:0.00652881,(DU:0.00549721,(FLCK216:1e-06,FLMO62:1e-06)100:0.00562417)100:0.00550189)100:1e-06,((CRL0030:1e-06,(CUCA4:1e-06,(SCCU3:1e-06,MXSA3017:0.00550694)100:1e-06)100:1e-06)100:1e-06,(AR:1e-06,((NI:0.0104757,HE:0.00151902)100:0.0225515,(CH:0.0134544,(FLSF47:1e-06,((BJSB3:1e-06,(TXGR3:1e-06,(TXMD3:1e-06,FLWO6:1e-06)100:1e-06)100:1e-06)100:1e-06,(((FLSF54:1e-06,FLSF33:1e-06)100:1e-06,(LALC2:1e-06,(FLCK18:1e-06,FLBA140:1e-06)100:1e-06)100:1e-06)100:1e-06,(FLAB109:1e-06,((CRL0001:1e-06,CUVN10:1e-06)100:1e-06,(BJVL19:1e-06,(HNDA09:1e-06,(MXGT4:1e-06,((DO:1e-06,FLSA185:1e-06)100:1e-06,(MXED8:1e-06,BZBB1:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:0.00644056)100:0.0202218)100:0.00526957)100:1e-06)100:1e-06);"
+            },
+            {
+                "Unnamed: 0": 2,
+                "start": 50000,
+                "end": 150000,
+                "nsnps": 18,
+                "nsamplecov": 34,
+                "tree": "(CRL0001:1e-06,reference:1e-06,(MXED8:1e-06,(DO:0.0128545,((FLSF33:1e-06,(CRL0030:1e-06,((CUCA4:1e-06,MXSA3017:1e-06)100:0.0061307,(FLWO6:1e-06,(FLSF54:1e-06,(AR:1e-06,CUSV6:0.00389674)100:0.00464393)100:1e-06)100:0.00514126)100:1e-06)100:0.00443389)100:0.0059116,(DU:0.00636922,((HE:1e-06,NI:1e-06)100:0.0131901,(FLMO62:1e-06,(FLCK18:1e-06,(EN:1e-06,(BZBB1:1e-06,(CUVN10:1e-06,(FLCK216:1e-06,(HNDA09:1e-06,(MXGT4:1e-06,(TXMD3:1e-06,(CH:1e-06,(BJSL25:1e-06,(FLAB109:1e-06,(FLSF47:1e-06,(FLBA140:1e-06,(LALC2:1e-06,(BJVL19:1e-06,(TXGR3:1e-06,(BJSB3:1e-06,FLSA185:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:0.00212055)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:1e-06)100:0.000392103)100:0.00786772)100:0.00113029)100:1e-06);"
+            }
+        ]
+    },
+    {
+        "table_name": "gapminder_cleaned.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/gapminder_cleaned.csv",
+        "columns": [
+            "year",
+            "pop",
+            "lifeexp",
+            "gdppercap",
+            "country",
+            "continent"
+        ],
+        "dtypes": {
+            "year": "int64",
+            "pop": "int64",
+            "lifeexp": "float64",
+            "gdppercap": "float64",
+            "country": "object",
+            "continent": "object"
+        },
+        "sample_data": [
+            {
+                "year": 1952,
+                "pop": 8425333,
+                "lifeexp": 28.801,
+                "gdppercap": 779.4453145,
+                "country": "afghanistan",
+                "continent": "asia"
+            },
+            {
+                "year": 1957,
+                "pop": 9240934,
+                "lifeexp": 30.332,
+                "gdppercap": 820.8530296,
+                "country": "afghanistan",
+                "continent": "asia"
+            },
+            {
+                "year": 1962,
+                "pop": 10267083,
+                "lifeexp": 31.997,
+                "gdppercap": 853.10071,
+                "country": "afghanistan",
+                "continent": "asia"
+            }
+        ]
+    },
+    {
+        "table_name": "census.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/census.csv",
+        "columns": [
+            "age",
+            "workclass",
+            "final-weight",
+            "education",
+            "education-num",
+            "marital-status",
+            "occupation",
+            "relationship",
+            "race",
+            "sex",
+            "capital-gain",
+            "capital-loos",
+            "hour-per-week",
+            "native-country",
+            "income"
+        ],
+        "dtypes": {
+            "age": "int64",
+            "workclass": "object",
+            "final-weight": "int64",
+            "education": "object",
+            "education-num": "int64",
+            "marital-status": "object",
+            "occupation": "object",
+            "relationship": "object",
+            "race": "object",
+            "sex": "object",
+            "capital-gain": "int64",
+            "capital-loos": "int64",
+            "hour-per-week": "int64",
+            "native-country": "object",
+            "income": "object"
+        },
+        "sample_data": [
+            {
+                "age": 39,
+                "workclass": " State-gov",
+                "final-weight": 77516,
+                "education": " Bachelors",
+                "education-num": 13,
+                "marital-status": " Never-married",
+                "occupation": " Adm-clerical",
+                "relationship": " Not-in-family",
+                "race": " White",
+                "sex": " Male",
+                "capital-gain": 2174,
+                "capital-loos": 0,
+                "hour-per-week": 40,
+                "native-country": " United-States",
+                "income": " <=50K"
+            },
+            {
+                "age": 50,
+                "workclass": " Self-emp-not-inc",
+                "final-weight": 83311,
+                "education": " Bachelors",
+                "education-num": 13,
+                "marital-status": " Married-civ-spouse",
+                "occupation": " Exec-managerial",
+                "relationship": " Husband",
+                "race": " White",
+                "sex": " Male",
+                "capital-gain": 0,
+                "capital-loos": 0,
+                "hour-per-week": 13,
+                "native-country": " United-States",
+                "income": " <=50K"
+            },
+            {
+                "age": 38,
+                "workclass": " Private",
+                "final-weight": 215646,
+                "education": " HS-grad",
+                "education-num": 9,
+                "marital-status": " Divorced",
+                "occupation": " Handlers-cleaners",
+                "relationship": " Not-in-family",
+                "race": " White",
+                "sex": " Male",
+                "capital-gain": 0,
+                "capital-loos": 0,
+                "hour-per-week": 40,
+                "native-country": " United-States",
+                "income": " <=50K"
+            }
+        ]
+    },
+    {
+        "table_name": "hotel_data.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/hotel_data.csv",
+        "columns": [
+            "hotel_id",
+            "hotel_name",
+            "city_name",
+            "star_rating",
+            "bubble_score",
+            "review_count",
+            "hotel_type",
+            "brand_name",
+            "parent_brand_name"
+        ],
+        "dtypes": {
+            "hotel_id": "int64",
+            "hotel_name": "object",
+            "city_name": "object",
+            "star_rating": "float64",
+            "bubble_score": "float64",
+            "review_count": "int64",
+            "hotel_type": "object",
+            "brand_name": "object",
+            "parent_brand_name": "object"
+        },
+        "sample_data": [
+            {
+                "hotel_id": 75737,
+                "hotel_name": "Night Theater District",
+                "city_name": "New York City",
+                "star_rating": 4.0,
+                "bubble_score": 40.0,
+                "review_count": 2291,
+                "hotel_type": "Hotel",
+                "brand_name": "Night Hotel",
+                "parent_brand_name": "Wyndham Hotel Group"
+            },
+            {
+                "hotel_id": 93401,
+                "hotel_name": "Heritage Hotel New York City",
+                "city_name": "New York City",
+                "star_rating": 2.5,
+                "bubble_score": 35.0,
+                "review_count": 968,
+                "hotel_type": "Hotel",
+                "brand_name": NaN,
+                "parent_brand_name": NaN
+            },
+            {
+                "hotel_id": 224217,
+                "hotel_name": "Clarion Hotel Park Avenue",
+                "city_name": "New York City",
+                "star_rating": 2.5,
+                "bubble_score": 35.0,
+                "review_count": 462,
+                "hotel_type": "Hotel",
+                "brand_name": "Clarion",
+                "parent_brand_name": "Choice Hotels International, Inc."
+            }
+        ]
+    },
+    {
+        "table_name": "Yelp_Reviews.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Yelp_Reviews.csv",
+        "columns": [
+            "Unnamed: 0",
+            "business_id",
+            "cool",
+            "date",
+            "funny",
+            "review_id",
+            "stars",
+            "text",
+            "useful",
+            "user_id"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "business_id": "object",
+            "cool": "int64",
+            "date": "object",
+            "funny": "int64",
+            "review_id": "object",
+            "stars": "int64",
+            "text": "object",
+            "useful": "int64",
+            "user_id": "object"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 1,
+                "business_id": "pomGBqfbxcqPv14c3XH-ZQ",
+                "cool": 0,
+                "date": "2012-11-13",
+                "funny": 0,
+                "review_id": "dDl8zu1vWPdKGihJrwQbpw",
+                "stars": 5,
+                "text": "I love this place! My fiance And I go here atleast once a week. The portions are huge! Food is amazing. I love their carne asada. They have great lunch specials... Leticia is super nice and cares about what you think of her restaurant. You have to try their cheese enchiladas too the sauce is different And amazing!!!",
+                "useful": 0,
+                "user_id": "msQe1u7Z_XuqjGoqhB0J5g"
+            },
+            {
+                "Unnamed: 0": 2,
+                "business_id": "jtQARsP6P-LbkyjbO1qNGg",
+                "cool": 1,
+                "date": "2014-10-23",
+                "funny": 1,
+                "review_id": "LZp4UX5zK3e-c5ZGSeo3kA",
+                "stars": 1,
+                "text": "Terrible. Dry corn bread. Rib tips were all fat and mushy and had no flavor. If you want bbq in this neighborhood go to john mulls roadkill grill. Trust me.",
+                "useful": 3,
+                "user_id": "msQe1u7Z_XuqjGoqhB0J5g"
+            },
+            {
+                "Unnamed: 0": 4,
+                "business_id": "Ums3gaP2qM3W1XcA5r6SsQ",
+                "cool": 0,
+                "date": "2014-09-05",
+                "funny": 0,
+                "review_id": "jsDu6QEJHbwP2Blom1PLCA",
+                "stars": 5,
+                "text": "Delicious healthy food. The steak is amazing. Fish and pork are awesome too. Service is above and beyond. Not a bad thing to say about this place. Worth every penny!",
+                "useful": 0,
+                "user_id": "msQe1u7Z_XuqjGoqhB0J5g"
+            }
+        ]
+    },
+    {
+        "table_name": "YAHOO-BTC_USD_D.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/YAHOO-BTC_USD_D.csv",
+        "columns": [
+            "Date",
+            "Open",
+            "High",
+            "Low",
+            "Close",
+            "Adj Close",
+            "Volume"
+        ],
+        "dtypes": {
+            "Date": "object",
+            "Open": "float64",
+            "High": "float64",
+            "Low": "float64",
+            "Close": "float64",
+            "Adj Close": "float64",
+            "Volume": "int64"
+        },
+        "sample_data": [
+            {
+                "Date": "2014-09-17",
+                "Open": 465.864014,
+                "High": 468.174011,
+                "Low": 452.421997,
+                "Close": 457.334015,
+                "Adj Close": 457.334015,
+                "Volume": 21056800
+            },
+            {
+                "Date": "2014-09-18",
+                "Open": 456.859985,
+                "High": 456.859985,
+                "Low": 413.104004,
+                "Close": 424.440002,
+                "Adj Close": 424.440002,
+                "Volume": 34483200
+            },
+            {
+                "Date": "2014-09-19",
+                "Open": 424.102997,
+                "High": 427.834991,
+                "Low": 384.532013,
+                "Close": 394.79599,
+                "Adj Close": 394.79599,
+                "Volume": 37919700
+            }
+        ]
+    },
+    {
+        "table_name": "test_x.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/test_x.csv",
+        "columns": [
+            "Pclass",
+            "Sex",
+            "Age",
+            "Fare",
+            "Embarked",
+            "Title",
+            "IsAlone",
+            "Age*Pclass"
+        ],
+        "dtypes": {
+            "Pclass": "int64",
+            "Sex": "int64",
+            "Age": "int64",
+            "Fare": "int64",
+            "Embarked": "int64",
+            "Title": "int64",
+            "IsAlone": "int64",
+            "Age*Pclass": "int64"
+        },
+        "sample_data": [
+            {
+                "Pclass": 3,
+                "Sex": 0,
+                "Age": 2,
+                "Fare": 0,
+                "Embarked": 2,
+                "Title": 1,
+                "IsAlone": 1,
+                "Age*Pclass": 6
+            },
+            {
+                "Pclass": 3,
+                "Sex": 1,
+                "Age": 2,
+                "Fare": 0,
+                "Embarked": 0,
+                "Title": 3,
+                "IsAlone": 0,
+                "Age*Pclass": 6
+            },
+            {
+                "Pclass": 2,
+                "Sex": 0,
+                "Age": 3,
+                "Fare": 1,
+                "Embarked": 2,
+                "Title": 1,
+                "IsAlone": 1,
+                "Age*Pclass": 6
+            }
+        ]
+    },
+    {
+        "table_name": "Baltimore_City_Employee_Salaries_FY2013.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Baltimore_City_Employee_Salaries_FY2013.csv",
+        "columns": [
+            "NAME",
+            "JOBTITLE",
+            "DEPTID",
+            "DESCR",
+            "HIRE_DT",
+            "ANNUAL_RT",
+            "Gross"
+        ],
+        "dtypes": {
+            "NAME": "object",
+            "JOBTITLE": "object",
+            "DEPTID": "object",
+            "DESCR": "object",
+            "HIRE_DT": "object",
+            "ANNUAL_RT": "float64",
+            "Gross": "float64"
+        },
+        "sample_data": [
+            {
+                "NAME": "AKROFI,BERNARD",
+                "JOBTITLE": "AUDITOR TRAINEE",
+                "DEPTID": "A24002",
+                "DESCR": "COMP-Audits (002)",
+                "HIRE_DT": "02/04/2013",
+                "ANNUAL_RT": 37407.0,
+                "Gross": 14387.3
+            },
+            {
+                "NAME": "Aaron,Keairah T",
+                "JOBTITLE": "AIDE BLUE CHIP",
+                "DEPTID": "W02278",
+                "DESCR": "Youth Summer  (278)",
+                "HIRE_DT": "06/19/2013",
+                "ANNUAL_RT": 11310.0,
+                "Gross": NaN
+            },
+            {
+                "NAME": "Aaron,Keontae E",
+                "JOBTITLE": "AIDE BLUE CHIP",
+                "DEPTID": "W02200",
+                "DESCR": "Youth Summer  (200)",
+                "HIRE_DT": "06/10/2013",
+                "ANNUAL_RT": 11310.0,
+                "Gross": NaN
+            }
+        ]
+    },
+    {
+        "table_name": "credit-data-post-import.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/credit-data-post-import.csv",
+        "columns": [
+            "serious_dlqin2yrs",
+            "revolving_utilization_of_unsecured_lines",
+            "age",
+            "number_of_time30-59_days_past_due_not_worse",
+            "debt_ratio",
+            "monthly_income",
+            "number_of_open_credit_lines_and_loans",
+            "number_of_times90_days_late",
+            "number_real_estate_loans_or_lines",
+            "number_of_time60-89_days_past_due_not_worse",
+            "number_of_dependents"
+        ],
+        "dtypes": {
+            "serious_dlqin2yrs": "int64",
+            "revolving_utilization_of_unsecured_lines": "float64",
+            "age": "int64",
+            "number_of_time30-59_days_past_due_not_worse": "int64",
+            "debt_ratio": "float64",
+            "monthly_income": "float64",
+            "number_of_open_credit_lines_and_loans": "int64",
+            "number_of_times90_days_late": "int64",
+            "number_real_estate_loans_or_lines": "int64",
+            "number_of_time60-89_days_past_due_not_worse": "int64",
+            "number_of_dependents": "float64"
+        },
+        "sample_data": [
+            {
+                "serious_dlqin2yrs": 1,
+                "revolving_utilization_of_unsecured_lines": 0.7661266089999998,
+                "age": 45,
+                "number_of_time30-59_days_past_due_not_worse": 2,
+                "debt_ratio": 0.8029821290000001,
+                "monthly_income": 9120.0,
+                "number_of_open_credit_lines_and_loans": 13,
+                "number_of_times90_days_late": 0,
+                "number_real_estate_loans_or_lines": 6,
+                "number_of_time60-89_days_past_due_not_worse": 0,
+                "number_of_dependents": 2.0
+            },
+            {
+                "serious_dlqin2yrs": 0,
+                "revolving_utilization_of_unsecured_lines": 0.957151019,
+                "age": 40,
+                "number_of_time30-59_days_past_due_not_worse": 0,
+                "debt_ratio": 0.121876201,
+                "monthly_income": 2600.0,
+                "number_of_open_credit_lines_and_loans": 4,
+                "number_of_times90_days_late": 0,
+                "number_real_estate_loans_or_lines": 0,
+                "number_of_time60-89_days_past_due_not_worse": 0,
+                "number_of_dependents": 1.0
+            },
+            {
+                "serious_dlqin2yrs": 0,
+                "revolving_utilization_of_unsecured_lines": 0.65818014,
+                "age": 38,
+                "number_of_time30-59_days_past_due_not_worse": 1,
+                "debt_ratio": 0.085113375,
+                "monthly_income": 3042.0,
+                "number_of_open_credit_lines_and_loans": 2,
+                "number_of_times90_days_late": 1,
+                "number_real_estate_loans_or_lines": 0,
+                "number_of_time60-89_days_past_due_not_worse": 0,
+                "number_of_dependents": 0.0
+            }
+        ]
+    },
+    {
+        "table_name": "imp.score.ldlr.metabolome.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/imp.score.ldlr.metabolome.csv",
+        "columns": [
+            "#featureID",
+            "row ID",
+            "row m/z",
+            "row retention time",
+            "LibraryID",
+            "standard_indentification_level_1",
+            "_feature_id",
+            "importance.score"
+        ],
+        "dtypes": {
+            "#featureID": "object",
+            "row ID": "int64",
+            "row m/z": "float64",
+            "row retention time": "float64",
+            "LibraryID": "object",
+            "standard_indentification_level_1": "float64",
+            "_feature_id": "object",
+            "importance.score": "float64"
+        },
+        "sample_data": [
+            {
+                "#featureID": "358.3677167129743_3.65612984126984",
+                "row ID": 241,
+                "row m/z": 358.3677167,
+                "row retention time": 3.656129841,
+                "LibraryID": NaN,
+                "standard_indentification_level_1": NaN,
+                "_feature_id": "358.3677167129743_3.65612984126984",
+                "importance.score": 0.0670524225212391
+            },
+            {
+                "#featureID": "423.2744890715284_4.29798541001065",
+                "row ID": 695,
+                "row m/z": 423.2744891,
+                "row retention time": 4.29798541,
+                "LibraryID": NaN,
+                "standard_indentification_level_1": NaN,
+                "_feature_id": "423.2744890715284_4.29798541001065",
+                "importance.score": 0.0405984341742611
+            },
+            {
+                "#featureID": "304.2993572401259_5.121302585521083",
+                "row ID": 382,
+                "row m/z": 304.2993572,
+                "row retention time": 5.1213025860000005,
+                "LibraryID": "Spectral Match to Benzyldodecyldimethylammonium from NIST14",
+                "standard_indentification_level_1": NaN,
+                "_feature_id": "304.2993572401259_5.121302585521083",
+                "importance.score": 0.0341410429343644
+            }
+        ]
+    },
+    {
+        "table_name": "2014_q4.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/2014_q4.csv",
+        "columns": [
+            "Date",
+            "Trips over the past 24-hours (midnight to 11:59pm)",
+            "Cumulative trips (since launch):",
+            "Miles traveled today (midnight to 11:59 pm)",
+            "Miles traveled to date:",
+            "Total Annual Memberships Sold",
+            "Annual Member Sign-Ups (midnight to 11:59 pm)",
+            "24-Hour Passes Purchased (midnight to 11:59 pm)",
+            "7-Day Passes Purchased (midnight to 11:59 pm)"
+        ],
+        "dtypes": {
+            "Date": "object",
+            "Trips over the past 24-hours (midnight to 11:59pm)": "int64",
+            "Cumulative trips (since launch):": "int64",
+            "Miles traveled today (midnight to 11:59 pm)": "int64",
+            "Miles traveled to date:": "int64",
+            "Total Annual Memberships Sold": "int64",
+            "Annual Member Sign-Ups (midnight to 11:59 pm)": "int64",
+            "24-Hour Passes Purchased (midnight to 11:59 pm)": "int64",
+            "7-Day Passes Purchased (midnight to 11:59 pm)": "int64"
+        },
+        "sample_data": [
+            {
+                "Date": "10/1/2014",
+                "Trips over the past 24-hours (midnight to 11:59pm)": 31197,
+                "Cumulative trips (since launch):": 13296973,
+                "Miles traveled today (midnight to 11:59 pm)": 44612,
+                "Miles traveled to date:": 23121175,
+                "Total Annual Memberships Sold": 124846,
+                "Annual Member Sign-Ups (midnight to 11:59 pm)": 112,
+                "24-Hour Passes Purchased (midnight to 11:59 pm)": 330,
+                "7-Day Passes Purchased (midnight to 11:59 pm)": 48
+            },
+            {
+                "Date": "10/2/2014",
+                "Trips over the past 24-hours (midnight to 11:59pm)": 38286,
+                "Cumulative trips (since launch):": 13335259,
+                "Miles traveled today (midnight to 11:59 pm)": 60639,
+                "Miles traveled to date:": 23181814,
+                "Total Annual Memberships Sold": 124959,
+                "Annual Member Sign-Ups (midnight to 11:59 pm)": 113,
+                "24-Hour Passes Purchased (midnight to 11:59 pm)": 602,
+                "7-Day Passes Purchased (midnight to 11:59 pm)": 86
+            },
+            {
+                "Date": "10/3/2014",
+                "Trips over the past 24-hours (midnight to 11:59pm)": 38956,
+                "Cumulative trips (since launch):": 13374215,
+                "Miles traveled today (midnight to 11:59 pm)": 65739,
+                "Miles traveled to date:": 23247553,
+                "Total Annual Memberships Sold": 125024,
+                "Annual Member Sign-Ups (midnight to 11:59 pm)": 65,
+                "24-Hour Passes Purchased (midnight to 11:59 pm)": 1276,
+                "7-Day Passes Purchased (midnight to 11:59 pm)": 107
+            }
+        ]
+    },
+    {
+        "table_name": "baro_2015.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/baro_2015.csv",
+        "columns": [
+            "DATE TIME",
+            " WINDSPEED",
+            " DIR",
+            " GUSTS",
+            " AT",
+            " BARO",
+            " RELHUM",
+            " VIS"
+        ],
+        "dtypes": {
+            "DATE TIME": "object",
+            " WINDSPEED": "float64",
+            " DIR": "int64",
+            " GUSTS": "float64",
+            " AT": "float64",
+            " BARO": "float64",
+            " RELHUM": "float64",
+            " VIS": "float64"
+        },
+        "sample_data": [
+            {
+                "DATE TIME": "01/01/2015 00:00",
+                " WINDSPEED": 2.72,
+                " DIR": 288,
+                " GUSTS": 5.25,
+                " AT": 27.7,
+                " BARO": 1023.0,
+                " RELHUM": NaN,
+                " VIS": NaN
+            },
+            {
+                "DATE TIME": "01/01/2015 01:00",
+                " WINDSPEED": 3.89,
+                " DIR": 273,
+                " GUSTS": 7.0,
+                " AT": 26.8,
+                " BARO": 1022.7,
+                " RELHUM": NaN,
+                " VIS": NaN
+            },
+            {
+                "DATE TIME": "01/01/2015 02:00",
+                " WINDSPEED": 4.86,
+                " DIR": 268,
+                " GUSTS": 6.41,
+                " AT": 27.0,
+                " BARO": 1022.1,
+                " RELHUM": NaN,
+                " VIS": NaN
+            }
+        ]
+    },
+    {
+        "table_name": "weather_data_1864.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/weather_data_1864.csv",
+        "columns": [
+            "station",
+            "datetime",
+            "obs_type",
+            "obs_value",
+            "TMAX_F",
+            "datetime_dt"
+        ],
+        "dtypes": {
+            "station": "object",
+            "datetime": "int64",
+            "obs_type": "object",
+            "obs_value": "float64",
+            "TMAX_F": "float64",
+            "datetime_dt": "object"
+        },
+        "sample_data": [
+            {
+                "station": "SZ000006717",
+                "datetime": 18640226,
+                "obs_type": "TMAX",
+                "obs_value": -34.0,
+                "TMAX_F": -29.200000000000003,
+                "datetime_dt": "1864-02-26"
+            },
+            {
+                "station": "SZ000006717",
+                "datetime": 18640208,
+                "obs_type": "TMAX",
+                "obs_value": -17.4,
+                "TMAX_F": 0.6800000000000033,
+                "datetime_dt": "1864-02-08"
+            },
+            {
+                "station": "CA006158350",
+                "datetime": 18640217,
+                "obs_type": "TMAX",
+                "obs_value": -16.7,
+                "TMAX_F": 1.9400000000000013,
+                "datetime_dt": "1864-02-17"
+            }
+        ]
+    },
+    {
+        "table_name": "oecd_education_spending.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/oecd_education_spending.csv",
+        "columns": [
+            "LOCATION",
+            "INDICATOR",
+            "SUBJECT",
+            "MEASURE",
+            "FREQUENCY",
+            "TIME",
+            "Value",
+            "Flag Codes"
+        ],
+        "dtypes": {
+            "LOCATION": "object",
+            "INDICATOR": "object",
+            "SUBJECT": "object",
+            "MEASURE": "object",
+            "FREQUENCY": "object",
+            "TIME": "int64",
+            "Value": "float64",
+            "Flag Codes": "float64"
+        },
+        "sample_data": [
+            {
+                "LOCATION": "AUS",
+                "INDICATOR": "EDUEXP",
+                "SUBJECT": "TRY",
+                "MEASURE": "PC_GDP",
+                "FREQUENCY": "A",
+                "TIME": 2012,
+                "Value": 1.6,
+                "Flag Codes": NaN
+            },
+            {
+                "LOCATION": "AUS",
+                "INDICATOR": "EDUEXP",
+                "SUBJECT": "TRY",
+                "MEASURE": "PC_GDP",
+                "FREQUENCY": "A",
+                "TIME": 2013,
+                "Value": 1.7,
+                "Flag Codes": NaN
+            },
+            {
+                "LOCATION": "AUS",
+                "INDICATOR": "EDUEXP",
+                "SUBJECT": "PRY_NTRY",
+                "MEASURE": "PC_GDP",
+                "FREQUENCY": "A",
+                "TIME": 2012,
+                "Value": 4.0,
+                "Flag Codes": NaN
+            }
+        ]
+    },
+    {
+        "table_name": "0020200722.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/0020200722.csv",
+        "columns": [
+            "GAME_ID",
+            "EVENTNUM",
+            "EVENTMSGTYPE",
+            "EVENTMSGACTIONTYPE",
+            "PERIOD",
+            "WCTIMESTRING",
+            "PCTIMESTRING",
+            "HOMEDESCRIPTION",
+            "NEUTRALDESCRIPTION",
+            "VISITORDESCRIPTION",
+            "SCORE",
+            "SCOREMARGIN"
+        ],
+        "dtypes": {
+            "GAME_ID": "int64",
+            "EVENTNUM": "int64",
+            "EVENTMSGTYPE": "int64",
+            "EVENTMSGACTIONTYPE": "int64",
+            "PERIOD": "int64",
+            "WCTIMESTRING": "object",
+            "PCTIMESTRING": "object",
+            "HOMEDESCRIPTION": "object",
+            "NEUTRALDESCRIPTION": "float64",
+            "VISITORDESCRIPTION": "object",
+            "SCORE": "float64",
+            "SCOREMARGIN": "float64"
+        },
+        "sample_data": [
+            {
+                "GAME_ID": 20200722,
+                "EVENTNUM": 0,
+                "EVENTMSGTYPE": 12,
+                "EVENTMSGACTIONTYPE": 0,
+                "PERIOD": 1,
+                "WCTIMESTRING": "7:13 PM",
+                "PCTIMESTRING": "12:00",
+                "HOMEDESCRIPTION": NaN,
+                "NEUTRALDESCRIPTION": NaN,
+                "VISITORDESCRIPTION": NaN,
+                "SCORE": NaN,
+                "SCOREMARGIN": NaN
+            },
+            {
+                "GAME_ID": 20200722,
+                "EVENTNUM": 1,
+                "EVENTMSGTYPE": 10,
+                "EVENTMSGACTIONTYPE": 0,
+                "PERIOD": 1,
+                "WCTIMESTRING": "7:14 PM",
+                "PCTIMESTRING": "12:00",
+                "HOMEDESCRIPTION": "Jump Ball Ilgauskas vs. Garnett: Tip to Palacio",
+                "NEUTRALDESCRIPTION": NaN,
+                "VISITORDESCRIPTION": NaN,
+                "SCORE": NaN,
+                "SCOREMARGIN": NaN
+            },
+            {
+                "GAME_ID": 20200722,
+                "EVENTNUM": 2,
+                "EVENTMSGTYPE": 5,
+                "EVENTMSGACTIONTYPE": 1,
+                "PERIOD": 1,
+                "WCTIMESTRING": "7:15 PM",
+                "PCTIMESTRING": "11:46",
+                "HOMEDESCRIPTION": "Ilgauskas Bad Pass Turnover (P1.T1)",
+                "NEUTRALDESCRIPTION": NaN,
+                "VISITORDESCRIPTION": "Peeler STEAL (1 STL)",
+                "SCORE": NaN,
+                "SCOREMARGIN": NaN
+            }
+        ]
+    },
+    {
+        "table_name": "well_2_complete.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/well_2_complete.csv",
+        "columns": [
+            "DEPTH",
+            "VP",
+            "VS",
+            "RHO_OLD",
+            "GR",
+            "NPHI",
+            "RHO",
+            "SW",
+            "SWX",
+            "VPVS",
+            "IP",
+            "IS",
+            "VSH",
+            "RHOm",
+            "RHOf",
+            "PHI"
+        ],
+        "dtypes": {
+            "DEPTH": "float64",
+            "VP": "float64",
+            "VS": "float64",
+            "RHO_OLD": "float64",
+            "GR": "float64",
+            "NPHI": "float64",
+            "RHO": "float64",
+            "SW": "float64",
+            "SWX": "float64",
+            "VPVS": "float64",
+            "IP": "float64",
+            "IS": "float64",
+            "VSH": "float64",
+            "RHOm": "float64",
+            "RHOf": "float64",
+            "PHI": "float64"
+        },
+        "sample_data": [
+            {
+                "DEPTH": 2013.2528,
+                "VP": 2294.7000000000007,
+                "VS": 876.9,
+                "RHO_OLD": 1.9972,
+                "GR": 91.8785,
+                "NPHI": 0.4908,
+                "RHO": NaN,
+                "SW": NaN,
+                "SWX": NaN,
+                "VPVS": 2.6168320218953136,
+                "IP": NaN,
+                "IS": NaN,
+                "VSH": 0.4936212406729436,
+                "RHOm": 2.7289793985076707,
+                "RHOf": NaN,
+                "PHI": NaN
+            },
+            {
+                "DEPTH": 2013.4052,
+                "VP": 2296.7,
+                "VS": 943.0,
+                "RHO_OLD": 2.0455,
+                "GR": 86.8004,
+                "NPHI": 0.4833,
+                "RHO": 2.240103999999997,
+                "SW": 1.0,
+                "SWX": 1.0,
+                "VPVS": 2.4355249204665954,
+                "IP": 5144.8468567999935,
+                "IS": 2112.4180719999968,
+                "VSH": 0.4360098974293231,
+                "RHOm": 2.719761583588692,
+                "RHOf": 1.09,
+                "PHI": 0.2943115044671145
+            },
+            {
+                "DEPTH": 2013.5576,
+                "VP": 2290.4,
+                "VS": 912.5,
+                "RHO_OLD": 2.1122,
+                "GR": 86.0021,
+                "NPHI": 0.4474,
+                "RHO": 2.2422880000000003,
+                "SW": 1.0,
+                "SWX": 1.0,
+                "VPVS": 2.510027397260274,
+                "IP": 5135.7364352,
+                "IS": 2046.0878,
+                "VSH": 0.4269531369654917,
+                "RHOm": 2.7183125019144785,
+                "RHOf": 1.09,
+                "PHI": 0.2923422262955024
+            }
+        ]
+    },
+    {
+        "table_name": "beauty and the labor market.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/beauty and the labor market.csv",
+        "columns": [
+            "wage",
+            "lwage",
+            "belavg",
+            "abvavg",
+            "exper",
+            "looks",
+            "union",
+            "goodhlth",
+            "black",
+            "female",
+            "married",
+            "south",
+            "bigcity",
+            "smllcity",
+            "service",
+            "expersq",
+            "educ",
+            "Nservice",
+            "Slooks"
+        ],
+        "dtypes": {
+            "wage": "float64",
+            "lwage": "float64",
+            "belavg": "int64",
+            "abvavg": "int64",
+            "exper": "int64",
+            "looks": "int64",
+            "union": "int64",
+            "goodhlth": "int64",
+            "black": "int64",
+            "female": "int64",
+            "married": "int64",
+            "south": "int64",
+            "bigcity": "int64",
+            "smllcity": "int64",
+            "service": "int64",
+            "expersq": "int64",
+            "educ": "int64",
+            "Nservice": "int64",
+            "Slooks": "int64"
+        },
+        "sample_data": [
+            {
+                "wage": 5.73,
+                "lwage": 1.745715,
+                "belavg": 0,
+                "abvavg": 1,
+                "exper": 30,
+                "looks": 4,
+                "union": 0,
+                "goodhlth": 1,
+                "black": 0,
+                "female": 1,
+                "married": 1,
+                "south": 0,
+                "bigcity": 0,
+                "smllcity": 1,
+                "service": 1,
+                "expersq": 900,
+                "educ": 14,
+                "Nservice": 0,
+                "Slooks": 4
+            },
+            {
+                "wage": 4.28,
+                "lwage": 1.453953,
+                "belavg": 0,
+                "abvavg": 0,
+                "exper": 28,
+                "looks": 3,
+                "union": 0,
+                "goodhlth": 1,
+                "black": 0,
+                "female": 1,
+                "married": 1,
+                "south": 1,
+                "bigcity": 0,
+                "smllcity": 1,
+                "service": 0,
+                "expersq": 784,
+                "educ": 12,
+                "Nservice": 1,
+                "Slooks": 0
+            },
+            {
+                "wage": 7.96,
+                "lwage": 2.074429,
+                "belavg": 0,
+                "abvavg": 1,
+                "exper": 35,
+                "looks": 4,
+                "union": 0,
+                "goodhlth": 1,
+                "black": 0,
+                "female": 1,
+                "married": 0,
+                "south": 0,
+                "bigcity": 0,
+                "smllcity": 1,
+                "service": 0,
+                "expersq": 1225,
+                "educ": 10,
+                "Nservice": 1,
+                "Slooks": 0
+            }
+        ]
+    },
+    {
+        "table_name": "percent-bachelors-degrees-women-usa.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/percent-bachelors-degrees-women-usa.csv",
+        "columns": [
+            "Year",
+            "Agriculture",
+            "Architecture",
+            "Art and Performance",
+            "Biology",
+            "Business",
+            "Communications and Journalism",
+            "Computer Science",
+            "Education",
+            "Engineering",
+            "English",
+            "Foreign Languages",
+            "Health Professions",
+            "Math and Statistics",
+            "Physical Sciences",
+            "Psychology",
+            "Public Administration",
+            "Social Sciences and History"
+        ],
+        "dtypes": {
+            "Year": "int64",
+            "Agriculture": "float64",
+            "Architecture": "float64",
+            "Art and Performance": "float64",
+            "Biology": "float64",
+            "Business": "float64",
+            "Communications and Journalism": "float64",
+            "Computer Science": "float64",
+            "Education": "float64",
+            "Engineering": "float64",
+            "English": "float64",
+            "Foreign Languages": "float64",
+            "Health Professions": "float64",
+            "Math and Statistics": "float64",
+            "Physical Sciences": "float64",
+            "Psychology": "float64",
+            "Public Administration": "float64",
+            "Social Sciences and History": "float64"
+        },
+        "sample_data": [
+            {
+                "Year": 1970,
+                "Agriculture": 4.22979798,
+                "Architecture": 11.92100539,
+                "Art and Performance": 59.7,
+                "Biology": 29.08836297,
+                "Business": 9.064438975,
+                "Communications and Journalism": 35.3,
+                "Computer Science": 13.6,
+                "Education": 74.53532758,
+                "Engineering": 0.8,
+                "English": 65.57092343,
+                "Foreign Languages": 73.8,
+                "Health Professions": 77.1,
+                "Math and Statistics": 38.0,
+                "Physical Sciences": 13.8,
+                "Psychology": 44.4,
+                "Public Administration": 68.4,
+                "Social Sciences and History": 36.8
+            },
+            {
+                "Year": 1971,
+                "Agriculture": 5.452796685,
+                "Architecture": 12.00310559,
+                "Art and Performance": 59.9,
+                "Biology": 29.39440285,
+                "Business": 9.503186594,
+                "Communications and Journalism": 35.5,
+                "Computer Science": 13.6,
+                "Education": 74.14920369,
+                "Engineering": 1.0,
+                "English": 64.55648516,
+                "Foreign Languages": 73.9,
+                "Health Professions": 75.5,
+                "Math and Statistics": 39.0,
+                "Physical Sciences": 14.9,
+                "Psychology": 46.2,
+                "Public Administration": 65.5,
+                "Social Sciences and History": 36.2
+            },
+            {
+                "Year": 1972,
+                "Agriculture": 7.42071022,
+                "Architecture": 13.21459351,
+                "Art and Performance": 60.4,
+                "Biology": 29.81022105,
+                "Business": 10.5589621,
+                "Communications and Journalism": 36.6,
+                "Computer Science": 14.9,
+                "Education": 73.55451996,
+                "Engineering": 1.2,
+                "English": 63.6642632,
+                "Foreign Languages": 74.6,
+                "Health Professions": 76.9,
+                "Math and Statistics": 40.2,
+                "Physical Sciences": 14.8,
+                "Psychology": 47.6,
+                "Public Administration": 62.6,
+                "Social Sciences and History": 36.1
+            }
+        ]
+    },
+    {
+        "table_name": "cs-test.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/cs-test.csv",
+        "columns": [
+            "Unnamed: 0",
+            "SeriousDlqin2yrs",
+            "RevolvingUtilizationOfUnsecuredLines",
+            "age",
+            "NumberOfTime30-59DaysPastDueNotWorse",
+            "DebtRatio",
+            "MonthlyIncome",
+            "NumberOfOpenCreditLinesAndLoans",
+            "NumberOfTimes90DaysLate",
+            "NumberRealEstateLoansOrLines",
+            "NumberOfTime60-89DaysPastDueNotWorse",
+            "NumberOfDependents"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "SeriousDlqin2yrs": "float64",
+            "RevolvingUtilizationOfUnsecuredLines": "float64",
+            "age": "int64",
+            "NumberOfTime30-59DaysPastDueNotWorse": "int64",
+            "DebtRatio": "float64",
+            "MonthlyIncome": "int64",
+            "NumberOfOpenCreditLinesAndLoans": "int64",
+            "NumberOfTimes90DaysLate": "int64",
+            "NumberRealEstateLoansOrLines": "int64",
+            "NumberOfTime60-89DaysPastDueNotWorse": "int64",
+            "NumberOfDependents": "int64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 1,
+                "SeriousDlqin2yrs": NaN,
+                "RevolvingUtilizationOfUnsecuredLines": 0.88551908,
+                "age": 43,
+                "NumberOfTime30-59DaysPastDueNotWorse": 0,
+                "DebtRatio": 0.177512717,
+                "MonthlyIncome": 5700,
+                "NumberOfOpenCreditLinesAndLoans": 4,
+                "NumberOfTimes90DaysLate": 0,
+                "NumberRealEstateLoansOrLines": 0,
+                "NumberOfTime60-89DaysPastDueNotWorse": 0,
+                "NumberOfDependents": 0
+            },
+            {
+                "Unnamed: 0": 2,
+                "SeriousDlqin2yrs": NaN,
+                "RevolvingUtilizationOfUnsecuredLines": 0.463295269,
+                "age": 57,
+                "NumberOfTime30-59DaysPastDueNotWorse": 0,
+                "DebtRatio": 0.527236928,
+                "MonthlyIncome": 9141,
+                "NumberOfOpenCreditLinesAndLoans": 15,
+                "NumberOfTimes90DaysLate": 0,
+                "NumberRealEstateLoansOrLines": 4,
+                "NumberOfTime60-89DaysPastDueNotWorse": 0,
+                "NumberOfDependents": 2
+            },
+            {
+                "Unnamed: 0": 3,
+                "SeriousDlqin2yrs": NaN,
+                "RevolvingUtilizationOfUnsecuredLines": 0.043275036,
+                "age": 59,
+                "NumberOfTime30-59DaysPastDueNotWorse": 0,
+                "DebtRatio": 0.687647522,
+                "MonthlyIncome": 5083,
+                "NumberOfOpenCreditLinesAndLoans": 12,
+                "NumberOfTimes90DaysLate": 0,
+                "NumberRealEstateLoansOrLines": 1,
+                "NumberOfTime60-89DaysPastDueNotWorse": 0,
+                "NumberOfDependents": 2
+            }
+        ]
+    },
+    {
+        "table_name": "2019-08_edges.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/2019-08_edges.csv",
+        "columns": [
+            "Source",
+            "Target",
+            "Weight",
+            "Type",
+            "lng_org",
+            "lat_org",
+            "lng_dest",
+            "lat_dest"
+        ],
+        "dtypes": {
+            "Source": "int64",
+            "Target": "float64",
+            "Weight": "int64",
+            "Type": "object",
+            "lng_org": "float64",
+            "lat_org": "float64",
+            "lng_dest": "float64",
+            "lat_dest": "float64"
+        },
+        "sample_data": [
+            {
+                "Source": 0,
+                "Target": 1.0,
+                "Weight": 10,
+                "Type": "Directed",
+                "lng_org": 51.048332,
+                "lat_org": 16.960160000000002,
+                "lng_dest": 51.089356,
+                "lat_dest": 17.001061
+            },
+            {
+                "Source": 0,
+                "Target": 13.0,
+                "Weight": 129,
+                "Type": "Directed",
+                "lng_org": 51.048332,
+                "lat_org": 16.960160000000002,
+                "lng_dest": 51.053396,
+                "lat_dest": 16.971785
+            },
+            {
+                "Source": 0,
+                "Target": 14.0,
+                "Weight": 168,
+                "Type": "Directed",
+                "lng_org": 51.048332,
+                "lat_org": 16.960160000000002,
+                "lng_dest": 51.047068,
+                "lat_dest": 16.95721
+            }
+        ]
+    },
+    {
+        "table_name": "arrest_expungibility.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/arrest_expungibility.csv",
+        "columns": [
+            "Date",
+            "Offense",
+            "Age",
+            "Count",
+            "Category",
+            "Disqualifying_Offense",
+            "Offense_Type",
+            "Expungible"
+        ],
+        "dtypes": {
+            "Date": "int64",
+            "Offense": "object",
+            "Age": "int64",
+            "Count": "float64",
+            "Category": "object",
+            "Disqualifying_Offense": "bool",
+            "Offense_Type": "object",
+            "Expungible": "bool"
+        },
+        "sample_data": [
+            {
+                "Date": 1991,
+                "Offense": "Aggravated Assault",
+                "Age": 15,
+                "Count": 1.0,
+                "Category": "Crimes Against Person",
+                "Disqualifying_Offense": true,
+                "Offense_Type": "misdemeanor",
+                "Expungible": false
+            },
+            {
+                "Date": 1991,
+                "Offense": "All Other Larceny",
+                "Age": 14,
+                "Count": 1.0,
+                "Category": "Crimes Against Property",
+                "Disqualifying_Offense": false,
+                "Offense_Type": "misdemeanor",
+                "Expungible": true
+            },
+            {
+                "Date": 1991,
+                "Offense": "All Other Offenses",
+                "Age": 13,
+                "Count": 1.0,
+                "Category": "Group B Offenses",
+                "Disqualifying_Offense": false,
+                "Offense_Type": "misdemeanor",
+                "Expungible": true
+            }
+        ]
+    },
+    {
+        "table_name": "vgsales.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/vgsales.csv",
+        "columns": [
+            "Rank",
+            "Name",
+            "Platform",
+            "Year",
+            "Genre",
+            "Publisher",
+            "NA_Sales",
+            "EU_Sales",
+            "JP_Sales",
+            "Other_Sales",
+            "Global_Sales"
+        ],
+        "dtypes": {
+            "Rank": "int64",
+            "Name": "object",
+            "Platform": "object",
+            "Year": "int64",
+            "Genre": "object",
+            "Publisher": "object",
+            "NA_Sales": "float64",
+            "EU_Sales": "float64",
+            "JP_Sales": "float64",
+            "Other_Sales": "float64",
+            "Global_Sales": "float64"
+        },
+        "sample_data": [
+            {
+                "Rank": 1,
+                "Name": "Wii Sports",
+                "Platform": "Wii",
+                "Year": 2006,
+                "Genre": "Sports",
+                "Publisher": "Nintendo",
+                "NA_Sales": 41.49,
+                "EU_Sales": 29.02,
+                "JP_Sales": 3.77,
+                "Other_Sales": 8.46,
+                "Global_Sales": 82.74
+            },
+            {
+                "Rank": 2,
+                "Name": "Super Mario Bros.",
+                "Platform": "NES",
+                "Year": 1985,
+                "Genre": "Platform",
+                "Publisher": "Nintendo",
+                "NA_Sales": 29.08,
+                "EU_Sales": 3.58,
+                "JP_Sales": 6.81,
+                "Other_Sales": 0.77,
+                "Global_Sales": 40.24
+            },
+            {
+                "Rank": 3,
+                "Name": "Mario Kart Wii",
+                "Platform": "Wii",
+                "Year": 2008,
+                "Genre": "Racing",
+                "Publisher": "Nintendo",
+                "NA_Sales": 15.85,
+                "EU_Sales": 12.88,
+                "JP_Sales": 3.79,
+                "Other_Sales": 3.31,
+                "Global_Sales": 35.82
+            }
+        ]
+    },
+    {
+        "table_name": "gapminder_gdp_asia.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/gapminder_gdp_asia.csv",
+        "columns": [
+            "country",
+            "gdpPercap_1952",
+            "gdpPercap_1957",
+            "gdpPercap_1962",
+            "gdpPercap_1967",
+            "gdpPercap_1972",
+            "gdpPercap_1977",
+            "gdpPercap_1982",
+            "gdpPercap_1987",
+            "gdpPercap_1992",
+            "gdpPercap_1997",
+            "gdpPercap_2002",
+            "gdpPercap_2007"
+        ],
+        "dtypes": {
+            "country": "object",
+            "gdpPercap_1952": "float64",
+            "gdpPercap_1957": "float64",
+            "gdpPercap_1962": "float64",
+            "gdpPercap_1967": "float64",
+            "gdpPercap_1972": "float64",
+            "gdpPercap_1977": "float64",
+            "gdpPercap_1982": "float64",
+            "gdpPercap_1987": "float64",
+            "gdpPercap_1992": "float64",
+            "gdpPercap_1997": "float64",
+            "gdpPercap_2002": "float64",
+            "gdpPercap_2007": "float64"
+        },
+        "sample_data": [
+            {
+                "country": "Afghanistan",
+                "gdpPercap_1952": 779.4453145,
+                "gdpPercap_1957": 820.8530296,
+                "gdpPercap_1962": 853.10071,
+                "gdpPercap_1967": 836.1971382,
+                "gdpPercap_1972": 739.9811058,
+                "gdpPercap_1977": 786.11336,
+                "gdpPercap_1982": 978.0114388,
+                "gdpPercap_1987": 852.3959448,
+                "gdpPercap_1992": 649.3413952,
+                "gdpPercap_1997": 635.341351,
+                "gdpPercap_2002": 726.7340548,
+                "gdpPercap_2007": 974.5803384
+            },
+            {
+                "country": "Bahrain",
+                "gdpPercap_1952": 9867.084765,
+                "gdpPercap_1957": 11635.79945,
+                "gdpPercap_1962": 12753.27514,
+                "gdpPercap_1967": 14804.6727,
+                "gdpPercap_1972": 18268.65839,
+                "gdpPercap_1977": 19340.10196,
+                "gdpPercap_1982": 19211.14731,
+                "gdpPercap_1987": 18524.02406,
+                "gdpPercap_1992": 19035.57917,
+                "gdpPercap_1997": 20292.01679,
+                "gdpPercap_2002": 23403.55927,
+                "gdpPercap_2007": 29796.04834
+            },
+            {
+                "country": "Bangladesh",
+                "gdpPercap_1952": 684.2441716,
+                "gdpPercap_1957": 661.6374577,
+                "gdpPercap_1962": 686.3415538,
+                "gdpPercap_1967": 721.1860862,
+                "gdpPercap_1972": 630.2336265,
+                "gdpPercap_1977": 659.8772322,
+                "gdpPercap_1982": 676.9818656,
+                "gdpPercap_1987": 751.9794035,
+                "gdpPercap_1992": 837.8101643,
+                "gdpPercap_1997": 972.7700352,
+                "gdpPercap_2002": 1136.39043,
+                "gdpPercap_2007": 1391.253792
+            }
+        ]
+    },
+    {
+        "table_name": "DES=+2006261.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/DES=+2006261.csv",
+        "columns": [
+            "JDTDB",
+            "Calendar Date (TDB)",
+            "X",
+            "Y",
+            "Z",
+            "Unnamed: 5"
+        ],
+        "dtypes": {
+            "JDTDB": "float64",
+            "Calendar Date (TDB)": "object",
+            "X": "float64",
+            "Y": "float64",
+            "Z": "float64",
+            "Unnamed: 5": "float64"
+        },
+        "sample_data": [
+            {
+                "JDTDB": 2451214.540613426,
+                "Calendar Date (TDB)": " A.D. 1999-Feb-05 00:58:29.0000",
+                "X": -288747920.4014895,
+                "Y": 24757945.55630772,
+                "Z": 22126855.53510034,
+                "Unnamed: 5": NaN
+            },
+            {
+                "JDTDB": 2451215.540613426,
+                "Calendar Date (TDB)": " A.D. 1999-Feb-06 00:58:29.0000",
+                "X": -289446587.3203819,
+                "Y": 23035934.93346225,
+                "Z": 22866787.85207847,
+                "Unnamed: 5": NaN
+            },
+            {
+                "JDTDB": 2451216.540613426,
+                "Calendar Date (TDB)": " A.D. 1999-Feb-07 00:58:29.0000",
+                "X": -290133649.6015852,
+                "Y": 21313000.30706115,
+                "Z": 23605803.31485712,
+                "Unnamed: 5": NaN
+            }
+        ]
+    },
+    {
+        "table_name": "test_ave.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/test_ave.csv",
+        "columns": [
+            "Unnamed: 0",
+            "PassengerId",
+            "Survived",
+            "Pclass",
+            "Name",
+            "Sex",
+            "Age",
+            "SibSp",
+            "Parch",
+            "Ticket",
+            "Fare",
+            "Cabin",
+            "Embarked",
+            "AgeBand"
+        ],
+        "dtypes": {
+            "Unnamed: 0": "int64",
+            "PassengerId": "int64",
+            "Survived": "int64",
+            "Pclass": "int64",
+            "Name": "object",
+            "Sex": "object",
+            "Age": "float64",
+            "SibSp": "int64",
+            "Parch": "int64",
+            "Ticket": "object",
+            "Fare": "float64",
+            "Cabin": "object",
+            "Embarked": "object",
+            "AgeBand": "int64"
+        },
+        "sample_data": [
+            {
+                "Unnamed: 0": 0,
+                "PassengerId": 1,
+                "Survived": 0,
+                "Pclass": 3,
+                "Name": "Braund, Mr. Owen Harris",
+                "Sex": "male",
+                "Age": 22.0,
+                "SibSp": 1,
+                "Parch": 0,
+                "Ticket": "A/5 21171",
+                "Fare": 7.25,
+                "Cabin": NaN,
+                "Embarked": "S",
+                "AgeBand": 2
+            },
+            {
+                "Unnamed: 0": 1,
+                "PassengerId": 2,
+                "Survived": 1,
+                "Pclass": 1,
+                "Name": "Cumings, Mrs. John Bradley (Florence Briggs Thayer)",
+                "Sex": "female",
+                "Age": 38.0,
+                "SibSp": 1,
+                "Parch": 0,
+                "Ticket": "PC 17599",
+                "Fare": 71.2833,
+                "Cabin": "C85",
+                "Embarked": "C",
+                "AgeBand": 3
+            },
+            {
+                "Unnamed: 0": 2,
+                "PassengerId": 3,
+                "Survived": 1,
+                "Pclass": 3,
+                "Name": "Heikkinen, Miss. Laina",
+                "Sex": "female",
+                "Age": 26.0,
+                "SibSp": 0,
+                "Parch": 0,
+                "Ticket": "STON/O2. 3101282",
+                "Fare": 7.925,
+                "Cabin": NaN,
+                "Embarked": "S",
+                "AgeBand": 2
+            }
+        ]
+    },
+    {
+        "table_name": "GODREJIND.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/GODREJIND.csv",
+        "columns": [
+            "Symbol",
+            "Series",
+            "Date",
+            "Prev Close",
+            "Open Price",
+            "High Price",
+            "Low Price",
+            "Last Price",
+            "Close Price",
+            "Average Price",
+            "Total Traded Quantity",
+            "Turnover",
+            "No. of Trades",
+            "Deliverable Qty",
+            "% Dly Qt to Traded Qty"
+        ],
+        "dtypes": {
+            "Symbol": "object",
+            "Series": "object",
+            "Date": "object",
+            "Prev Close": "float64",
+            "Open Price": "float64",
+            "High Price": "float64",
+            "Low Price": "float64",
+            "Last Price": "float64",
+            "Close Price": "float64",
+            "Average Price": "float64",
+            "Total Traded Quantity": "int64",
+            "Turnover": "float64",
+            "No. of Trades": "int64",
+            "Deliverable Qty": "int64",
+            "% Dly Qt to Traded Qty": "float64"
+        },
+        "sample_data": [
+            {
+                "Symbol": "GODREJIND",
+                "Series": "EQ",
+                "Date": "15-May-2017",
+                "Prev Close": 564.6,
+                "Open Price": 581.0,
+                "High Price": 584.0,
+                "Low Price": 568.5,
+                "Last Price": 578.9,
+                "Close Price": 578.55,
+                "Average Price": 578.09,
+                "Total Traded Quantity": 797171,
+                "Turnover": 460836225.3,
+                "No. of Trades": 21649,
+                "Deliverable Qty": 360927,
+                "% Dly Qt to Traded Qty": 45.28
+            },
+            {
+                "Symbol": "GODREJIND",
+                "Series": "EQ",
+                "Date": "16-May-2017",
+                "Prev Close": 578.55,
+                "Open Price": 581.45,
+                "High Price": 589.0,
+                "Low Price": 572.25,
+                "Last Price": 583.8,
+                "Close Price": 584.8,
+                "Average Price": 583.6,
+                "Total Traded Quantity": 500223,
+                "Turnover": 291930164.6,
+                "No. of Trades": 17204,
+                "Deliverable Qty": 210364,
+                "% Dly Qt to Traded Qty": 42.05
+            },
+            {
+                "Symbol": "GODREJIND",
+                "Series": "EQ",
+                "Date": "17-May-2017",
+                "Prev Close": 584.8,
+                "Open Price": 583.0,
+                "High Price": 594.0,
+                "Low Price": 576.85,
+                "Last Price": 584.9,
+                "Close Price": 588.6,
+                "Average Price": 588.74,
+                "Total Traded Quantity": 504155,
+                "Turnover": 296814880.85,
+                "No. of Trades": 8567,
+                "Deliverable Qty": 261667,
+                "% Dly Qt to Traded Qty": 51.9
+            }
+        ]
+    },
+    {
+        "table_name": "auto-mpg.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/auto-mpg.csv",
+        "columns": [
+            "mpg",
+            "cylinders",
+            "displacement",
+            "horsepower",
+            "weight",
+            "acceleration",
+            "modelyear",
+            "origin"
+        ],
+        "dtypes": {
+            "mpg": "float64",
+            "cylinders": "int64",
+            "displacement": "float64",
+            "horsepower": "float64",
+            "weight": "float64",
+            "acceleration": "float64",
+            "modelyear": "int64",
+            "origin": "int64"
+        },
+        "sample_data": [
+            {
+                "mpg": 18.0,
+                "cylinders": 8,
+                "displacement": 307.0,
+                "horsepower": 130.0,
+                "weight": 3504.0,
+                "acceleration": 12.0,
+                "modelyear": 70,
+                "origin": 1
+            },
+            {
+                "mpg": 15.0,
+                "cylinders": 8,
+                "displacement": 350.0,
+                "horsepower": 165.0,
+                "weight": 3693.0,
+                "acceleration": 11.5,
+                "modelyear": 70,
+                "origin": 1
+            },
+            {
+                "mpg": 18.0,
+                "cylinders": 8,
+                "displacement": 318.0,
+                "horsepower": 150.0,
+                "weight": 3436.0,
+                "acceleration": 11.0,
+                "modelyear": 70,
+                "origin": 1
+            }
+        ]
+    },
+    {
+        "table_name": "country_vaccinations.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/country_vaccinations.csv",
+        "columns": [
+            "country",
+            "iso_code",
+            "date",
+            "total_vaccinations",
+            "people_vaccinated",
+            "people_fully_vaccinated",
+            "daily_vaccinations_raw",
+            "daily_vaccinations",
+            "total_vaccinations_per_hundred",
+            "people_vaccinated_per_hundred",
+            "people_fully_vaccinated_per_hundred",
+            "daily_vaccinations_per_million",
+            "vaccines",
+            "source_name",
+            "source_website"
+        ],
+        "dtypes": {
+            "country": "object",
+            "iso_code": "object",
+            "date": "object",
+            "total_vaccinations": "float64",
+            "people_vaccinated": "float64",
+            "people_fully_vaccinated": "float64",
+            "daily_vaccinations_raw": "float64",
+            "daily_vaccinations": "float64",
+            "total_vaccinations_per_hundred": "float64",
+            "people_vaccinated_per_hundred": "float64",
+            "people_fully_vaccinated_per_hundred": "float64",
+            "daily_vaccinations_per_million": "float64",
+            "vaccines": "object",
+            "source_name": "object",
+            "source_website": "object"
+        },
+        "sample_data": [
+            {
+                "country": "Albania",
+                "iso_code": "ALB",
+                "date": "2021-01-10",
+                "total_vaccinations": 0.0,
+                "people_vaccinated": 0.0,
+                "people_fully_vaccinated": NaN,
+                "daily_vaccinations_raw": NaN,
+                "daily_vaccinations": NaN,
+                "total_vaccinations_per_hundred": 0.0,
+                "people_vaccinated_per_hundred": 0.0,
+                "people_fully_vaccinated_per_hundred": NaN,
+                "daily_vaccinations_per_million": NaN,
+                "vaccines": "Pfizer/BioNTech",
+                "source_name": "Ministry of Health",
+                "source_website": "https://shendetesia.gov.al/vaksinimi-anticovid-kryhen-424-vaksinime-ne-dy-qendrat-e-vaksinimit-ne-shkoder-dhe-tirane/"
+            },
+            {
+                "country": "Albania",
+                "iso_code": "ALB",
+                "date": "2021-01-11",
+                "total_vaccinations": NaN,
+                "people_vaccinated": NaN,
+                "people_fully_vaccinated": NaN,
+                "daily_vaccinations_raw": NaN,
+                "daily_vaccinations": 64.0,
+                "total_vaccinations_per_hundred": NaN,
+                "people_vaccinated_per_hundred": NaN,
+                "people_fully_vaccinated_per_hundred": NaN,
+                "daily_vaccinations_per_million": 22.0,
+                "vaccines": "Pfizer/BioNTech",
+                "source_name": "Ministry of Health",
+                "source_website": "https://shendetesia.gov.al/vaksinimi-anticovid-kryhen-424-vaksinime-ne-dy-qendrat-e-vaksinimit-ne-shkoder-dhe-tirane/"
+            },
+            {
+                "country": "Albania",
+                "iso_code": "ALB",
+                "date": "2021-01-12",
+                "total_vaccinations": 128.0,
+                "people_vaccinated": 128.0,
+                "people_fully_vaccinated": NaN,
+                "daily_vaccinations_raw": NaN,
+                "daily_vaccinations": 64.0,
+                "total_vaccinations_per_hundred": 0.0,
+                "people_vaccinated_per_hundred": 0.0,
+                "people_fully_vaccinated_per_hundred": NaN,
+                "daily_vaccinations_per_million": 22.0,
+                "vaccines": "Pfizer/BioNTech",
+                "source_name": "Ministry of Health",
+                "source_website": "https://shendetesia.gov.al/vaksinimi-anticovid-kryhen-424-vaksinime-ne-dy-qendrat-e-vaksinimit-ne-shkoder-dhe-tirane/"
+            }
+        ]
+    },
+    {
+        "table_name": "bitconnect_price.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/bitconnect_price.csv",
+        "columns": [
+            "Date",
+            "Open",
+            "High",
+            "Low",
+            "Close",
+            "Volume",
+            "Market Cap"
+        ],
+        "dtypes": {
+            "Date": "object",
+            "Open": "float64",
+            "High": "float64",
+            "Low": "float64",
+            "Close": "float64",
+            "Volume": "object",
+            "Market Cap": "object"
+        },
+        "sample_data": [
+            {
+                "Date": "Sep 17, 2017",
+                "Open": 109.75,
+                "High": 110.94,
+                "Low": 102.81,
+                "Close": 106.84,
+                "Volume": "5,350,380",
+                "Market Cap": "737,226,000"
+            },
+            {
+                "Date": "Sep 16, 2017",
+                "Open": 111.11,
+                "High": 116.01,
+                "Low": 105.02,
+                "Close": 109.85,
+                "Volume": "5,683,580",
+                "Market Cap": "744,652,000"
+            },
+            {
+                "Date": "Sep 15, 2017",
+                "Open": 97.42,
+                "High": 113.75,
+                "Low": 89.36,
+                "Close": 111.22,
+                "Volume": "8,539,660",
+                "Market Cap": "652,107,000"
+            }
+        ]
+    },
+    {
+        "table_name": "2015-09-21.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/2015-09-21.csv",
+        "columns": [
+            "origin_station_code",
+            "origin_station",
+            "destination_station_code",
+            "destination_station",
+            "route_code",
+            "start_time",
+            "end_time",
+            "fleet_number",
+            "station_code",
+            "station",
+            "station_type",
+            "platform",
+            "sch_arr_time",
+            "sch_dep_time",
+            "act_arr_time",
+            "act_dep_time"
+        ],
+        "dtypes": {
+            "origin_station_code": "object",
+            "origin_station": "object",
+            "destination_station_code": "object",
+            "destination_station": "object",
+            "route_code": "int64",
+            "start_time": "object",
+            "end_time": "object",
+            "fleet_number": "int64",
+            "station_code": "object",
+            "station": "object",
+            "station_type": "object",
+            "platform": "object",
+            "sch_arr_time": "object",
+            "sch_dep_time": "object",
+            "act_arr_time": "object",
+            "act_dep_time": "object"
+        },
+        "sample_data": [
+            {
+                "origin_station_code": "MAM",
+                "origin_station": "Machine Mist",
+                "destination_station_code": "ROT",
+                "destination_station": "Roll Test",
+                "route_code": 4,
+                "start_time": "21/09/15 05:01:00",
+                "end_time": "21/09/15 05:41:00",
+                "fleet_number": 3088,
+                "station_code": "MAM",
+                "station": "Machine Mist",
+                "station_type": "Passenger",
+                "platform": "Outbound",
+                "sch_arr_time": NaN,
+                "sch_dep_time": "21/09/15 05:01:00",
+                "act_arr_time": NaN,
+                "act_dep_time": "21/09/15 04:59:19"
+            },
+            {
+                "origin_station_code": "MAM",
+                "origin_station": "Machine Mist",
+                "destination_station_code": "ROT",
+                "destination_station": "Roll Test",
+                "route_code": 4,
+                "start_time": "21/09/15 05:01:00",
+                "end_time": "21/09/15 05:41:00",
+                "fleet_number": 3088,
+                "station_code": "BUB",
+                "station": "Bucket Believe",
+                "station_type": "Passenger",
+                "platform": "Outbound",
+                "sch_arr_time": "21/09/15 05:01:30",
+                "sch_dep_time": "21/09/15 05:02:00",
+                "act_arr_time": "21/09/15 05:00:37",
+                "act_dep_time": "21/09/15 05:01:08"
+            },
+            {
+                "origin_station_code": "MAM",
+                "origin_station": "Machine Mist",
+                "destination_station_code": "ROT",
+                "destination_station": "Roll Test",
+                "route_code": 4,
+                "start_time": "21/09/15 05:01:00",
+                "end_time": "21/09/15 05:41:00",
+                "fleet_number": 3088,
+                "station_code": "MOM",
+                "station": "Monkey Machine",
+                "station_type": "Passenger",
+                "platform": "Outbound",
+                "sch_arr_time": "21/09/15 05:04:30",
+                "sch_dep_time": "21/09/15 05:05:00",
+                "act_arr_time": "21/09/15 05:03:10",
+                "act_dep_time": "21/09/15 05:03:41"
+            }
+        ]
+    }
+]
