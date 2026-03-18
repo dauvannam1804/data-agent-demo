@@ -1,0 +1,17 @@
+[project]
+name = "data-agent-demo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "agno>=2.5.10",
+    "duckdb>=1.5.0",
+    "matplotlib>=3.10.8",
+    "openai>=2.29.0",
+    "pandas>=2.3.3",
+    "plotly>=6.6.0",
+    "python-dotenv>=1.2.2",
+    "streamlit>=1.55.0",
+    "tabulate>=0.10.0",
+]

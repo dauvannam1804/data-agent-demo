@@ -107,9 +107,10 @@ A newly introduced schema-driven architecture optimized for large sets of CSV fi
 
 2. **Initialize python environment and install dependencies**:
    ```bash
+   uv init
    uv venv
    source .venv/bin/activate
-   uv pip install -r requirements.txt
+   uv add -r requirements.txt
    ```
 
 3. **Configure Environment Variables**:
