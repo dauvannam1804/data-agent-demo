@@ -15,7 +15,7 @@ def execute_sql_on_csv(csv_paths: List[str], query: str) -> str:
         # Create a view for each CSV file
         for csv_path in csv_paths:
             table_name = os.path.splitext(os.path.basename(csv_path))[0]
-            con.execute(f"CREATE VIEW {table_name} AS SELECT * FROM read_csv_auto('{csv_path}')")
+            con.execute(f'CREATE VIEW "{table_name}" AS SELECT * FROM read_csv_auto(\'{csv_path}\')')
         
         # Execute the user query
         result = con.execute(query).fetchdf()
@@ -34,5 +34,5 @@ def get_sql_results_as_df(csv_paths: List[str], query: str):
     con = duckdb.connect(database=':memory:')
     for csv_path in csv_paths:
         table_name = os.path.splitext(os.path.basename(csv_path))[0]
-        con.execute(f"CREATE VIEW {table_name} AS SELECT * FROM read_csv_auto('{csv_path}')")
+        con.execute(f'CREATE VIEW "{table_name}" AS SELECT * FROM read_csv_auto(\'{csv_path}\')')
     return con.execute(query).fetchdf()
