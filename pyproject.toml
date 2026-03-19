@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "agno>=2.5.10",
+    "chromadb>=1.5.5",
     "duckdb>=1.5.0",
     "matplotlib>=3.10.8",
     "openai>=2.29.0",

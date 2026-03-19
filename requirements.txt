@@ -2,6 +2,7 @@ agno
 openai
 pandas
 duckdb
+chromadb
 plotly
 matplotlib
 streamlit
