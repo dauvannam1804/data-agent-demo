@@ -1,3 +1,11 @@
 .env
 InfiAgent
 data/sale_data
+__pycache__/
+*.pyc
+.venv/
+query_gpt_system/sql_samples/chroma_db/
+benchmark/results_*.json
+benchmark/summary_*.txt
+benchmark/results.json
+benchmark/summary.txt
