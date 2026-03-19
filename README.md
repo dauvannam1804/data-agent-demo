@@ -118,8 +118,9 @@ A newly introduced schema-driven architecture optimized for large sets of CSV fi
 2. **Intent Agent**: Classifies the semantic topic of the user's input.
 3. **Table Agent**: Uses the Intent and Query to identify the single most relevant CSV file out of dozens of files.
 4. **Column Pruner Agent**: Selects ONLY the absolutely necessary columns required to answer the query, discarding the rest to dramatically save LLM token usage and prevent hallucinations.
-5. **GenAI SQL Gateway**: A specialized pipeline that takes the fully optimized/pruned payload and generates highly accurate Zero-Shot DuckDB SQL.
-6. **SQL Executor**: A sandboxed wrapper that runs the query on DuckDB and streams Markdown results back to the user.
+5. **GenAI SQL Gateway**: A specialized pipeline that combines the pruned schema, retrieved SQL samples (via RAG), and the user query to generate highly accurate Few-Shot DuckDB SQL.
+6. **SQL Executor**: A sandboxed wrapper that runs the query on DuckDB and streams results back to the user.
+7. **SQL Sample RAG (`sql_samples/`)**: Uses **Agno** and **ChromaDB** to find relevant SQL examples similar to the user's question, enhancing generation accuracy.
 
 ## Setup
 
