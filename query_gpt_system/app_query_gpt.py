@@ -10,6 +10,7 @@ from core_agents.intent_agent import get_intent_agent
 from core_agents.table_agent import identify_table
 from core_agents.column_pruner import prune_columns
 from core_agents.genai_gateway import generate_duckdb_sql
+from core_agents.sql_sample_retriever import get_sql_samples
 from executor.sql_engine import execute_query
 
 st.set_page_config(page_title="Query GPT", page_icon="🚀", layout="wide")
@@ -82,11 +83,22 @@ if prompt := st.chat_input("Hỏi tôi bất kỳ điều gì (VD: Độ tuổi 
                 pruned_columns = prune_columns(prompt, matched_table_data)
                 st.write(f"👉 **Pruned Columns**: `{pruned_columns}`")
                 
-            # Bước 4: Viết SQL
+            # Bước 4: RAG - Tìm SQL mẫu tương tự
+            with st.spinner("Truy vấn SQL Samples (RAG)..."):
+                sql_samples = get_sql_samples(prompt, top_k=3)
+                if sql_samples:
+                    with st.expander("🔍 Tìm thấy các ví dụ SQL tương tự (Few-shot samples)", expanded=False):
+                        for s in sql_samples:
+                            st.markdown(f"**Q:** {s['question']}")
+                            st.code(s['sql'], language="sql")
+                else:
+                    st.info("Không tìm thấy SQL samples phù hợp trong VectorDB.")
+
+            # Bước 5: Viết SQL
             with st.spinner("Sinh SQL DuckDB..."):
                 # DuckDB cần đường dẫn tuyệt đối hoặc tương đối đúng hướng
                 csv_path = matched_table_data['file_path']
-                sql_query = generate_duckdb_sql(prompt, csv_path, pruned_columns)
+                sql_query = generate_duckdb_sql(prompt, csv_path, pruned_columns, sql_samples)
                 st.code(sql_query, language="sql")
                 
             # Bước 5: Chạy SQL
