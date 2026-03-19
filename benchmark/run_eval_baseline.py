@@ -50,7 +50,7 @@ def main():
     correct_count = 0
     total_count = 0
     
-    limit = 2 # Total is 257
+    limit = 257 # Total is 257
     
     with open(questions_file, 'r', encoding='utf-8') as f:
         for line in f:
