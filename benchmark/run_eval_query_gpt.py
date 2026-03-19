@@ -11,6 +11,7 @@ sys.path.append(os.path.join(root_dir, 'query_gpt_system'))
 from core_agents.intent_agent import get_intent_agent
 from core_agents.table_agent import identify_table
 from core_agents.column_pruner import prune_columns
+from core_agents.sql_sample_retriever import get_sql_samples
 from core_agents.genai_gateway import generate_duckdb_sql
 from executor.sql_engine import execute_query
 
@@ -52,7 +53,7 @@ def main():
     correct_count = 0
     total_count = 0
     
-    limit = 257 # Total is 257
+    limit = 2 # Total is 257
     
     intent_agent = get_intent_agent()
     
@@ -102,12 +103,19 @@ def main():
             except Exception as e:
                 pruned_columns = matched_table_data["columns"]
                 
-            # Bước 4: Viết SQL
+            # Bước 4: Lấy ví dụ SQL mẫu (RAG)
+            sql_samples = []
+            try:
+                sql_samples = get_sql_samples(q_data['question'], top_k=3)
+            except Exception as e:
+                print(f"RAG error: {e}")
+                
+            # Bước 5: Viết SQL
             sql_query = ""
             execution_result = ""
             try:
-                sql_query = generate_duckdb_sql(prompt, csv_path, pruned_columns)
-                # Bước 5: Chạy SQL
+                sql_query = generate_duckdb_sql(prompt, csv_path, pruned_columns, sql_samples=sql_samples)
+                # Bước 6: Chạy SQL
                 execution_result = execute_query(sql_query)
             except Exception as e:
                 print(f"Agent/Execution error: {e}")
@@ -147,6 +155,7 @@ def main():
                 "pruned_columns": pruned_columns,
                 "sql_query": sql_query,
                 "execution_result": execution_result,
+                "sql_samples": sql_samples,
                 "extracted_answers": extracted_sorted,
                 "expected_answers": expected_sorted,
                 "is_correct": is_correct

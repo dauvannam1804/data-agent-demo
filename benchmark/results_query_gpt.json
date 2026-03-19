@@ -1,0 +1,88 @@
+[
+  {
+    "id": 0,
+    "question": "Calculate the mean fare paid by the passengers.",
+    "expected_file": "test_ave.csv",
+    "matched_file": "titanic.csv",
+    "intent": "Tài chính",
+    "pruned_columns": [
+      "Fare"
+    ],
+    "sql_query": "SELECT '@mean_fare[' || ROUND(AVG(\"Fare\"), 2) || ']' AS mean_fare FROM '/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/titanic.csv';",
+    "execution_result": "| mean_fare        |\n|:-----------------|\n| @mean_fare[32.2] |",
+    "sql_samples": [
+      {
+        "question": "Calculate the mean fare paid by the passengers.",
+        "sql": "SELECT ROUND(AVG(Fare), 2) AS mean_fare FROM test_ave;",
+        "table": "test_ave"
+      },
+      {
+        "question": "Calculate the mean and standard deviation of the fare paid by the passengers.",
+        "sql": "SELECT ROUND(AVG(Fare), 2) AS mean_fare, ROUND(SQRT(SUM(POWER(Fare - AVG(Fare), 2)) / COUNT(Fare)), 2) AS std_dev_fare FROM titanic;",
+        "table": "titanic"
+      },
+      {
+        "question": "Calculate the mean age of the passengers.",
+        "sql": "SELECT ROUND(AVG(Age), 2) AS mean_age FROM test_x;",
+        "table": "test_x"
+      }
+    ],
+    "extracted_answers": [
+      [
+        "mean_fare",
+        "32.2"
+      ]
+    ],
+    "expected_answers": [
+      [
+        "mean_fare",
+        "34.65"
+      ]
+    ],
+    "is_correct": false
+  },
+  {
+    "id": 5,
+    "question": "Generate a new feature called \"FamilySize\" by summing the \"SibSp\" and \"Parch\" columns. Then, calculate the Pearson correlation coefficient (r) between the \"FamilySize\" and \"Fare\" columns.",
+    "expected_file": "test_ave.csv",
+    "matched_file": "titanic.csv",
+    "intent": "Phân tích dữ liệu",
+    "pruned_columns": [
+      "SibSp",
+      "Parch",
+      "Fare"
+    ],
+    "sql_query": "SELECT '@correlation_coefficient[' || ROUND(CORR(\"SibSp\" + \"Parch\", \"Fare\"), 2) || ']' AS correlation_coefficient FROM '/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/titanic.csv';",
+    "execution_result": "| correlation_coefficient        |\n|:-------------------------------|\n| @correlation_coefficient[0.22] |",
+    "sql_samples": [
+      {
+        "question": "Generate a new feature called \"FamilySize\" by summing the \"SibSp\" and \"Parch\" columns. Then, calculate the Pearson correlation coefficient (r) between the \"FamilySize\" and \"Fare\" columns.",
+        "sql": "SELECT ROUND(CORR(SibSp + Parch, Fare), 2) AS correlation_coefficient FROM test_ave;",
+        "table": "test_ave"
+      },
+      {
+        "question": "Create a new feature called 'FamilySize' by combining the 'SibSp' and 'Parch' columns, which represents the total number of family members a passenger had aboard the Titanic. Then, find the correlation coefficient between 'FamilySize' and 'Survived'.",
+        "sql": "SELECT ROUND(CORR(SibSp + Parch, Survived), 2) AS correlation_coefficient FROM titanic;",
+        "table": "titanic"
+      },
+      {
+        "question": "Create a new feature \"FamilySize\" by summing the IsAlone column with the number of siblings/spouses and number of parents/children on board.",
+        "sql": "SELECT ROUND(AVG(IsAlone + 2), 1) AS average_familysize FROM test_x;",
+        "table": "test_x"
+      }
+    ],
+    "extracted_answers": [
+      [
+        "correlation_coefficient",
+        "0.22"
+      ]
+    ],
+    "expected_answers": [
+      [
+        "correlation_coefficient",
+        "0.21"
+      ]
+    ],
+    "is_correct": false
+  }
+]
