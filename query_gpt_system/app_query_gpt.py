@@ -39,8 +39,20 @@ with st.sidebar:
         with st.expander("Danh sách Bảng dữ liệu", expanded=False):
             for t in registry:
                 st.markdown(f"- **{t['table_name']}**")
+        all_table_names = sorted([t['table_name'] for t in registry])
     except Exception as e:
         st.error(f"Lỗi đọc registry: {e}")
+        st.stop()
+
+# Initialize session state for table confirmation and UI persistence
+if "confirmed_table_names" not in st.session_state:
+    st.session_state.confirmed_table_names = None
+if "active_query" not in st.session_state:
+    st.session_state.active_query = None
+if "active_intent" not in st.session_state:
+    st.session_state.active_intent = None
+if "active_suggestions" not in st.session_state:
+    st.session_state.active_suggestions = []
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
@@ -53,44 +65,84 @@ if prompt := st.chat_input("Hỏi tôi bất kỳ điều gì (VD: Độ tuổi 
         st.error("Chưa cấu hình OPENAI_API_KEY trong file .env!")
         st.stop()
         
-    st.chat_message("user").markdown(prompt)
-    st.session_state.messages.append({"role": "user", "content": prompt})
+    # Reset all processing state on new prompt
+    st.session_state.active_query = prompt
+    st.session_state.active_intent = None
+    st.session_state.active_suggestions = []
+    st.session_state.confirmed_table_names = None
     
+    st.session_state.messages.append({"role": "user", "content": prompt})
+    st.rerun()
+
+# Processing Pipeline (Renders if there's an active query)
+if st.session_state.active_query:
+    prompt = st.session_state.active_query
     with st.chat_message("assistant"):
         try:
             # Bước 1: Ý định
-            with st.status("🛸 Bước 1: Phân tích Ý định (Intent Analysis)", expanded=True) as status:
+            with st.status("🛸 Bước 1: Phân tích Ý định (Intent Analysis)", 
+                          state="complete" if st.session_state.active_intent else "running", 
+                          expanded=False) as status:
                 st.write("**Input:**")
                 st.info(prompt)
                 
-                intent_agent = get_intent_agent()
-                intent_response = intent_agent.run(prompt)
-                intent = intent_response.content.strip()
+                if st.session_state.active_intent is None:
+                    intent_agent = get_intent_agent()
+                    intent_response = intent_agent.run(prompt)
+                    intent = intent_response.content.strip()
+                    st.session_state.active_intent = intent
                 
                 st.write("**Output:**")
-                st.success(f"Intent: {intent}")
+                st.success(f"Intent: {st.session_state.active_intent}")
                 status.update(label="✅ Bước 1: Xong!", state="complete", expanded=False)
 
+            intent = st.session_state.active_intent
+
             # Bước 2: Tìm Bảng
-            with st.status("📂 Bước 2: Xác định Bảng (Table Identification)", expanded=True) as status:
+            with st.status("📂 Bước 2: Xác định Bảng (Table Identification)", 
+                          state="complete" if st.session_state.active_suggestions else "running", 
+                          expanded=False) as status:
                 st.write("**Input:**")
                 st.json({"prompt": prompt, "intent": intent})
                 
-                table_name = identify_table(prompt, intent, REGISTRY_PATH)
-                
-                # Load full schema cho bảng này
-                with open(REGISTRY_PATH, 'r', encoding='utf-8') as f:
-                    reg = json.load(f)
-                matched_table_data = next((t for t in reg if t['table_name'] == table_name), None)
+                if not st.session_state.active_suggestions:
+                    table_names = identify_table(prompt, intent, REGISTRY_PATH)
+                    st.session_state.active_suggestions = table_names
                 
                 st.write("**Output:**")
-                if matched_table_data:
-                    st.success(f"Table Matched: `{table_name}`")
-                else:
-                    st.error(f"Không tìm thấy file {table_name} trong Registry!")
-                    st.stop()
+                st.success(f"Suggested: `{', '.join(st.session_state.active_suggestions)}`")
                 status.update(label="✅ Bước 2: Xong!", state="complete", expanded=False)
-                    
+
+            table_names = st.session_state.active_suggestions
+
+            # --- INTERACTION STEP: ACK/EDIT TABLES ---
+            if st.session_state.confirmed_table_names is None:
+                st.markdown("### 🛠️ Xác nhận Danh sách Bảng")
+                st.info("Vui lòng kiểm tra và chỉnh sửa danh sách bảng cần dùng.")
+                selected_tables = st.multiselect(
+                    "Danh sách bảng:",
+                    options=all_table_names,
+                    default=[t for t in table_names if t in all_table_names]
+                )
+                if st.button("Xác nhận & Chạy tiếp 🚀"):
+                    st.session_state.confirmed_table_names = selected_tables
+                    st.rerun()
+                st.stop()
+            
+            # Nếu đã xác nhận, lấy danh sách cuối cùng
+            final_table_names = st.session_state.confirmed_table_names
+            st.success(f"**Bảng đã xác nhận:** `{', '.join(final_table_names)}`")
+            
+            # Tạm thời lấy bảng đầu tiên để chạy tiếp (chờ nâng cấp multi-table toàn diện nếu cần)
+            table_name = final_table_names[0]
+            with open(REGISTRY_PATH, 'r', encoding='utf-8') as f:
+                reg = json.load(f)
+            matched_table_data = next((t for t in reg if t['table_name'] == table_name), None)
+
+            if not matched_table_data:
+                st.error(f"Không tìm thấy bảng `{table_name}` trong Registry!")
+                st.stop()
+
             # Bước 3: Cắt Cột
             with st.status("✂️ Bước 3: Thu gọn Cột (Column Pruning)", expanded=True) as status:
                 st.write("**Input:**")
@@ -104,7 +156,7 @@ if prompt := st.chat_input("Hỏi tôi bất kỳ điều gì (VD: Độ tuổi 
                 st.success(f"Pruned Columns: `{pruned_columns}`")
                 status.update(label="✅ Bước 3: Xong!", state="complete", expanded=False)
                 
-            # Bước 4: RAG - Tìm SQL mẫu tương tự
+            # Bước 4: RAG
             with st.status("🔍 Bước 4: Truy vấn SQL Samples (RAG)", expanded=True) as status:
                 st.write("**Input:**")
                 st.info(prompt)
@@ -149,14 +201,20 @@ if prompt := st.chat_input("Hỏi tôi bất kỳ điều gì (VD: Độ tuổi 
                 st.markdown(result_markdown)
                 status.update(label="✅ Bước 6: Xong!", state="complete", expanded=False)
 
-            # Hiển thị kết quả cuối cùng ra ngoài status containers
+            # Hiển thị kết quả cuối cùng
             st.markdown("### 🏆 Kết quả cuối cùng")
             st.markdown(result_markdown)
             
-            # Ghi nhận log chat cho session state
-            full_reply = f"**Intent:** {intent}\n\n**Table:** `{table_name}`\n\n**Pruned Columns:** `{pruned_columns}`\n\n**SQL:**\n```sql\n{sql_query}\n```\n\n### Kết quả:\n{result_markdown}"
+            # Ghi nhận log chat và RESET active query
+            full_reply = f"**Intent:** {intent}\n\n**Tables:** `{', '.join(final_table_names)}`\n\n**SQL:**\n```sql\n{sql_query}\n```\n\n### Kết quả:\n{result_markdown}"
             st.session_state.messages.append({"role": "assistant", "content": full_reply})
+            
+            # Clear active query to allow next input
+            st.session_state.active_query = None
+            st.session_state.confirmed_table_names = None
             
         except Exception as e:
             st.error(f"Quá trình phân tích thất bại: {str(e)}")
             st.code(traceback.format_exc())
+            st.session_state.active_query = None # Clear on error too
+           
