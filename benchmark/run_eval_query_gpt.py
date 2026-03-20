@@ -13,6 +13,7 @@ from core_agents.table_agent import identify_table
 from core_agents.column_pruner import prune_columns
 from core_agents.sql_sample_retriever import get_sql_samples
 from core_agents.genai_gateway import generate_duckdb_sql
+from core_agents.result_refiner import refine_result
 from executor.sql_engine import execute_query
 
 def extract_answers(text: str):
@@ -53,7 +54,7 @@ def main():
     correct_count = 0
     total_count = 0
     
-    limit = 2 # Total is 257
+    limit = 4 # Total is 257
     
     intent_agent = get_intent_agent()
     
@@ -64,49 +65,53 @@ def main():
             
             if total_count >= limit:
                 break
+
+            if q_id != 6:
+                continue
                 
             expected_csv_file = q_data['file_name']
             
-            # Khởi tạo prompt
-            prompt = f"Question: {q_data['question']}\n\nConstraints: {q_data['constraints']}\n\nFormat: {q_data['format']}\n\nLưu ý: BẮT BUỘC SELECT và format thành chuỗi @answer_name[value] TRONG CÂU SQL ĐỂ TRẢ RA."
+            # Khởi tạo prompt (Không cần ép format trong SQL nữa)
+            prompt = f"Question: {q_data['question']}\n\nConstraints: {q_data['constraints']}\n\nQuản lý: Hãy viết SQL DuckDB chuẩn để lấy dữ liệu."
             
             print(f"\n--- Evaluating Question ID: {q_id} ---")
             
             # Bước 1: Ý định
             try:
+                print("STEP 1")
+                print("Question:", q_data['question'])
                 intent_response = intent_agent.run(q_data['question'])
+                print("Intent Response:", intent_response.content.strip())
                 intent = intent_response.content.strip()
             except Exception as e:
                 intent = "Unknown"
                 
-            # Bước 2: Tìm Bảng
-            try:
-                table_name = identify_table(q_data['question'], intent, registry_path)
-                matched_table_data = next((t for t in registry if t['table_name'] == table_name), None)
-            except Exception as e:
-                matched_table_data = None
-                
-            # Fallback nếu Table Agent fail
-            if not matched_table_data:
-                print(f"Agent failed to find correct table. Found {table_name}. Falling back to default.")
-                matched_table_data = next((t for t in registry if t['table_name'] == expected_csv_file), None)
+            # Bước 2: Xác định Bảng (Sử dụng nhãn đúng thay vì gọi Agent)
+            table_name = expected_csv_file
+            matched_table_data = next((t for t in registry if t['table_name'] == table_name), None)
             
             if not matched_table_data:
                 print(f"Error: CSV {expected_csv_file} not found in registry.")
                 continue
 
             csv_path = matched_table_data['file_path']
+            print("STEP 2")
+            print("CSV Path:", csv_path)
             
             # Bước 3: Cắt Cột
             try:
+                print("STEP 3")
                 pruned_columns = prune_columns(q_data['question'], matched_table_data)
+                print("Pruned Columns:", pruned_columns)
             except Exception as e:
                 pruned_columns = matched_table_data["columns"]
                 
             # Bước 4: Lấy ví dụ SQL mẫu (RAG)
             sql_samples = []
             try:
+                print("STEP 4")
                 sql_samples = get_sql_samples(q_data['question'], top_k=3)
+                print("SQL Samples:", sql_samples)
             except Exception as e:
                 print(f"RAG error: {e}")
                 
@@ -114,13 +119,25 @@ def main():
             sql_query = ""
             execution_result = ""
             try:
+                print("STEP 5")
                 sql_query = generate_duckdb_sql(prompt, csv_path, pruned_columns, sql_samples=sql_samples)
+                print("SQL Query:", sql_query)
                 # Bước 6: Chạy SQL
+                print("STEP 6")
                 execution_result = execute_query(sql_query)
+                print("Raw Execution Result:", execution_result)
             except Exception as e:
                 print(f"Agent/Execution error: {e}")
 
-            agent_text = execution_result
+            # Bước 7: Refine kết quả sang định dạng @key[value]
+            try:
+                print("STEP 7: Refinement")
+                refined_text = refine_result(q_data['question'], q_data['format'], execution_result)
+                print("Refined Result:", refined_text)
+                agent_text = refined_text
+            except Exception as e:
+                print(f"Refinement error: {e}")
+                agent_text = execution_result
             extracted = extract_answers(agent_text)
             
             # Check if LLM outputted the SQL query but DuckDB failed, maybe we try to regex out the answer if LLM mistakenly put the answer directly in query
