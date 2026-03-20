@@ -4,9 +4,9 @@ A dual-architecture AI system that allows you to chat with your CSV data using N
 
 ## Features
 
-- **Upload any CSV file**: The applications automatically infer the data schema and read metadata.
+- **Upload any CSV file (Baseline System)**: The application automatically infers the data schema and reads metadata.
 - **Natural Language to SQL**: Converts your chat questions into optimized DuckDB queries.
-- **Automated Data Visualization (Baseline)**: Automatically writes Python code to generate and display plots inline using Matplotlib/Plotly.
+- **Automated Data Visualization (Baseline System)**: Automatically writes Python code to generate and display plots inline using Matplotlib/Plotly.
 - **Dual Architecture Deployment**: 
   - **Baseline System**: A 3-agent pipeline with **Semantic Layer** for rule-based query pre-analysis (`Semantic → Analyzer → SQL → Chart`).
   - **Query GPT System**: An advanced 5-stage pipeline inspired by Uber's Query GPT (`Intent -> Table -> Prune -> GenAI -> Execute`).
@@ -91,9 +91,9 @@ A newly introduced schema-driven architecture optimized for large sets of CSV fi
    └──────────────────────┘    └──────────┬───────────┘
               │                           │
               ▼                           ▼
-   ┌──────────────────────────────────────────────────┐
-   │ 2. Table Agent (Finds Best Matching CSV)         │
-   └──────────────────────────────────────────────────┘
+   ┌──────────────────────────────────────────────────┐    ┌───────────────────────┐
+   │ 2. Table Agent (Finds Best Matching CSV)         │◀───│ User Select/Edit CSV  │
+   └──────────────────────────────────────────────────┘    └───────────────────────┘
               │
               ▼ (Matched CSV Schema + Query)
    ┌──────────────────────────────────────────────────┐
@@ -101,10 +101,14 @@ A newly introduced schema-driven architecture optimized for large sets of CSV fi
    └──────────────────────────────────────────────────┘
               │
               ▼ (Pruned Schema + Query)
-   ┌──────────────────────────────────────────────────┐
-   │ 4. GenAI SQL Gateway (Generates DuckDB SQL)      │
-   └──────────────────────────────────────────────────┘
-              │
+   ┌──────────────────────────────────────────────────┐    ┌───────────────────────┐
+   │ 4. GenAI SQL Gateway (Generates DuckDB SQL)      │◀───│ SQL Samples RAG       │
+   └──────────────────────────────────────────────────┘    └──────────▲────────────┘
+              │                                                       │
+              │                                            ┌───────────────────────┐
+              │                                            │ Ingest Data           │
+              │                                            │ (Vectorize samples)   │
+              │                                            └───────────────────────┘
               ▼ (Executable SQL)
    ┌──────────────────────────────────────────────────┐
    │ 5. SQL Executor (Runs DuckDB & Formats Markdown) │
@@ -116,11 +120,12 @@ A newly introduced schema-driven architecture optimized for large sets of CSV fi
 
 1. **Metadata Scanner (`schema_builder.py`)**: Pre-scans the `data/` directory and builds a global `schema_registry.json`.
 2. **Intent Agent**: Classifies the semantic topic of the user's input.
-3. **Table Agent**: Uses the Intent and Query to identify the single most relevant CSV file out of dozens of files.
+3. **Table Agent**: Uses the Intent and Query to identify the single most relevant CSV file out of dozens of files. (Includes UI for the user to manually select or edit the chosen CSV).
 4. **Column Pruner Agent**: Selects ONLY the absolutely necessary columns required to answer the query, discarding the rest to dramatically save LLM token usage and prevent hallucinations.
 5. **GenAI SQL Gateway**: A specialized pipeline that combines the pruned schema, retrieved SQL samples (via RAG), and the user query to generate highly accurate Few-Shot DuckDB SQL.
 6. **SQL Executor**: A sandboxed wrapper that runs the query on DuckDB and streams results back to the user.
 7. **SQL Sample RAG (`sql_samples/`)**: Uses **Agno** and **ChromaDB** to find relevant SQL examples similar to the user's question, enhancing generation accuracy.
+8. **Ingest Data**: The process of vectorizing existing SQL examples and storing them into ChromaDB for the RAG system to use.
 
 ## Setup
 
@@ -163,7 +168,12 @@ python query_gpt_system/metadata/schema_builder.py
 ```
 This command will deeply scan all the large CSVs inside `data/` and structure their formats for the Table Agent.
 
-After the registry is successfully populated:
+Next, you need to ingest the SQL samples into the vector database for the RAG system:
+```bash
+python query_gpt_system/sql_samples/ingest_samples.py
+```
+
+After the registry is successfully populated and the data is ingested:
 ```bash
 ./run_query_gpt.sh
 ```
@@ -178,3 +188,4 @@ After the registry is successfully populated:
 - [Streamlit](https://streamlit.io/) - Interactive Web UI
 - [DuckDB](https://duckdb.org/) - In-memory analytical SQL database
 - [OpenAI](https://openai.com/) - Using the `gpt-4o-mini` language model
+- [ChromaDB](https://www.trychroma.com/) - The open-source AI database
