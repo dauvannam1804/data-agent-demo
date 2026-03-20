@@ -54,7 +54,7 @@ def main():
     correct_count = 0
     total_count = 0
     
-    limit = 4 # Total is 257
+    limit = 257 # Total is 257
     
     intent_agent = get_intent_agent()
     
@@ -66,8 +66,8 @@ def main():
             if total_count >= limit:
                 break
 
-            if q_id != 6:
-                continue
+            # if q_id != 0:
+            #     continue
                 
             expected_csv_file = q_data['file_name']
             
@@ -76,73 +76,85 @@ def main():
             
             print(f"\n--- Evaluating Question ID: {q_id} ---")
             
+            # Khởi tạo danh sách lỗi cho câu hỏi này
+            question_errors = []
+            
             # Bước 1: Ý định
             try:
-                print("STEP 1")
-                print("Question:", q_data['question'])
+                # print("STEP 1")
+                # print("Question:", q_data['question'])
                 intent_response = intent_agent.run(q_data['question'])
-                print("Intent Response:", intent_response.content.strip())
+                # print("Intent Response:", intent_response.content.strip())
                 intent = intent_response.content.strip()
             except Exception as e:
                 intent = "Unknown"
+                question_errors.append(f"Intent error: {str(e)}")
                 
             # Bước 2: Xác định Bảng (Sử dụng nhãn đúng thay vì gọi Agent)
             table_name = expected_csv_file
             matched_table_data = next((t for t in registry if t['table_name'] == table_name), None)
             
             if not matched_table_data:
-                print(f"Error: CSV {expected_csv_file} not found in registry.")
+                err_msg = f"Error: CSV {expected_csv_file} not found in registry."
+                print(err_msg)
+                question_errors.append(err_msg)
                 continue
 
             csv_path = matched_table_data['file_path']
-            print("STEP 2")
-            print("CSV Path:", csv_path)
+            # print("STEP 2")
+            # print("CSV Path:", csv_path)
             
             # Bước 3: Cắt Cột
             try:
-                print("STEP 3")
+                # print("STEP 3")
                 pruned_columns = prune_columns(q_data['question'], matched_table_data)
-                print("Pruned Columns:", pruned_columns)
+                # print("Pruned Columns:", pruned_columns)
             except Exception as e:
                 pruned_columns = matched_table_data["columns"]
+                question_errors.append(f"Pruning error: {str(e)}")
                 
             # Bước 4: Lấy ví dụ SQL mẫu (RAG)
             sql_samples = []
             try:
-                print("STEP 4")
+                # print("STEP 4")
                 sql_samples = get_sql_samples(q_data['question'], top_k=3)
-                print("SQL Samples:", sql_samples)
+                # print("SQL Samples:", sql_samples)
             except Exception as e:
                 print(f"RAG error: {e}")
+                question_errors.append(f"RAG error: {str(e)}")
                 
             # Bước 5: Viết SQL
             sql_query = ""
             execution_result = ""
             try:
-                print("STEP 5")
+                # print("STEP 5")
                 sql_query = generate_duckdb_sql(prompt, csv_path, pruned_columns, sql_samples=sql_samples)
-                print("SQL Query:", sql_query)
+                # print("SQL Query:", sql_query)
                 # Bước 6: Chạy SQL
-                print("STEP 6")
+                # print("STEP 6")
                 execution_result = execute_query(sql_query)
-                print("Raw Execution Result:", execution_result)
+                # print("Raw Execution Result:", execution_result)
             except Exception as e:
                 print(f"Agent/Execution error: {e}")
+                question_errors.append(f"Agent/Execution error: {str(e)}")
 
             # Bước 7: Refine kết quả sang định dạng @key[value]
             try:
-                print("STEP 7: Refinement")
+                # print("STEP 7: Refinement")
                 refined_text = refine_result(q_data['question'], q_data['format'], execution_result)
-                print("Refined Result:", refined_text)
+                # print("Refined Result:", refined_text)
                 agent_text = refined_text
             except Exception as e:
                 print(f"Refinement error: {e}")
+                question_errors.append(f"Refinement error: {str(e)}")
                 agent_text = execution_result
             extracted = extract_answers(agent_text)
             
             # Check if LLM outputted the SQL query but DuckDB failed, maybe we try to regex out the answer if LLM mistakenly put the answer directly in query
             if not extracted:
                 extracted = extract_answers(sql_query)
+                if not extracted:
+                    question_errors.append("No answers extracted from SQL result or query.")
 
             expected = labels.get(q_id, [])
             
@@ -175,7 +187,8 @@ def main():
                 "sql_samples": sql_samples,
                 "extracted_answers": extracted_sorted,
                 "expected_answers": expected_sorted,
-                "is_correct": is_correct
+                "is_correct": is_correct,
+                "errors": question_errors
             })
             
             with open(results_file, 'w', encoding='utf-8') as out_f:

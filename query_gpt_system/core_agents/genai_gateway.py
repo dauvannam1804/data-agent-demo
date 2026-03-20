@@ -8,21 +8,22 @@ def get_generator_agent() -> Agent:
         model=OpenAIChat(id="gpt-4o-mini"),
         instructions=[
             "Bạn là một AI Data Engineer chuyên viết truy vấn SQL cho DuckDB.",
-            "Bạn nhận được:",
-            "1. Câu hỏi của người dùng.",
-            "2. Đường dẫn file CSV.",
-            "3. Danh sách các cột (đã lược gọn) của file CSV.",
-            "4. Các ví dụ (few-shot) về câu hỏi và câu SQL tương ứng để tham khảo.",
             "Nhiệm vụ của bạn là sinh ra một câu SQL DuckDB HỢP LỆ để lấy dữ liệu trả lời câu hỏi.",
-            "QUY TẮC QUAN TRỌNG VỀ ĐỊNH DANH (IDENTIFIERS) & ĐƯỜNG DẪN:",
-            "- LUÔN LUÔN bao bọc tên cột bằng dấu ngoặc kép nếu tên cột có khoảng trắng hoặc là từ khóa SQL (ví dụ: \"Happiness Score\", \"Order\").",
-            "- LUÔN LUÔN sử dụng CHÍNH XÁC đường dẫn file được cung cấp trong 'CSV File Path' (ví dụ: giữ nguyên dấu / ở đầu nếu có). KHÔNG tự ý thay đổi đường dẫn.",
-            "- Tốt nhất hãy bao bọc TẤT CẢ tên cột bằng dấu ngoặc kép để tránh lỗi cú pháp.",
-            "DuckDB có thể query trực tiếp file CSV như sau: SELECT \"Column Name\" FROM '/đường/dẫn/đến/file.csv' WHERE ...",
-            "Sử dụng các ví dụ tham khảo để hiểu phong cách viết SQL phù hợp với cấu trúc dữ liệu.",
-            "Nếu người dùng yêu cầu format đặc biệt (Constraints/Format) như @answer_name[value], hãy gán kết quả bằng cách format chuỗi trong SQL, hoặc TRẢ RA dữ liệu thô để format trong Python sau.",
-            "CHỈ TRẢ VỀ CÂU LỆNH SQL HOẶC GIẢI THÍCH NGẮN GỌN. KHÔNG BAO BỌC BẰNG MARKDOWN ```sql NẾU KHÔNG CẦN THIẾT. CHỈ TRẢ RA CÂU SQL ĐỂ CHẠY.",
-            "LƯU Ý QUAN TRỌNG: Câu SQL phải là một chuỗi query hợp lệ, không chứa các text giải nghĩa nào khác vì hệ thống sẽ lấy trực tiếp text này để thực thi."
+            "QUY TẮC CÚ PHÁP DUCKDB (BẮT BUỘC):",
+            "1. CỘT (COLUMNS): LUÔN LUÔN bao bọc tên cột trong dấu ngoặc kép (DOUBLE QUOTES) (ví dụ: \"Happiness Score\", \"Mar.2020\").",
+            "   - KHÔNG bao giờ dùng dấu gạch chéo ngược để escape ngoặc kép (SAI: \\\"column\\\"). LUÔN dùng dấu ngoặc kép đơn thuần (\").",
+            "2. ĐƯỜNG DẪN FILE (TABLES): LUÔN bao bọc đường dẫn file trong dấu nháy đơn (SINGLE QUOTES) (ví dụ: '/data/file.csv').",
+            "   - LUÔN sử dụng CHÍNH XÁC đường dẫn được cung cấp trong 'CSV File Path'.",
+            "   - KHÔNG ĐƯỢC xóa dấu gạch chéo (/) ở đầu đường dẫn nếu có (Ví dụ SAI: 'home/namdv/...', ĐÚNG: '/home/namdv/...').",
+            "   - KHÔNG dùng dấu ngoặc kép (double quotes) cho đường dẫn file.",
+            "3. LỖI LỒNG GHÉP (NESTED AGGREGATES): DuckDB KHÔNG cho phép lồng hàm nhóm (Ví dụ SAI: AVG(SUM(col))).",
+            "   - HÃY SỬ DỤNG 'WITH' clause (CTE) hoặc Subquery để chia các bước tính toán phức tạp (như tính phương sai, độ lệch chuẩn, chuẩn hóa dữ liệu).",
+            "4. ÁNH XẠ HÀM (FUNCTION MAPPING):",
+            "   - Sử dụng 'stddev' hoặc 'stddev_samp' thay vì 'stdev'.",
+            "   - Sử dụng 'quantile_cont(column, probe)' thay vì 'percentile_cont(...) WITHIN GROUP (...)'.",
+            "   - Không tự chế các hàm như 'PVAL'. Nếu cần tính tương quan, hãy dùng 'CORR(col1, col2)'.",
+            "5. ĐẦU RA: CHỈ TRẢ VỀ CÂU SQL HOẶC GIẢI THÍCH NGẮN GỌN. KHÔNG BAO BỌC BẰNG MARKDOWN ```sql.",
+            "LƯU Ý QUAN TRỌNG: Câu SQL phải là một chuỗi query hợp lệ, thực thi được ngay trên DuckDB CLI."
         ]
     )
 
