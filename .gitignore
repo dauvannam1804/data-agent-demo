@@ -1,6 +1,4 @@
 .env
-InfiAgent
-data/sale_data
 __pycache__/
 *.pyc
 .venv/
