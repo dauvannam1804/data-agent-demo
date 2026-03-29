@@ -37,15 +37,15 @@ def generate_duckdb_sql(query: str, file_path: str, pruned_columns: list, sql_sa
     # Chuẩn bị context bổ sung từ Few-shot samples
     samples_context = ""
     if sql_samples:
-        samples_context = "\nVí dụ tham khảo (Few-shot samples):\n"
+        samples_context = "\nVí dụ tham khảo (Các SQL mẫu dùng tên bảng giả định. BẠN PHẢI THAY THẾ CHÚNG BẰNG ĐƯỜNG DẪN CSV THẬT KHI VIẾT SQL CỦA MÌNH):\n"
         for i, s in enumerate(sql_samples):
             samples_context += f"Q{i+1}: {s['question']}\n"
             samples_context += f"SQL{i+1}: {s['sql']}\n---\n"
     
-    prompt = f"Question: {query}\n\nCSV File Path: {file_path}\n"
+    prompt = f"Question: {query}\n\nCSV File Path: '{file_path}'\n"
     if samples_context:
         prompt += samples_context
-    prompt += f"\nAvailable Columns: {pruned_columns}\n\nWrite DuckDB SQL Query:"
+    prompt += f"\nAvailable Columns: {pruned_columns}\n\nWrite DuckDB SQL Query (NHỚ DÙNG '{file_path}' TRONG MỆNH ĐỀ FROM):"
     
     response = agent.run(prompt)
     sql_query = response.content.strip()
