@@ -118,7 +118,7 @@ A newly introduced schema-driven architecture optimized for large sets of CSV fi
       [Streamlit UI Shows Markdown Data]
 ```
 
-1. **Metadata Scanner (`schema_builder.py`)**: Pre-scans the `data/` directory and builds a global `schema_registry.json`.
+1. **Metadata Scanner (`schema_builder.py`)**: Pre-scans the `data-code/InfiAgent/da-dev-tables/` directory and builds a global `schema_registry.json`.
 2. **Intent Agent**: Classifies the semantic topic of the user's input.
 3. **Table Agent**: Uses the Intent and Query to identify the single most relevant CSV file out of dozens of files. (Includes UI for the user to manually select or edit the chosen CSV).
 4. **Column Pruner Agent**: Selects ONLY the absolutely necessary columns required to answer the query, discarding the rest to dramatically save LLM token usage and prevent hallucinations.
@@ -151,7 +151,7 @@ A newly introduced schema-driven architecture optimized for large sets of CSV fi
 
 ## Usage
 
-This repository contains executable bash scripts for both distinct systems. Data resources (`data/`) are heavily shared between them.
+This repository contains executable bash scripts for both distinct systems. Data resources (`data-code/`) are heavily shared between them.
 
 ### Running Baseline System
 1. Start the Streamlit application:
@@ -166,7 +166,7 @@ Before launching the query GPT architecture, you **must** build the metadata sch
 ```bash
 python query_gpt_system/metadata/schema_builder.py
 ```
-This command will deeply scan all the large CSVs inside `data/` and structure their formats for the Table Agent.
+This command will deeply scan all the large CSVs inside `data-code/InfiAgent/da-dev-tables/` and structure their formats for the Table Agent.
 
 Next, you need to ingest the SQL samples into the vector database for the RAG system:
 ```bash
