@@ -30,9 +30,9 @@ def extract_answers(text: str):
     return [[m[0], m[1].strip()] for m in matches]
 
 def main():
-    questions_file = "data/InfiAgent/da-dev-questions.jsonl"
-    labels_file = "data/InfiAgent/da-dev-labels.jsonl"
-    tables_dir = "data/InfiAgent/da-dev-tables"
+    questions_file = "data-code/InfiAgent/da-dev-questions.jsonl"
+    labels_file = "data-code/InfiAgent/da-dev-labels.jsonl"
+    tables_dir = "data-code/InfiAgent/da-dev-tables"
     results_file = "benchmark/results.json"
     
     # Load dotenv
