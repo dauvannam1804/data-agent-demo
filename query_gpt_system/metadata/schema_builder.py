@@ -54,7 +54,7 @@ def build_schema_registry(data_dir: str, output_file: str):
 if __name__ == "__main__":
     # Đường dẫn thư mục
     base_dir = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-    data_dir = os.path.join(base_dir, "data", "InfiAgent", "da-dev-tables")
+    data_dir = os.path.join(base_dir, "data-code", "InfiAgent", "da-dev-tables")
     output_path = os.path.join(base_dir, "query_gpt_system", "metadata", "schema_registry.json")
     
     build_schema_registry(data_dir, output_path)

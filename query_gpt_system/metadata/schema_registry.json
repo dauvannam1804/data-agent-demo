@@ -1,7 +1,7 @@
 [
     {
         "table_name": "Current_Logan.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Current_Logan.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/Current_Logan.csv",
         "columns": [
             "JAMES LOGAN",
             "Unnamed: 1",
@@ -62,7 +62,7 @@
     },
     {
         "table_name": "3901.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/3901.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/3901.csv",
         "columns": [
             "TRUE_TIME",
             "TIME",
@@ -173,7 +173,7 @@
     },
     {
         "table_name": "Credit.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Credit.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/Credit.csv",
         "columns": [
             "Unnamed: 0",
             "Income",
@@ -249,7 +249,7 @@
     },
     {
         "table_name": "titanic.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/titanic.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/titanic.csv",
         "columns": [
             "PassengerId",
             "Survived",
@@ -325,7 +325,7 @@
     },
     {
         "table_name": "ferret-Pitt-2-preinf-lib2-100_sitediffsel.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/ferret-Pitt-2-preinf-lib2-100_sitediffsel.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/ferret-Pitt-2-preinf-lib2-100_sitediffsel.csv",
         "columns": [
             "site",
             "abs_diffsel",
@@ -371,7 +371,7 @@
     },
     {
         "table_name": "titanic_test.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/titanic_test.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/titanic_test.csv",
         "columns": [
             "PassengerId",
             "Pclass",
@@ -442,7 +442,7 @@
     },
     {
         "table_name": "random_stock_data.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/random_stock_data.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/random_stock_data.csv",
         "columns": [
             "Time",
             "Open",
@@ -488,7 +488,7 @@
     },
     {
         "table_name": "abalone.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/abalone.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/abalone.csv",
         "columns": [
             "Sex",
             "Length",
@@ -549,7 +549,7 @@
     },
     {
         "table_name": "insurance.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/insurance.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/insurance.csv",
         "columns": [
             "age",
             "sex",
@@ -600,7 +600,7 @@
     },
     {
         "table_name": "bike_rental_hour.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/bike_rental_hour.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/bike_rental_hour.csv",
         "columns": [
             "instant",
             "dteday",
@@ -701,7 +701,7 @@
     },
     {
         "table_name": "traj-Osak.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/traj-Osak.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/traj-Osak.csv",
         "columns": [
             "userID",
             "trajID",
@@ -757,7 +757,7 @@
     },
     {
         "table_name": "Gillam_fin.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Gillam_fin.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/Gillam_fin.csv",
         "columns": [
             "Unnamed: 0",
             "id",
@@ -813,7 +813,7 @@
     },
     {
         "table_name": "titanic_train.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/titanic_train.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/titanic_train.csv",
         "columns": [
             "PassengerId",
             "Survived",
@@ -889,7 +889,7 @@
     },
     {
         "table_name": "election2016.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/election2016.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/election2016.csv",
         "columns": [
             "votes_dem",
             "votes_gop",
@@ -955,7 +955,7 @@
     },
     {
         "table_name": "cost_data_with_errors.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/cost_data_with_errors.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/cost_data_with_errors.csv",
         "columns": [
             "Unnamed: 0",
             "name",
@@ -1026,7 +1026,7 @@
     },
     {
         "table_name": "2015.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/2015.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/2015.csv",
         "columns": [
             "Country",
             "Region",
@@ -1102,7 +1102,7 @@
     },
     {
         "table_name": "city_departments_in_current_budget.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/city_departments_in_current_budget.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/city_departments_in_current_budget.csv",
         "columns": [
             "Department Name",
             "coa_dept_id",
@@ -1148,7 +1148,7 @@
     },
     {
         "table_name": "my_test_01.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/my_test_01.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/my_test_01.csv",
         "columns": [
             "MedInc",
             "HouseAge",
@@ -1209,7 +1209,7 @@
     },
     {
         "table_name": "train_new_ocr_29.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/train_new_ocr_29.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/train_new_ocr_29.csv",
         "columns": [
             "Unnamed: 0",
             "answers",
@@ -1295,7 +1295,7 @@
     },
     {
         "table_name": "estimated_numbers.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/estimated_numbers.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/estimated_numbers.csv",
         "columns": [
             "Country",
             "Year",
@@ -1366,7 +1366,7 @@
     },
     {
         "table_name": "ravenna_250715.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/ravenna_250715.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/ravenna_250715.csv",
         "columns": [
             "Unnamed: 0",
             "temp",
@@ -1437,7 +1437,7 @@
     },
     {
         "table_name": "e5_aapl.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/e5_aapl.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/e5_aapl.csv",
         "columns": [
             "Date",
             "Open",
@@ -1483,7 +1483,7 @@
     },
     {
         "table_name": "diamonds.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/diamonds.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/diamonds.csv",
         "columns": [
             "carat",
             "cut",
@@ -1549,7 +1549,7 @@
     },
     {
         "table_name": "veracruz 2016.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/veracruz 2016.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/veracruz 2016.csv",
         "columns": [
             "Unnamed: 0",
             "MedInd",
@@ -1595,7 +1595,7 @@
     },
     {
         "table_name": "test_Y3wMUE5_7gLdaTN.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/test_Y3wMUE5_7gLdaTN.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/test_Y3wMUE5_7gLdaTN.csv",
         "columns": [
             "Loan_ID",
             "Gender",
@@ -1671,7 +1671,7 @@
     },
     {
         "table_name": "microsoft.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/microsoft.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/microsoft.csv",
         "columns": [
             "Unnamed: 0",
             "Date",
@@ -1722,7 +1722,7 @@
     },
     {
         "table_name": "baseball_data.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/baseball_data.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/baseball_data.csv",
         "columns": [
             "salary_in_thousands_of_dollars",
             "batting_average",
@@ -1823,7 +1823,7 @@
     },
     {
         "table_name": "unemployement_industry.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/unemployement_industry.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/unemployement_industry.csv",
         "columns": [
             "Serial",
             "Industry and class of worker",
@@ -1889,7 +1889,7 @@
     },
     {
         "table_name": "fb_articles_20180822_20180829_df.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/fb_articles_20180822_20180829_df.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/fb_articles_20180822_20180829_df.csv",
         "columns": [
             "Unnamed: 0",
             "author",
@@ -1970,7 +1970,7 @@
     },
     {
         "table_name": "Todo_Tango_letras_final.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Todo_Tango_letras_final.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/Todo_Tango_letras_final.csv",
         "columns": [
             "link",
             "titulo",
@@ -2021,7 +2021,7 @@
     },
     {
         "table_name": "Zip_MedianSoldPricePerSqft_AllHomes.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Zip_MedianSoldPricePerSqft_AllHomes.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/Zip_MedianSoldPricePerSqft_AllHomes.csv",
         "columns": [
             "RegionID",
             "RegionName",
@@ -2082,7 +2082,7 @@
     },
     {
         "table_name": "20170413_000000_group_statistics.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/20170413_000000_group_statistics.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/20170413_000000_group_statistics.csv",
         "columns": [
             "timestamp",
             "num. busy overflows",
@@ -2148,7 +2148,7 @@
     },
     {
         "table_name": "housedata.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/housedata.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/housedata.csv",
         "columns": [
             "Unnamed: 0",
             "price",
@@ -2264,7 +2264,7 @@
     },
     {
         "table_name": "cms_hospital_readmissions.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/cms_hospital_readmissions.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/cms_hospital_readmissions.csv",
         "columns": [
             "Hospital Name",
             "Provider Number",
@@ -2340,7 +2340,7 @@
     },
     {
         "table_name": "tr_eikon_eod_data.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/tr_eikon_eod_data.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/tr_eikon_eod_data.csv",
         "columns": [
             "Date",
             "AAPL.O",
@@ -2421,7 +2421,7 @@
     },
     {
         "table_name": "api_output_2018-09-11_11-08-28.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/api_output_2018-09-11_11-08-28.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/api_output_2018-09-11_11-08-28.csv",
         "columns": [
             "index",
             "name",
@@ -2497,7 +2497,7 @@
     },
     {
         "table_name": "weather_train.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/weather_train.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/weather_train.csv",
         "columns": [
             "time",
             "sun",
@@ -2558,7 +2558,7 @@
     },
     {
         "table_name": "tree.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/tree.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/tree.csv",
         "columns": [
             "LIVE_ID",
             "PLTID",
@@ -2619,7 +2619,7 @@
     },
     {
         "table_name": "ts-sc4-wi100000-sl25000-Qrob_Chr05.tree_table.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/ts-sc4-wi100000-sl25000-Qrob_Chr05.tree_table.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/ts-sc4-wi100000-sl25000-Qrob_Chr05.tree_table.csv",
         "columns": [
             "Unnamed: 0",
             "start",
@@ -2665,7 +2665,7 @@
     },
     {
         "table_name": "gapminder_cleaned.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/gapminder_cleaned.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/gapminder_cleaned.csv",
         "columns": [
             "year",
             "pop",
@@ -2711,7 +2711,7 @@
     },
     {
         "table_name": "census.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/census.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/census.csv",
         "columns": [
             "age",
             "workclass",
@@ -2802,7 +2802,7 @@
     },
     {
         "table_name": "hotel_data.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/hotel_data.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/hotel_data.csv",
         "columns": [
             "hotel_id",
             "hotel_name",
@@ -2863,7 +2863,7 @@
     },
     {
         "table_name": "Yelp_Reviews.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Yelp_Reviews.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/Yelp_Reviews.csv",
         "columns": [
             "Unnamed: 0",
             "business_id",
@@ -2929,7 +2929,7 @@
     },
     {
         "table_name": "YAHOO-BTC_USD_D.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/YAHOO-BTC_USD_D.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/YAHOO-BTC_USD_D.csv",
         "columns": [
             "Date",
             "Open",
@@ -2980,7 +2980,7 @@
     },
     {
         "table_name": "test_x.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/test_x.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/test_x.csv",
         "columns": [
             "Pclass",
             "Sex",
@@ -3036,7 +3036,7 @@
     },
     {
         "table_name": "Baltimore_City_Employee_Salaries_FY2013.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/Baltimore_City_Employee_Salaries_FY2013.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/Baltimore_City_Employee_Salaries_FY2013.csv",
         "columns": [
             "NAME",
             "JOBTITLE",
@@ -3087,7 +3087,7 @@
     },
     {
         "table_name": "credit-data-post-import.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/credit-data-post-import.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/credit-data-post-import.csv",
         "columns": [
             "serious_dlqin2yrs",
             "revolving_utilization_of_unsecured_lines",
@@ -3158,7 +3158,7 @@
     },
     {
         "table_name": "imp.score.ldlr.metabolome.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/imp.score.ldlr.metabolome.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/imp.score.ldlr.metabolome.csv",
         "columns": [
             "#featureID",
             "row ID",
@@ -3214,7 +3214,7 @@
     },
     {
         "table_name": "2014_q4.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/2014_q4.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/2014_q4.csv",
         "columns": [
             "Date",
             "Trips over the past 24-hours (midnight to 11:59pm)",
@@ -3275,7 +3275,7 @@
     },
     {
         "table_name": "baro_2015.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/baro_2015.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/baro_2015.csv",
         "columns": [
             "DATE TIME",
             " WINDSPEED",
@@ -3331,7 +3331,7 @@
     },
     {
         "table_name": "weather_data_1864.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/weather_data_1864.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/weather_data_1864.csv",
         "columns": [
             "station",
             "datetime",
@@ -3377,7 +3377,7 @@
     },
     {
         "table_name": "oecd_education_spending.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/oecd_education_spending.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/oecd_education_spending.csv",
         "columns": [
             "LOCATION",
             "INDICATOR",
@@ -3433,7 +3433,7 @@
     },
     {
         "table_name": "0020200722.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/0020200722.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/0020200722.csv",
         "columns": [
             "GAME_ID",
             "EVENTNUM",
@@ -3509,7 +3509,7 @@
     },
     {
         "table_name": "well_2_complete.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/well_2_complete.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/well_2_complete.csv",
         "columns": [
             "DEPTH",
             "VP",
@@ -3605,7 +3605,7 @@
     },
     {
         "table_name": "beauty and the labor market.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/beauty and the labor market.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/beauty and the labor market.csv",
         "columns": [
             "wage",
             "lwage",
@@ -3716,7 +3716,7 @@
     },
     {
         "table_name": "percent-bachelors-degrees-women-usa.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/percent-bachelors-degrees-women-usa.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/percent-bachelors-degrees-women-usa.csv",
         "columns": [
             "Year",
             "Agriculture",
@@ -3822,7 +3822,7 @@
     },
     {
         "table_name": "cs-test.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/cs-test.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/cs-test.csv",
         "columns": [
             "Unnamed: 0",
             "SeriousDlqin2yrs",
@@ -3898,7 +3898,7 @@
     },
     {
         "table_name": "2019-08_edges.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/2019-08_edges.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/2019-08_edges.csv",
         "columns": [
             "Source",
             "Target",
@@ -3954,7 +3954,7 @@
     },
     {
         "table_name": "arrest_expungibility.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/arrest_expungibility.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/arrest_expungibility.csv",
         "columns": [
             "Date",
             "Offense",
@@ -4010,7 +4010,7 @@
     },
     {
         "table_name": "vgsales.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/vgsales.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/vgsales.csv",
         "columns": [
             "Rank",
             "Name",
@@ -4081,7 +4081,7 @@
     },
     {
         "table_name": "gapminder_gdp_asia.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/gapminder_gdp_asia.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/gapminder_gdp_asia.csv",
         "columns": [
             "country",
             "gdpPercap_1952",
@@ -4162,7 +4162,7 @@
     },
     {
         "table_name": "DES=+2006261.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/DES=+2006261.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/DES=+2006261.csv",
         "columns": [
             "JDTDB",
             "Calendar Date (TDB)",
@@ -4208,7 +4208,7 @@
     },
     {
         "table_name": "test_ave.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/test_ave.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/test_ave.csv",
         "columns": [
             "Unnamed: 0",
             "PassengerId",
@@ -4294,7 +4294,7 @@
     },
     {
         "table_name": "GODREJIND.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/GODREJIND.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/GODREJIND.csv",
         "columns": [
             "Symbol",
             "Series",
@@ -4385,7 +4385,7 @@
     },
     {
         "table_name": "auto-mpg.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/auto-mpg.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/auto-mpg.csv",
         "columns": [
             "mpg",
             "cylinders",
@@ -4441,7 +4441,7 @@
     },
     {
         "table_name": "country_vaccinations.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/country_vaccinations.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/country_vaccinations.csv",
         "columns": [
             "country",
             "iso_code",
@@ -4532,7 +4532,7 @@
     },
     {
         "table_name": "bitconnect_price.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/bitconnect_price.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/bitconnect_price.csv",
         "columns": [
             "Date",
             "Open",
@@ -4583,7 +4583,7 @@
     },
     {
         "table_name": "2015-09-21.csv",
-        "file_path": "/home/namdv/workspace/data-agent-demo/data/InfiAgent/da-dev-tables/2015-09-21.csv",
+        "file_path": "/home/namdv/workspace/data-agent-demo/data-code/InfiAgent/da-dev-tables/2015-09-21.csv",
         "columns": [
             "origin_station_code",
             "origin_station",

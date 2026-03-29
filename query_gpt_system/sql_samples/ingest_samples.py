@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Cấu hình đường dẫn
-JSON_PATH = "data/sql_samples.json"
+JSON_PATH = "data-code/sql_samples.json"
 COLLECTION_NAME = "sql_samples"
 # Database sẽ được lưu tại đây
 CHROMA_PATH = "query_gpt_system/sql_samples/chroma_db"

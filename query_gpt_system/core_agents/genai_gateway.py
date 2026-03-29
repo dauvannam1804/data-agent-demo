@@ -12,7 +12,7 @@ def get_generator_agent() -> Agent:
             "QUY TẮC CÚ PHÁP DUCKDB (BẮT BUỘC):",
             "1. CỘT (COLUMNS): LUÔN LUÔN bao bọc tên cột trong dấu ngoặc kép (DOUBLE QUOTES) (ví dụ: \"Happiness Score\", \"Mar.2020\").",
             "   - KHÔNG bao giờ dùng dấu gạch chéo ngược để escape ngoặc kép (SAI: \\\"column\\\"). LUÔN dùng dấu ngoặc kép đơn thuần (\").",
-            "2. ĐƯỜNG DẪN FILE (TABLES): LUÔN bao bọc đường dẫn file trong dấu nháy đơn (SINGLE QUOTES) (ví dụ: '/data/file.csv').",
+            "2. ĐƯỜNG DẪN FILE (TABLES): LUÔN bao bọc đường dẫn file trong dấu nháy đơn (SINGLE QUOTES) (ví dụ: '/data-code/file.csv').",
             "   - LUÔN sử dụng CHÍNH XÁC đường dẫn được cung cấp trong 'CSV File Path'.",
             "   - KHÔNG ĐƯỢC xóa dấu gạch chéo (/) ở đầu đường dẫn nếu có (Ví dụ SAI: 'home/namdv/...', ĐÚNG: '/home/namdv/...').",
             "   - KHÔNG dùng dấu ngoặc kép (double quotes) cho đường dẫn file.",
