@@ -45,11 +45,11 @@ with st.sidebar:
     st.header("Upload Data")
     uploaded_files = st.file_uploader("Upload CSV files", type=["csv"], accept_multiple_files=True)
     if uploaded_files:
-        # Save files to data directory
-        os.makedirs("data", exist_ok=True)
+        # Save files to data-code directory
+        os.makedirs("data-code", exist_ok=True)
         paths = []
         for uploaded_file in uploaded_files:
-            file_path = os.path.join("data", uploaded_file.name)
+            file_path = os.path.join("data-code", uploaded_file.name)
             with open(file_path, "wb") as f:
                 f.write(uploaded_file.getbuffer())
             paths.append(file_path)
@@ -102,11 +102,11 @@ if prompt := st.chat_input("Hỏi tôi bất kỳ điều gì về dữ liệu..
             semantic_analyzer = SemanticAnalyzer(schema_columns=schema_columns)
             semantic_result = semantic_analyzer.analyze(prompt)
         
-        with st.expander("🔍 Semantic Layer", expanded=False):
-            st.markdown("**Input:** Câu query của người dùng")
-            st.code(prompt, language=None)
-            st.markdown("**Output:** Kết quả phân tích ngữ nghĩa")
-            st.code(semantic_result.to_prompt_string(), language=None)
+        # with st.expander("🔍 Semantic Layer", expanded=False):
+        #     st.markdown("**Input:** Câu query của người dùng")
+        #     st.code(prompt, language=None)
+        #     st.markdown("**Output:** Kết quả phân tích ngữ nghĩa")
+        #     st.code(semantic_result.to_prompt_string(), language=None)
             
         with st.spinner("Analyzer Agent đang phân tích..."):
             analyzer = get_analyzer_agent()
@@ -118,76 +118,77 @@ if prompt := st.chat_input("Hỏi tôi bất kỳ điều gì về dữ liệu..
             )
             analyzer_response = analyzer.run(analyzer_prompt)
         
-        with st.expander("🧠 Analyzer Agent", expanded=False):
-            st.markdown("**Input:**")
-            st.code(analyzer_prompt, language=None)
-            st.markdown("**Output:**")
-            st.markdown(analyzer_response.content)
+        # with st.expander("🧠 Analyzer Agent", expanded=False):
+        #     st.markdown("**Input:**")
+        #     st.code(analyzer_prompt, language=None)
+        #     st.markdown("**Output:**")
+        #     st.markdown(analyzer_response.content)
             
         with st.spinner("Hệ thống đang truy xuất dữ liệu..."):
             sql_agent = get_sql_agent(csv_paths)
             sql_prompt = f"Yêu cầu từ Analyzer:\n{analyzer_response.content}\n\nHãy viết câu lệnh SQL và chạy công cụ để lấy dữ liệu. Hãy TRÌNH BÀY KẾT QUẢ dữ liệu ra vì Chart Agent sẽ cần đọc nó."
             sql_response = sql_agent.run(sql_prompt)
         
-        with st.expander("🗄️ SQL Agent", expanded=False):
-            st.markdown("**Input:**")
-            st.code(sql_prompt, language=None)
-            st.markdown("**Output:**")
-            st.markdown(sql_response.content)
+        # with st.expander("🗄️ SQL Agent", expanded=False):
+        #     st.markdown("**Input:**")
+        #     st.code(sql_prompt, language=None)
+        #     st.markdown("**Output:**")
+        #     st.markdown(sql_response.content)
             
-            # 3. Chart Agent (Conditionally)
-            # Check if user wants a chart
-            chart_keywords = ["vẽ", "biểu đồ", "chart", "plot", "visualize", "hình ảnh", "đồ thị"]
-            needs_chart = any(keyword in prompt.lower() for keyword in chart_keywords)
-            
-            with st.chat_message("assistant"):
-                if needs_chart:
-                    with st.spinner("Hệ thống đang vẽ biểu đồ..."):
-                        chart_agent = get_chart_agent()
-                        chart_prompt = f"Yêu cầu ban đầu: {prompt}\n\nDữ liệu bạn cần vẽ (dạng markdown/text):\n{sql_response.content}"
-                        chart_response = chart_agent.run(chart_prompt)
-                    
-                    with st.expander("📊 Chart Agent", expanded=False):
-                        st.markdown("**Input:**")
-                        st.code(chart_prompt, language=None)
-                        st.markdown("**Output:**")
-                        st.markdown(chart_response.content)
-                        
-                    # Check for output image or html file path mentioned in text
-                    file_path_found = None
-                    if "output/" in chart_response.content:
-                        match = re.search(r'output/[\w-]+\.(png|html)', chart_response.content)
-                        if match:
-                            file_path_found = match.group(0)
-                            
-                    # Default checking
-                    if not file_path_found:
-                        if os.path.exists("output/chart.png"):
-                            file_path_found = "output/chart.png"
-                        elif os.path.exists("output/chart.html"):
-                            file_path_found = "output/chart.html"
-                        
-                    if file_path_found and os.path.exists(file_path_found):
-                        is_html = file_path_found.endswith('.html')
-                        message_data = {
-                            "role": "assistant", 
-                            "content": f"**Kết quả phân tích & Biểu đồ:**\n\n{chart_response.content}"
-                        }
-                        if is_html:
-                            message_data['html'] = file_path_found
-                            import streamlit.components.v1 as components
-                            with open(file_path_found, 'r', encoding='utf-8') as f:
-                                components.html(f.read(), height=500)
-                        else:
-                            message_data['image'] = file_path_found
-                            st.image(file_path_found)
-                            
-                        st.session_state.messages.append(message_data)
-                    else:
-                        st.session_state.messages.append({"role": "assistant", "content": f"**Kết quả phân tích:**\n\n{chart_response.content}"})
+        # 3. Chart Agent (Conditionally)
+        # Check if user wants a chart
+        chart_keywords = ["vẽ", "biểu đồ", "chart", "plot", "visualize", "hình ảnh", "đồ thị"]
+        needs_chart = any(keyword in prompt.lower() for keyword in chart_keywords)
+        
+        with st.chat_message("assistant"):
+            if needs_chart:
+                with st.spinner("Hệ thống đang vẽ biểu đồ..."):
+                    chart_agent = get_chart_agent()
+                    chart_prompt = f"Yêu cầu ban đầu: {prompt}\n\nDữ liệu bạn cần vẽ (dạng markdown/text):\n{sql_response.content}"
+                    chart_response = chart_agent.run(chart_prompt)
                 
+                # with st.expander("📊 Chart Agent", expanded=False):
+                #     st.markdown("**Input:**")
+                #     st.code(chart_prompt, language=None)
+                #     st.markdown("**Output:**")
+                #     st.markdown(chart_response.content)
+                
+                st.markdown(chart_response.content)
+                    
+                # Check for output image or html file path mentioned in text
+                file_path_found = None
+                if "baseline_system/output/" in chart_response.content:
+                    match = re.search(r'baseline_system/output/[\w-]+\.(png|html)', chart_response.content)
+                    if match:
+                        file_path_found = match.group(0)
+                        
+                # Default checking
+                if not file_path_found:
+                    if os.path.exists("baseline_system/output/chart.png"):
+                        file_path_found = "baseline_system/output/chart.png"
+                    elif os.path.exists("baseline_system/output/chart.html"):
+                        file_path_found = "baseline_system/output/chart.html"
+                    
+                if file_path_found and os.path.exists(file_path_found):
+                    is_html = file_path_found.endswith('.html')
+                    message_data = {
+                        "role": "assistant", 
+                        "content": chart_response.content
+                    }
+                    if is_html:
+                        message_data['html'] = file_path_found
+                        import streamlit.components.v1 as components
+                        with open(file_path_found, 'r', encoding='utf-8') as f:
+                            components.html(f.read(), height=500)
+                    else:
+                        message_data['image'] = file_path_found
+                        st.image(file_path_found)
+                        
+                    st.session_state.messages.append(message_data)
                 else:
-                    # If no chart is requested, we just show the final SQL data result
-                    st.markdown("### Kết quả Phân tích Dữ liệu")
-                    st.markdown(sql_response.content)
-                    st.session_state.messages.append({"role": "assistant", "content": f"**Kết quả Phân tích Dữ liệu:**\n\n{sql_response.content}"})
+                    st.session_state.messages.append({"role": "assistant", "content": chart_response.content})
+            
+            else:
+                # If no chart is requested, we just show the final SQL data result
+                st.markdown(sql_response.content)
+                st.session_state.messages.append({"role": "assistant", "content": sql_response.content})

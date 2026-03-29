@@ -5,14 +5,14 @@ import contextlib
 def execute_python_code(code: str) -> str:
     """
     Executes python code. This should be used to write scripts that generate visualizations 
-    using plotly, matplotlib, etc. and saves the output to the 'output' folder.
+    using plotly, matplotlib, etc. and saves the output to the 'baseline_system/output' folder.
     """
     try:
         # Create a string buffer to capture stdout
         stdout_buffer = io.StringIO()
         
         # Make sure output directory exists
-        os.makedirs('output', exist_ok=True)
+        os.makedirs('baseline_system/output', exist_ok=True)
         
         # Dictionary to hold local variables after execution
         local_vars = {}

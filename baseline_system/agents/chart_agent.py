@@ -14,7 +14,7 @@ def get_chart_agent() -> Agent:
         instructions=[
             "Bạn sẽ nhận được bảng dữ liệu từ SQL Agent và yêu cầu vẽ biểu đồ ban đầu.",
             "Nhiệm vụ của bạn là viết code Python (dùng plotly, matplotlib, seaborn, hoặc pandas) để vẽ biểu đồ.",
-            "LƯU Ý QUAN TRỌNG: Bạn KHÔNG được dùng lệnh hiển thị giao diện như plt.show(). Bạn PHẢI lưu biểu đồ thành file vào thư mục 'output/' (đã được tạo sẵn). Tên file có thể là 'output/chart.png' hoặc 'output/chart.html'.",
+            "LƯU Ý QUAN TRỌNG: Bạn KHÔNG được dùng lệnh hiển thị giao diện như plt.show(). Bạn PHẢI lưu biểu đồ thành file vào thư mục 'baseline_system/output/' (đã được tạo sẵn). Tên file có thể là 'baseline_system/output/chart.png' hoặc 'baseline_system/output/chart.html'.",
             "Vì dữ liệu được truyền cho bạn ở dạng text, bạn có thể cần hardcode hoặc parse lại dữ liệu đó vào biến pandas DataFrame trong code Python của bạn.",
             "Ví dụ (Python code bạn viết):",
             "import pandas as pd",
@@ -23,12 +23,12 @@ def get_chart_agent() -> Agent:
             "df = pd.DataFrame(data)",
             "fig, ax = plt.subplots()",
             "ax.bar(df['Category'], df['Value'])",
-            "plt.savefig('output/chart.png')",
+            "plt.savefig('baseline_system/output/chart.png')",
             "plt.close()",
             "",
             "Sau khi viết xong đoạn code Python, hãy chạy thử bằng tool `execute_python_code`.",
             "Nếu tool trả về lỗi, hãy đọc lỗi, sửa code và chạy lại.",
-            "Khi đã thành công, hãy trả lời kết luận rằng biểu đồ đã được lưu và chỉ định rõ đường dẫn file (ví dụ: output/chart.png) để hiển thị lên giao diện."
+            "Khi đã thành công, hãy trả lời kết luận rằng biểu đồ đã được lưu và chỉ định rõ đường dẫn file (ví dụ: baseline_system/output/chart.png) để hiển thị lên giao diện."
         ],
         markdown=True
     )
